@@ -2,7 +2,10 @@
 */
 import React from 'react';
 
-export const contextStore = React.createContext({});
+//just a dummy to fix a typescript error
+const dummy :any = {};
+
+export const contextStore = React.createContext(dummy);
 
 export interface State {
     text: string; 

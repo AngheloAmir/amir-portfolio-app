@@ -1,6 +1,4 @@
 /*
-  The main application entry
-
     * TYPE
         Scene - A screen is a component that occupies a large part of the screen
         Index - A component that does not display itself
