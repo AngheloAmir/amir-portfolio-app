@@ -1,0 +1,34 @@
+/*
+*/
+@import '../../theme.scss';
+
+#AboutProfile {
+    display: flex;
+    flex-direction: row;
+    margin-left: 2.5%;
+    width: 95%;
+
+    img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .contents {
+        border: 2px solid blue;
+        
+        margin-left: $fontsize;
+        p {
+       
+            border: 1px solid red;
+        }
+    }
+    
+    @include tabletscreen {
+        flex-direction: column;   
+    }
+   
+    @include desktopscreen {
+
+    }
+
+}

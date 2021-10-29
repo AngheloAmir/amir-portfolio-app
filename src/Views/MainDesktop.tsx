@@ -10,9 +10,9 @@
         The user is at Home and the current screen is desktop size
 */
 import React from 'react';
-import './Styles/maindesktop.scss';
+import './layout/MainDesktop.scss';
 
-import { MainScreenPropsReceive } from './Common/MainScreenInterface';
+import { MainScreenPropsReceive } from './common/MainScreenInterface';
 import AboutProfile from './UI/AboutProfile';
 
 export default function MainDesktop( props :MainScreenPropsReceive) {
@@ -20,7 +20,8 @@ export default function MainDesktop( props :MainScreenPropsReceive) {
         <div id='desktop-main'>
             <div id='sidebar'>
                 <AboutProfile   
-                    onclick={props.onClick}
+                    imagepath={props.profileIconPath}
+                    text={props.aboutInfo}
                 />
             </div>
 

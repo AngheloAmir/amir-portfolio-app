@@ -12,28 +12,32 @@
 */
 import React from 'react';
 
-import { contextStore, StateAPI, Action } from '../StateAPI';
+//import { contextStore, StateAPI, Action } from '../StateAPI';
+
+import MainJSON from '../Database/main.json';
 import MainDesktop from '../Views/MainDesktop';
 import MainMobile from '../Views/MainMobile';
 
-import useWindowDimensions from '../Functions/useWindowDimension';
+import useWindowDimensions from '../Utilities/useWindowDimension';
+
 
 export default function MainView() {
-    const { dispatch } :StateAPI = React.useContext(contextStore); 
+    //const { dispatch } :StateAPI = React.useContext(contextStore); 
     const { width } = useWindowDimensions();
-
-    function handleOnClick() {
-        dispatch( Action.Test() );
-        alert("Hello");
-    }
 
     return (
         <React.Fragment>
             {
                 width >= 578 ?
-                    <MainDesktop onClick={handleOnClick} />
+                    <MainDesktop
+                        profileIconPath={MainJSON['profile-icon-path']}
+                        aboutInfo={MainJSON['about-info']}
+                    />
                 :
-                    <MainMobile onClick={handleOnClick} />
+                    <MainMobile
+                        profileIconPath={MainJSON['profile-icon-path']}
+                        aboutInfo={MainJSON['about-info']}
+                    />
             }
         </React.Fragment>
     );

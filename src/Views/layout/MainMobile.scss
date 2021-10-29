@@ -1,8 +1,8 @@
 /*
 */
-@import './theme.scss';
+@import '../theme.scss';
 
-$containerWidth:        100vw;
+$containerWidth:        100%;
 $containerHeight:       100vh;
 $navigationbarHeight:   3rem;
 
@@ -13,13 +13,15 @@ $navigationbarHeight:   3rem;
     @include test;
 
     #navigation-bar {
-        height: $navigationbarHeight;
         @include test;
+        height: $navigationbarHeight;
+        width: $containerWidth;
+        position: fixed;
     }
 
     #aboutinfo {
-        height: 100px;
-        @include test;
+        margin-top: calc($navigationbarHeight + $fontsize);
+        margin-bottom: $fontsize;
     }
 
     #content {

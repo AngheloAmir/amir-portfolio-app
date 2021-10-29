@@ -10,9 +10,9 @@
         The user is at Home and the current screen is mobile size
 */
 import React from 'react';
-import './Styles/mainmobile.scss';
+import './layout/MainMobile.scss';
 
-import { MainScreenPropsReceive } from './Common/MainScreenInterface';
+import { MainScreenPropsReceive } from './common/MainScreenInterface';
 import AboutProfile from './UI/AboutProfile';
 
 export default function MainMobile( props :MainScreenPropsReceive) {
@@ -23,7 +23,10 @@ export default function MainMobile( props :MainScreenPropsReceive) {
             </div>
 
             <div id='aboutinfo'>
-                <AboutProfile onclick={props.onClick} />
+                <AboutProfile
+                    imagepath={props.profileIconPath}
+                    text={props.aboutInfo}
+                />
             </div>
 
             <div id='content'>

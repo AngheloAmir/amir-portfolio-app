@@ -17,7 +17,7 @@ $fontsize-big: 20px;
 }
 
 @mixin tabletscreen {
-    @media (max-width: 980px) {
+    @media (min-width: 579px) {
         @content;
     }
 }

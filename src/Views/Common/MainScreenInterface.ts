@@ -4,5 +4,6 @@
 */
 
 export interface MainScreenPropsReceive {
-    onClick: () => void;
+    profileIconPath     :string;
+    aboutInfo           :string;
 }
