@@ -1,0 +1,31 @@
+/*
+*/
+@import './theme.scss';
+
+$containerWidth:        100vw;
+$containerHeight:       100vh;
+$navigationbarHeight:   3rem;
+
+#mobile-main {
+    height:     $containerHeight;
+    width:      $containerWidth;
+
+    @include test;
+
+    #navigation-bar {
+        height: $navigationbarHeight;
+        @include test;
+    }
+
+    #aboutinfo {
+        height: 100px;
+        @include test;
+    }
+
+    #content {
+        height: 200px;
+        @include test;
+        background-color: lightgreen;
+    }
+
+}

@@ -1,18 +1,34 @@
 /*
+    * TYPE
+        Scene - A screen is a component that occupies a large part of the screen
+
+    * DESCRIPTION
+        Sets up the layout of the app during mobile screens. This component should
+        not return a content such as text, images... this things should be handled by the UI component
+
+    * VISIBLE WHEN
+        The user is at Home and the current screen is mobile size
 */
-import TestUI from "./UI/TestUI";
+import React from 'react';
+import './Styles/mainmobile.scss';
 
-interface receiveProps {
-    onClick: () => void;
-}
+import { MainScreenPropsReceive } from './Common/MainScreenInterface';
+import AboutProfile from './UI/AboutProfile';
 
-const sample = require('../Database/sample.json');
-export default function MainMobile( props :receiveProps) {
+export default function MainMobile( props :MainScreenPropsReceive) {
     return (
-        <div>
-            <h1>{sample.mobile_message}</h1>
-            <br />
-            <TestUI onClick={props.onClick}/>
+        <div id='mobile-main'>
+            <div id='navigation-bar'>
+                this is the navigation bar
+            </div>
+
+            <div id='aboutinfo'>
+                <AboutProfile onclick={props.onClick} />
+            </div>
+
+            <div id='content'>
+                this contains the content
+            </div>
         </div>
-    )
+    );
 }

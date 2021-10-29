@@ -1,12 +1,14 @@
 /*
     * TYPE
-        Scene - A screen is a component that occupies a large part of the screen
         Index - A component that does not display itself
-        Fragment of ...
+        Controller - A component that handles the functionality
 
     * DESCRIPTION
+        Decide what will be displayed based on the current user screen size.
+        It also handle the process (what happen when a button is clicked).
 
     * VISIBLE WHEN
+        The user is at Home
 */
 import React from 'react';
 
@@ -26,13 +28,13 @@ export default function MainView() {
     }
 
     return (
-        <div>
+        <React.Fragment>
             {
                 width >= 578 ?
                     <MainDesktop onClick={handleOnClick} />
                 :
                     <MainMobile onClick={handleOnClick} />
             }
-        </div>
-    )
+        </React.Fragment>
+    );
 }

@@ -1,18 +1,38 @@
 /*
+    * TYPE
+        Scene - A screen is a component that occupies a large part of the screen
+
+    * DESCRIPTION
+        Sets up the layout of the app during Desktop screens. This component should
+        not return a content such as text, images... this things should be handled by the UI component
+
+    * VISIBLE WHEN
+        The user is at Home and the current screen is desktop size
 */
-import TestUI from "./UI/TestUI";
+import React from 'react';
+import './Styles/maindesktop.scss';
 
-interface receiveProps {
-    onClick: () => void;
-}
+import { MainScreenPropsReceive } from './Common/MainScreenInterface';
+import AboutProfile from './UI/AboutProfile';
 
-const sample = require('../Database/sample.json');
-export default function MainDesktop( props :receiveProps) {
+export default function MainDesktop( props :MainScreenPropsReceive) {
     return (
-        <div>
-            <h1>{sample.desktop_message}</h1>
-            <br />
-            <TestUI onClick={props.onClick}/>
+        <div id='desktop-main'>
+            <div id='sidebar'>
+                <AboutProfile   
+                    onclick={props.onClick}
+                />
+            </div>
+
+            <div id='content'>
+                <div className='navigationbar'>
+                    <h2>this is the navigation bar</h2>
+                </div>
+
+                <div className='displayedcontent'>
+                    <h2>this is the content here</h2>
+                </div>
+            </div> 
         </div>
-    )
-}
+    );
+} 
