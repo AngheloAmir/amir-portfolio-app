@@ -7,7 +7,14 @@ import {
   createDefaultState,
   RootReducer} from './StateAPI';
 
-import Main from './Components/Main';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+
+
+import Main from './AppComponents/HomeScene';
 
 function App() {
   const [state, dispatch] = React.useReducer(RootReducer, createDefaultState());
@@ -15,7 +22,12 @@ function App() {
   return (
     <React.Fragment>
       <contextStore.Provider value={{state, dispatch}}>
-        <Main />
+        <Router>
+          <Switch>
+            <Route path="/"> <Main /> </Route>
+
+          </Switch>
+        </Router>
       </contextStore.Provider>
     </React.Fragment>
   );

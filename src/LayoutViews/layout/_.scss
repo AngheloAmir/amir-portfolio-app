@@ -1,15 +1,5 @@
-/*Defines the app global color, text size scheme */
+/* Mixings */
 
-/*DONT FORGET TO: npm install save-dev sass*/
-
-
-$primary-textcolor: #fff;
-
-$fontsize: 16px;
-$fontsize-big: 20px;
-
-
-/*=======================*/
 @mixin mobilescreen {
     @media (max-width: 578px) {
         @content;
@@ -28,7 +18,6 @@ $fontsize-big: 20px;
     }
 }
 
-/*=======================*/
 @mixin test {
     border: 1px solid red;
 }

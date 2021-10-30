@@ -1,4 +1,5 @@
 /*
+    Contain interface that is used in the context api (state api)
 */
 import { ActionType } from "./ActionType";
 import { State } from './State'

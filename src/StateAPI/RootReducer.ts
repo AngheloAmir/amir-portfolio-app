@@ -1,4 +1,6 @@
 /*
+    The root reducer.
+    This function is should only use be used by App.jsx since the App.js set up the context api
 */
 import { ActionType } from "./ActionType";
 import { ActionInterface } from "./Interface";
