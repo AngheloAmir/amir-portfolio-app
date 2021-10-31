@@ -1,0 +1,55 @@
+/*
+*/
+@import '../theme';
+
+#PongDesignNavbar {
+    background-color:   $navbar-color;
+    display:            flex;
+    flex-grow:          1;
+    height:             100%;
+
+    .img {
+        height:     100%;
+        width:      auto;
+    }
+
+    .navitemscontainer {
+        display:            flex;
+        flex-direction:     row;
+        flex-grow:          1;
+        margin-left:        $navbar-item-left-margin;
+        
+        .item {
+            font-size:      $navbar-fontsize;
+            margin-left:    $navbar-item-spacing;
+            padding:        $navbar-item-padding;
+            position:       relative;
+
+            &:hover {
+                color:      $navbar-item-hover;
+            }
+
+            .dropdown {
+                background-color:   $navbar-dropdown-bgcolor;
+                color:              $navbar-dropdown-textcolor;
+                display:            none;
+                margin-top:         0.1rem;
+                padding:            $navbar-dropdown-padding;
+                position:           absolute;
+                border-radius:      $navbar-dropdown-borderrad;
+
+                .subitem {
+                    padding:        $navbar-dropdown-spacing;
+                    &:hover {
+                        color: $navbar-dropdown-texthover
+                    }
+                }
+            }
+
+            &:hover .dropdown{
+                display: block;
+            }
+        }
+    }
+    
+}

@@ -14,7 +14,7 @@ import {
 } from "react-router-dom";
 
 
-import Main from './AppComponents/HomeScene';
+import HomeScene from './AppComponents/HomeScene';
 
 function App() {
   const [state, dispatch] = React.useReducer(RootReducer, createDefaultState());
@@ -24,7 +24,7 @@ function App() {
       <contextStore.Provider value={{state, dispatch}}>
         <Router>
           <Switch>
-            <Route path="/"> <Main /> </Route>
+            <Route path="/"> <HomeScene /> </Route>
 
           </Switch>
         </Router>

@@ -2,18 +2,16 @@
 */
 @import './_';
 
-$containerWidth:        100vw;
 $containerHeight:       100vh;
 $sidebarwidth:          200px;
 
 #Home {
     display:            flex;
-    flex-direction:     row;
     height:             $containerHeight;
-    width:              $containerWidth;
+    flex-direction:     row;
+    flex-grow:           1; 
 
     .sidebar {
-        background-color: rosybrown;
         display:            none;
         height:             $containerHeight;
         width:              $sidebarwidth;
@@ -24,17 +22,18 @@ $sidebarwidth:          200px;
     }
 
     .content {
-        background-color:   wheat;
         display:             flex;
         flex-direction:      column;
+        flex-grow:           1;
+
+        .navbar {
+            height: 2.5em;
+        }
 
         @include tabletscreen {
             width: calc(100% - $sidebarwidth);
         }
         
-        .navbar {
-            background-color: salmon;
-            height:             3em;
-        }
+        
     }
 }

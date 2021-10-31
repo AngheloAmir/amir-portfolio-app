@@ -1,0 +1,48 @@
+/*
+*/
+
+@import '../theme';
+
+#menuicon {
+    padding: $sliding-menuicon-padding;
+
+    .bar1 {
+        background-color:   $sliding-menuicon-color;
+        width:              $sliding-menuicon-width;
+        height:             $sliding-menuicon-height;
+        border-radius:      $sliding-menuicon-bradius;
+        margin:             2px 0 6px 0;
+        transition:         0.3s;
+
+    }
+    .bar2 {
+        background-color:   $sliding-menuicon-color;
+        width:              $sliding-menuicon-width;
+        height:             $sliding-menuicon-height;
+        border-radius:      $sliding-menuicon-bradius;
+        margin:             6px 0;
+        transition:         0.3s;
+    }
+    .bar3 {
+        background-color:   $sliding-menuicon-color;
+        width:              $sliding-menuicon-width;
+        height:             $sliding-menuicon-height;
+        border-radius:      $sliding-menuicon-bradius;
+        margin:             0;
+        transition:         0.3s;
+    }
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+	-webkit-transform: rotate(45deg) translate(-8px, -8px);
+	transform: rotate(45deg) translate(-8px, -8px);
+}

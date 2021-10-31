@@ -4,12 +4,9 @@
 */
 import React from 'react';
 
-//just a dummy to fix a typescript error
-const dummy :any = {};
-export const contextStore = React.createContext(dummy);
+export const contextStore = React.createContext<any>(null);
 
 export type { StateAPI } from './Interface';
-
 export { createDefaultState } from './State';
 export { Action } from './Actions';
 

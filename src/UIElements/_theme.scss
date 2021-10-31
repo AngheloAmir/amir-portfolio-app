@@ -1,7 +1,29 @@
-/*Defines the app global color, text size scheme */
-
-/*DONT FORGET TO: npm install save-dev sass*/
+/*
+    Defines the styling for the User Interface of each UI Elements
+*/
 $primary-textcolor: #fff;
 
-$fontsize: 16px;
-$fontsize-big: 20px;
+$fontsize:      16px;
+$fontsize-big:  20px;
+
+$navbar-color:              blueviolet;
+$navbar-fontsize:            18px;
+$navbar-item-hover:         red;
+$navbar-item-left-margin:    $navbar-fontsize * 3;
+$navbar-item-padding:        0.5rem 1rem;
+$navbar-item-spacing:        1rem;
+$navbar-dropdown-bgcolor:   chocolate;
+$navbar-dropdown-padding:    0.5rem 0.5rem;
+$navbar-dropdown-borderrad:  0.5rem;
+$navbar-dropdown-textcolor: blue;
+$navbar-dropdown-texthover: gray;
+$navbar-dropdown-spacing:    0.4rem 0rem;
+
+$sliding-menuicon-color:    black;
+$sliding-menuicon-padding:  5px 5px;
+$sliding-menuicon-height:   5px;    //each of the line in the menu burger
+$sliding-menuicon-width:    32px;   //each of the line in the menu burger
+$sliding-menuicon-bradius:  3px;
+$sliding-brand-leftmargin:  2rem;
+$sliding-drawer-height:     100vh;
+$sliding-drawer-width:      60vw;

@@ -11,7 +11,8 @@
     **To modify, just remove the content of the return statement of HomeLayout
 */
 import './layout/home.scss';
-import Content from '../UIElements/TestDesign/Content';
+import { Navbar, SlidingMenu } from '../UIElements';
+import useDimension from '../Utilities/useWindowDimension'
 
 interface propsReceive {
     onButtonPress       :() => void;
@@ -19,16 +20,51 @@ interface propsReceive {
 }
 
 export default function HomeLayout( props :propsReceive ) {
+    const { width } = useDimension();
+
+    const navs = [
+        {
+            name: 'item 1',
+            callback: () => alert('clicked'),
+        },
+        {
+            name: 'item 2',
+            subitem: [
+                {
+                    name: 'subitem1',
+                    callback: () => alert('subitem 1 clicked'),
+                },
+                {
+                    name: 'subitem1',
+                    callback: () => alert('subitem 2 clicked'),
+                },
+                {
+                    name: 'subitem3',
+                    callback: () => alert('subitem 3 clicked'),
+                }
+            ]
+        }
+    ];
+
     return (
         <div id='Home'>
             <div className='sidebar'> I am a side bar</div>
             <div className='content'>
-                <div className='navbar'>This is the navbar </div>
+                <div className='navbar'>
+                    { width > 578 ?
+                        <Navbar
+                            brandIconPath={'./assets/test.png'}
+                            items={navs}
+                        />
+                        :
+                        <SlidingMenu
+                           
+                            items={navs}
+                        />
+                    }
+                </div>
                 <div className='display'>
-                    <Content
-                        onButtonPress={props.onButtonPress}
-                        message={props.message}
-                    />
+                    <h1>DISPLAY WAS HERE</h1>
                 </div>
             </div>
         </div>
