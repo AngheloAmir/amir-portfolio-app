@@ -6,6 +6,10 @@ import { ActionType } from "./ActionType";
 import { ActionInterface } from "./Interface";
 import { State } from './State';
 
+/**
+ * The reducer (Google about Flow design pattern for info). 
+ * This function is indirectly called by the use of dispatch(ActionInterface)
+*/
 export function RootReducer(state :State, action :ActionInterface) :State {
     switch( action.type ) {
         case ActionType.test:

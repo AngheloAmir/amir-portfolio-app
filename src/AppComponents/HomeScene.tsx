@@ -1,16 +1,16 @@
-/*
-    * TYPE
-        Index - A component that does not display itself
+/**
+    @TYPE
         Controller - A component that handles the functionality
 
-    * DESCRIPTION
+    @DESCRIPTION
         It also handle the process (what happen when a button is clicked).
 
-    * VISIBLE WHEN
+    @VISIBLE
         The user is at home page
 
-    **This component return statement should not contain any html tags and text/data.
-    **only providing the process and data from StateAPI
+    @NOTICE
+        This component return statement should not contain any html tags and text/data.
+        only providing the process and data from StateAPI
 */
 import React from 'react';
 

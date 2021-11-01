@@ -6,13 +6,31 @@ $primary-textcolor: #fff;
 $fontsize:      16px;
 $fontsize-big:  20px;
 
-$navbar-color:              blueviolet;
+$navbar-base-brandleftmargin:   $fontsize * 3;
+$navbar-base-color:             blueviolet;
+$navbar-base-fontsize:          $fontsize * 1.2;
+$navbar-base-itemcolor:         black;
+$navbar-base-itemhover:         green;
+$navbar-base-menuiconcolor:     black;
+$navbar-base-padding:           $fontsize / 2;
+$navbar-dropdown-bgcolor:       chocolate;
+$navbar-dropdown-bghover:       blue;
+$navbar-dropdown-textcolor:     red;
+$navbar-dropdown-texthover:     red;
+$navbar-dropdown-width:         auto;
+
+
+
+
+$navbar-item-hover-color:   red;
+
+$navbar-color:               blueviolet;
 $navbar-fontsize:            18px;
-$navbar-item-hover:         red;
+$navbar-item-hover:          red;
 $navbar-item-left-margin:    $navbar-fontsize * 3;
 $navbar-item-padding:        0.5rem 1rem;
 $navbar-item-spacing:        1rem;
-$navbar-dropdown-bgcolor:   chocolate;
+$navbar-dropdown-bgcolor:    chocolate;
 $navbar-dropdown-padding:    0.5rem 0.5rem;
 $navbar-dropdown-borderrad:  0.5rem;
 $navbar-dropdown-textcolor: blue;

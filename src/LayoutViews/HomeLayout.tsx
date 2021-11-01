@@ -1,14 +1,12 @@
-/*
-    * TYPE
+/**
+    @TYPE
         Layout - A layout 
 
-    * DESCRIPTION
+    @DESCRIPTION
         Handle the appearance of the home page
 
-    * VISIBLE WHEN
+    @VISIBLE
         The user is at home page
-
-    **To modify, just remove the content of the return statement of HomeLayout
 */
 import './layout/home.scss';
 import { Navbar, SlidingMenu } from '../UIElements';

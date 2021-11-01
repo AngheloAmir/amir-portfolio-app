@@ -8,7 +8,16 @@ interface propsReceive {
     onMenuIconPress?: (isCrossed :boolean) => void;
 }
 
+
+
+
 export default function MenuIcon(props :propsReceive) {
+
+
+
+
+
+
     const [cross, setCross] = React.useState(false);
 
     function handleIconPressed() {
