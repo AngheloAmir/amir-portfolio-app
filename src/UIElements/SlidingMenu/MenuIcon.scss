@@ -3,31 +3,35 @@
 
 @import '../theme';
 
+$sliding-menuicon-color:    black;
+$sliding-menuicon-padding:  5px 5px;
+$sliding-menuicon-bradius:  3px;
+$sliding-brand-leftmargin:  2rem;
+$sliding-drawer-height:     100vh;
+$sliding-drawer-width:      60vw;
+
 #menuicon {
     padding: $sliding-menuicon-padding;
 
-    .bar1 {
+    div {
         background-color:   $sliding-menuicon-color;
-        width:              $sliding-menuicon-width;
-        height:             $sliding-menuicon-height;
+        width:              $navbar-slidingmenu-width;
+        height:             $navbar-slidingmenu-height;
         border-radius:      $sliding-menuicon-bradius;
+    }
+
+    .bar1 {
+        
         margin:             2px 0 6px 0;
         transition:         0.3s;
-
     }
+
     .bar2 {
-        background-color:   $sliding-menuicon-color;
-        width:              $sliding-menuicon-width;
-        height:             $sliding-menuicon-height;
-        border-radius:      $sliding-menuicon-bradius;
         margin:             6px 0;
         transition:         0.3s;
     }
+
     .bar3 {
-        background-color:   $sliding-menuicon-color;
-        width:              $sliding-menuicon-width;
-        height:             $sliding-menuicon-height;
-        border-radius:      $sliding-menuicon-bradius;
         margin:             0;
         transition:         0.3s;
     }

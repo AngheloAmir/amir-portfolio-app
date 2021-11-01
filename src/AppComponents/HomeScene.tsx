@@ -18,8 +18,40 @@ import { contextStore, StateAPI, Action } from '../StateAPI';
 import HomeLayout from '../LayoutViews/HomeLayout';
 import homejson from '../Database/home.json';
 
+import { FaBeer } from 'react-icons/fa';
+
 export default function HomeScene() {
     const { state, dispatch } :StateAPI = React.useContext(contextStore); 
+
+    const navitems = [
+        {
+            name: 'item1',
+            icon: () => <FaBeer />,
+        },
+        {
+            name: 'item2',
+            icon: () => <FaBeer />,
+            active: true
+        },
+        {
+            name: 'item3',
+            icon: () => <FaBeer />,
+            disabled: true
+        },
+        {
+            name: 'item4',
+            subitem: [
+                {
+                    name: 'sub 1',
+                    icon: () => <FaBeer />
+                },
+                {
+                    name: 'sub 2',
+                    icon: () => <FaBeer />
+                }
+            ]
+        } 
+    ];
 
     function handleOnPress() {
         alert('The state text was: ' + state.text);
@@ -31,6 +63,9 @@ export default function HomeScene() {
             <HomeLayout
                 onButtonPress={handleOnPress}
                 message={homejson.text}
+                navitems={navitems}
+                brandIconPath='./assets/test.png'
+                navcallback={(i :number, name :string) => console.log('you pressed :' + name)}
             />
         </React.Fragment>
     );

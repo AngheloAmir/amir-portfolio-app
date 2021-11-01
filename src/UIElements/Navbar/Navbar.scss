@@ -3,10 +3,14 @@
 @import '../theme';
 
 #PongDesignNavbar {
-    background-color:   $navbar-color;
+    background-color:   $navbar-base-color;
     display:            flex;
     flex-grow:          1;
     height:             100%;
+	-webkit-user-select:    none;
+	-webkit-touch-callout:  none;
+	-moz-user-select:       none;
+	-ms-user-select:        none;
 
     .img {
         height:     100%;
@@ -17,32 +21,74 @@
         display:            flex;
         flex-direction:     row;
         flex-grow:          1;
-        margin-left:        $navbar-item-left-margin;
+        margin-left:        $navbar-base-brandleftmargin;
         
-        .item {
-            font-size:      $navbar-fontsize;
-            margin-left:    $navbar-item-spacing;
-            padding:        $navbar-item-padding;
+        & > span {
+            box-sizing:     border-box;
+            border:         1px solid transparent;
+            font-size:      $navbar-base-fontsize;
+            margin-left:    $navbar-base-fontsize /2;
+            min-width:      ($navbar-base-fontsize * 7);
+            padding:        ($navbar-base-padding / 2) 0px;
             position:       relative;
+            text-align:     center;
+        }
+
+        .active {
+            color:          $navbar-base-itemactivecolor;
+        }
+
+        .disabled {
+            color:          $navbar-base-itemdisabled;
+        }
+
+        .item {
+            color:          $navbar-base-itemcolor;
 
             &:hover {
-                color:      $navbar-item-hover;
+                background-color:   $navbar-base-itemhoverbg;
+                color:              $navbar-base-itemhover;
+                border-radius:      $navbar-base-fontsize;
             }
-
+    
+            .icon {
+                margin-right: 	$navbar-base-padding;
+            }
+            
             .dropdown {
                 background-color:   $navbar-dropdown-bgcolor;
+                border-radius:      $navbar-base-fontsize;
                 color:              $navbar-dropdown-textcolor;
                 display:            none;
-                margin-top:         0.1rem;
-                padding:            $navbar-dropdown-padding;
+                margin-left:        $navbar-base-padding;
+                margin-top:         $navbar-base-padding;
+                min-width: 			($navbar-slidingdrawer-width *0.8);
+                padding:            $navbar-base-padding $navbar-base-padding;
+                padding-top:        ($navbar-base-padding / 2);
                 position:           absolute;
-                border-radius:      $navbar-dropdown-borderrad;
+                text-align:         left;
+
+                .invisiblebar {
+                    height:         $navbar-base-fontsize;
+                    margin-top:     -$navbar-base-fontsize;
+                    width:          ($navbar-slidingdrawer-width *0.5);
+                }
 
                 .subitem {
-                    padding:        $navbar-dropdown-spacing;
+                    padding:        $navbar-base-padding/2 $navbar-base-padding;
                     &:hover {
-                        color: $navbar-dropdown-texthover
+                        color:      $navbar-dropdown-texthover
                     }
+                }
+
+                &::before {
+                    content: " ";
+                    position: absolute;
+                    top: -20px;
+                    left: ($navbar-base-fontsize * 2);
+                    margin-top: 5px;
+	                border-width: 8px; border-style: solid;
+	                border-color: transparent transparent $navbar-dropdown-bgcolor transparent;	
                 }
             }
 

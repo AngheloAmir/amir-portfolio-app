@@ -9,40 +9,19 @@
         The user is at home page
 */
 import './layout/home.scss';
-import { Navbar, SlidingMenu } from '../UIElements';
+import { Navbar, SlidingMenu, NavItem } from '../UIElements';
 import useDimension from '../Utilities/useWindowDimension'
 
 interface propsReceive {
     onButtonPress       :() => void;
     message             :string;
+    brandIconPath       :string;
+    navitems            :Array<NavItem>;
+    navcallback         :(i :number, name :string) => void;
 }
 
 export default function HomeLayout( props :propsReceive ) {
     const { width } = useDimension();
-
-    const navs = [
-        {
-            name: 'item 1',
-            callback: () => alert('clicked'),
-        },
-        {
-            name: 'item 2',
-            subitem: [
-                {
-                    name: 'subitem1',
-                    callback: () => alert('subitem 1 clicked'),
-                },
-                {
-                    name: 'subitem1',
-                    callback: () => alert('subitem 2 clicked'),
-                },
-                {
-                    name: 'subitem3',
-                    callback: () => alert('subitem 3 clicked'),
-                }
-            ]
-        }
-    ];
 
     return (
         <div id='Home'>
@@ -51,13 +30,14 @@ export default function HomeLayout( props :propsReceive ) {
                 <div className='navbar'>
                     { width > 578 ?
                         <Navbar
-                            brandIconPath={'./assets/test.png'}
-                            items={navs}
+                            brandIconPath={props.brandIconPath}
+                            items={props.navitems}
+                            callback={props.navcallback}
                         />
                         :
                         <SlidingMenu
-                           
-                            items={navs}
+                            items={props.navitems}
+                            callback={props.navcallback}
                         />
                     }
                 </div>

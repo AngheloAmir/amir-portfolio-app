@@ -3,11 +3,12 @@
 import React from 'react';
 import './Drawer.scss';
 
-import { NavItem } from './SlidingMenu';
+import { NavItem, NavNameAndIcon } from '../lib/NavItem';
 
 interface propsReceive {
     items?      :Array<NavItem>;
     isVisible   :boolean;
+    callback    :(index :number, itemname :string) => void;   
 }
 
 export default function Drawer(props :propsReceive) {
@@ -16,12 +17,57 @@ export default function Drawer(props :propsReceive) {
             {
                 props.items?.map((item :NavItem, index :number) => {
                     return (
-                        <div key={index}>
-                            {item.name}
+                        <div key={index}
+                            className={item.active ? 'active' : item.disabled ? 'disabled' : 'item'}
+                            onClick={() => {
+                                if(item.active || item.disabled)
+                                    return;
+                                if(!item.subitem || item.subitem.length <= 0 )
+                                    props.callback(index, item.name)
+                            }}
+                        >
+                            <span className='icon'>
+                                { item.icon && item.icon() }
+                            </span>
+                            <span>
+                                { item.name }
+                            </span>
+                            <SubItem
+                                item={item}
+                                index={index}
+                                cb={(n :string) =>{
+                                    props.callback(index, n)
+                                }}
+                            />
                         </div>
                     )
                 })
             }
         </div>
-    )
+    );
+}
+
+function SubItem( props :{item :NavItem, index :number, cb: (name :string) => void}) {
+    if(!props.item.subitem || props.item.subitem.length <= 0 )
+        return <span></span>
+
+    return (
+        <div className='subitemcontainer'>
+            {props.item.subitem.map((subitem :NavNameAndIcon, index :number) => {
+                return (
+                    <div
+                        key={index}
+                        onClick={() => props.cb(subitem.name)}
+                    >
+                        <span className='icon'>
+                                { subitem.icon && subitem.icon() }
+                            </span>
+                            <span>
+                                { subitem.name }
+                            </span>
+                    </div>
+                );
+            })}
+        </div>
+    );
 }

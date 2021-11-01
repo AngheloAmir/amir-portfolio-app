@@ -6,42 +6,25 @@ $primary-textcolor: #fff;
 $fontsize:      16px;
 $fontsize-big:  20px;
 
+//This includes the sliding menu
 $navbar-base-brandleftmargin:   $fontsize * 3;
 $navbar-base-color:             blueviolet;
 $navbar-base-fontsize:          $fontsize * 1.2;
-$navbar-base-itemcolor:         black;
+$navbar-base-itemactivecolor:   orange;
+$navbar-base-itemcolor:         gray;
+$navbar-base-itemdisabled:      black;
 $navbar-base-itemhover:         green;
+$navbar-base-itemhoverbg:       orange;
 $navbar-base-menuiconcolor:     black;
-$navbar-base-padding:           $fontsize / 2;
+$navbar-base-padding:           ($navbar-base-fontsize / 2); //a padding that has many uses.
 $navbar-dropdown-bgcolor:       chocolate;
 $navbar-dropdown-bghover:       blue;
-$navbar-dropdown-textcolor:     red;
-$navbar-dropdown-texthover:     red;
+$navbar-dropdown-sub-border:    red;
+$navbar-dropdown-sub-colorbg:   green;
+$navbar-dropdown-textcolor:     purple;
+$navbar-dropdown-texthover:     white;
 $navbar-dropdown-width:         auto;
-
-
-
-
-$navbar-item-hover-color:   red;
-
-$navbar-color:               blueviolet;
-$navbar-fontsize:            18px;
-$navbar-item-hover:          red;
-$navbar-item-left-margin:    $navbar-fontsize * 3;
-$navbar-item-padding:        0.5rem 1rem;
-$navbar-item-spacing:        1rem;
-$navbar-dropdown-bgcolor:    chocolate;
-$navbar-dropdown-padding:    0.5rem 0.5rem;
-$navbar-dropdown-borderrad:  0.5rem;
-$navbar-dropdown-textcolor: blue;
-$navbar-dropdown-texthover: gray;
-$navbar-dropdown-spacing:    0.4rem 0rem;
-
-$sliding-menuicon-color:    black;
-$sliding-menuicon-padding:  5px 5px;
-$sliding-menuicon-height:   5px;    //each of the line in the menu burger
-$sliding-menuicon-width:    32px;   //each of the line in the menu burger
-$sliding-menuicon-bradius:  3px;
-$sliding-brand-leftmargin:  2rem;
-$sliding-drawer-height:     100vh;
-$sliding-drawer-width:      60vw;
+$navbar-slidingdrawer-height:   100vh;
+$navbar-slidingdrawer-width:    250px;
+$navbar-slidingmenu-width:      32px;
+$navbar-slidingmenu-height:     5px;
