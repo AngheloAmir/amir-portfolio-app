@@ -14,14 +14,16 @@
 */
 import React from 'react';
 
-import { contextStore, StateAPI, Action } from '../StateAPI';
+//import { contextStore, StateAPI, Action } from '../StateAPI';
 import HomeLayout from '../LayoutViews/HomeLayout';
-import homejson from '../Database/home.json';
+//import homejson from '../Database/home.json';
 
 import { FaBeer } from 'react-icons/fa';
 
+const homejson = require('../Database/home.json');
+
 export default function HomeScene() {
-    const { state, dispatch } :StateAPI = React.useContext(contextStore); 
+    //const { state, dispatch } :StateAPI = React.useContext(contextStore); 
 
     const navitems = [
         {
@@ -53,19 +55,14 @@ export default function HomeScene() {
         } 
     ];
 
-    function handleOnPress() {
-        alert('The state text was: ' + state.text);
-        dispatch( Action.Test() );
-    }
-
     return (
         <React.Fragment>
             <HomeLayout
-                onButtonPress={handleOnPress}
-                message={homejson.text}
-                navitems={navitems}
-                brandIconPath='./assets/test.png'
-                navcallback={(i :number, name :string) => console.log('you pressed :' + name)}
+                navigationbar={{
+                    navitems:       navitems,
+                    brandIconPath:  './assets/test.png',
+                    navcallback:    (i :number, name :string) => console.log('you pressed :' + name)
+                }}
             />
         </React.Fragment>
     );

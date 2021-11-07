@@ -9,41 +9,37 @@
         The user is at home page
 */
 import './layout/home.scss';
-import { Navbar, SlidingMenu, NavItem } from '../UIElements';
-import useDimension from '../Utilities/useWindowDimension'
+import NavigationBar, { NavigationBarPropsInterface } from './components/NavigationBar';
+import IntroductionContents from './components/IntroductionContents';
 
 interface propsReceive {
-    onButtonPress       :() => void;
-    message             :string;
-    brandIconPath       :string;
-    navitems            :Array<NavItem>;
-    navcallback         :(i :number, name :string) => void;
+/**
+ * Contains navigation items, callbacks and path of the image to brand icon
+ * @example
+ * brandIconPath :string;
+   navitems :Array<{
+       name :string, 
+       icon? :() => JSX.Element, 
+       active? :boolean, 
+       disabled? :boolean, 
+       subitem :Array<NavItems>
+    }>;
+   navcallback :(i :number, name :string) => void;
+*/
+    navigationbar :NavigationBarPropsInterface;
 }
 
 export default function HomeLayout( props :propsReceive ) {
-    const { width } = useDimension();
-
     return (
         <div id='Home'>
-            <div className='sidebar'> I am a side bar</div>
-            <div className='content'>
-                <div className='navbar'>
-                    { width > 578 ?
-                        <Navbar
-                            brandIconPath={props.brandIconPath}
-                            items={props.navitems}
-                            callback={props.navcallback}
-                        />
-                        :
-                        <SlidingMenu
-                            items={props.navitems}
-                            callback={props.navcallback}
-                        />
-                    }
-                </div>
-                <div className='display'>
-                    <h1>DISPLAY WAS HERE</h1>
-                </div>
+            <div className='navbar'>
+                <NavigationBar
+                    { ...props.navigationbar }
+                />
+            </div>
+
+            <div className='introduction'>
+                <IntroductionContents />
             </div>
         </div>
     );

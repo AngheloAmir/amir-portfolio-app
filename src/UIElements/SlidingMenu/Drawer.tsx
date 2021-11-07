@@ -3,7 +3,7 @@
 import React from 'react';
 import './Drawer.scss';
 
-import { NavItem, NavNameAndIcon } from '../lib/NavItem';
+import { NavItem, NavNameAndIcon } from '../_lib/NavItem';
 
 interface propsReceive {
     items?      :Array<NavItem>;

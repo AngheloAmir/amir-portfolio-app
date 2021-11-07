@@ -27,7 +27,7 @@
     />             
 */
 import './Navbar.scss';
-import { NavigationUIProps, NavItem } from '../lib/NavItem';
+import { NavigationUIProps, NavItem } from '../_lib/NavItem';
 import Subitem from './Subitem';
 
 /**

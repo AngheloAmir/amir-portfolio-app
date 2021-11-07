@@ -3,7 +3,7 @@
     The parent element should provide the position: fixed style.                 
 */
 import './Navbar.scss';
-import { NavItem } from '../lib/NavItem';
+import { NavItem } from '../_lib/NavItem';
 
 interface propsReceive {
     item        :NavItem;

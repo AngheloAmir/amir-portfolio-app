@@ -4,7 +4,7 @@
 import React from 'react';
 import './SlidingMenu.scss';
 
-import { NavigationUIProps } from '../lib/NavItem';
+import { NavigationUIProps } from '../_lib/NavItem';
 import MenuIcon from './MenuIcon';
 import Drawer from './Drawer';
 
