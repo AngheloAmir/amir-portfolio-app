@@ -13,18 +13,10 @@
         only providing the process and data from StateAPI
 */
 import React from 'react';
-
-//import { contextStore, StateAPI, Action } from '../StateAPI';
 import HomeLayout from '../LayoutViews/HomeLayout';
-//import homejson from '../Database/home.json';
-
 import { FaBeer } from 'react-icons/fa';
 
-const homejson = require('../Database/home.json');
-
 export default function HomeScene() {
-    //const { state, dispatch } :StateAPI = React.useContext(contextStore); 
-
     const navitems = [
         {
             name: 'item1',
@@ -62,6 +54,12 @@ export default function HomeScene() {
                     navitems:       navitems,
                     brandIconPath:  './assets/test.png',
                     navcallback:    (i :number, name :string) => console.log('you pressed :' + name)
+                }}
+                introduction={{
+                    title:'Anghelo Amir',
+                    alias: 'Web developer',
+                    text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias, ut deserunt fuga enim fugiat dolore. Rem reprehenderit consequuntur totam distinctio veniam ad voluptate mollitia culpa. Quas voluptates architecto quasi consequatur.',
+                    imagepath: 'logo192.png'
                 }}
             />
         </React.Fragment>

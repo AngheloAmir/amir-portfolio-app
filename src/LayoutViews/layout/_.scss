@@ -18,6 +18,12 @@
     }
 }
 
+@mixin bigscreen {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
 @mixin test {
     border: 1px solid red;
 }

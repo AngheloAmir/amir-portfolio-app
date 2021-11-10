@@ -9,37 +9,84 @@
         The user is at home page
 */
 import './layout/home.scss';
-import NavigationBar, { NavigationBarPropsInterface } from './components/NavigationBar';
-import IntroductionContents from './components/IntroductionContents';
+import useDimension from '../Utilities/useWindowDimension'
+import {
+    Navbar,
+    SlidingMenu,
+    NavItem,
+    DescriptiveCard,
+    //FancyButton,
+    Columns,
+    BasicCard,
+} from '../UIElements';
+
 
 interface propsReceive {
-/**
- * Contains navigation items, callbacks and path of the image to brand icon
- * @example
- * brandIconPath :string;
-   navitems :Array<{
-       name :string, 
-       icon? :() => JSX.Element, 
-       active? :boolean, 
-       disabled? :boolean, 
-       subitem :Array<NavItems>
-    }>;
-   navcallback :(i :number, name :string) => void;
-*/
-    navigationbar :NavigationBarPropsInterface;
+    navigationbar :{
+        brandIconPath       :string;
+        navitems            :Array<NavItem>;
+        navcallback         :(i :number, name :string) => void;
+    };
+    introduction :{
+        title :string;
+        alias :string;
+        text :string;
+        imagepath :string;
+    }
 }
 
 export default function HomeLayout( props :propsReceive ) {
+    const { isMobile, isDesktop } = useDimension();
+
     return (
         <div id='Home'>
-            <div className='navbar'>
-                <NavigationBar
-                    { ...props.navigationbar }
-                />
+         <div className='navbar'>
+                {!isMobile ?
+                    <Navbar
+                        brandIconPath={props.navigationbar.brandIconPath}
+                        items={props.navigationbar.navitems}
+                        callback={props.navigationbar.navcallback}
+                    />
+                    :
+                    <SlidingMenu
+                        items={props.navigationbar.navitems}
+                        callback={props.navigationbar.navcallback}
+                    />
+                }
             </div>
 
             <div className='introduction'>
-                <IntroductionContents />
+               
+                <DescriptiveCard 
+                    title={props.introduction.title}
+                    alias={props.introduction.alias}
+                    text={props.introduction.text}
+                    imagepath={props.introduction.imagepath}
+                    isHorizontal={!isMobile}
+                />
+               
+                
+            </div>
+
+            <div className='barscolumn'>
+                <h3>Skills</h3>
+                <Columns 
+                    columns={
+                        [
+                            {title: 'asda', text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias,'},
+                            {title: 'asda', text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias,'},
+                            {title: 'asda', text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias,'},
+                            {title: 'asda', text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias,'},
+                        ]
+                    }
+                    isSingleVertical={isMobile}
+                    columnCount={isDesktop ? 4 : 2}
+                />
+            </div>
+
+            <div className='barscolumn'>
+                <h3>Projects</h3>
+                <BasicCard />
             </div>
         </div>
     );

@@ -2,63 +2,63 @@
 */
 @import './_';
 
-$myprofilewidth:    40%;
-$introductionwidth: 80vw;
+$myprofilewidth:        40%;
+$introductionwidth:     80vw;
+$barscolumntopmargin:   12px;
 
 #Home {
     height: 100vh;
 
     .navbar {
-        height: 2.5em;
-        flex-grow: 1;
-        position: fixed;
-        top: 0; left: 0;
-        width: 100vw;
+        height:     2.5em;
+        flex-grow:  1;
+        position:   fixed;
+        top:        0; left: 0;
+        width:      100vw;
     }
 
     .introduction {
-        border: 5px solid darkblue;
-        display: flex;
+        background-color: orange;
+        display:        flex;
         flex-direction: column;
-        margin-top: 2.5em;
-        width: 100%;
+        margin-top:     2.5em;
+        width:          100%;
+        @include tabletscreen {
+            flex-direction: row;
+            height: 60vh;
+            padding: 6vh  calc((100vw - $introductionwidth) / 2) 8vh calc((100vw - $introductionwidth) / 2);
+            h1 {
+                margin-top: 1em;
+            }      
+        }
+        @include desktopscreen {
+            padding: 8vh 
+            calc(((100vw - $introductionwidth) / 2) + 5vw)
+            8vh
+            calc(((100vw - $introductionwidth) / 2) + 5vw);
+        }
+        @include bigscreen {
+            padding: 10vh 
+            calc(((100vw - $introductionwidth) / 2) + 5vw)
+            8vh
+            calc(((100vw - $introductionwidth) / 2) + 5vw);
+        }
+    }
 
+    .barscolumn {
+        border: 3px solid red;
+
+        margin-top: $barscolumntopmargin;
+        h3 {
+            text-align: center;
+        }
         @include tabletscreen {
             flex-direction: row;
             margin-left: calc((100vw - $introductionwidth) / 2);
             width: $introductionwidth;
-        }
-
-        .myprofile {
-            border: 2px solid red;
-            align-self: center;
-            display: flex;
-            justify-content: center;
-            width: $myprofilewidth;
-        }
-
-        .introtext {
-            align-content: center;
-            display: flex;
-            flex-direction: column;
-            width: auto;
-
-            h1, h3, p {
-                text-align: center;
-            }
-            p {
-                margin-left: 10%;
-                max-width: 700px;
-                width: 80%;
-            }
-
-            @include tabletscreen {
-                width: calc($introductionwidth - $myprofilewidth);
-
-            }
-            
+            h1 {
+                margin-top: 1em;
+            }      
         }
     }
-
-    
 }

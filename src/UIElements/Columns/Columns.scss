@@ -1,0 +1,51 @@
+/*
+*/
+
+@import '../theme';
+
+#PongDesignColumns {
+    h3, p {
+        text-align: center;
+        font-size: $fontsize;
+    }
+}
+
+.singular {
+    display: flex;
+    flex-direction: column;
+    background-color: blueviolet;
+    margin: $fontsize 0;
+    h3, p {
+        text-align: left;
+        font-size: $fontsize;
+    }
+}
+
+.column2, .column3, .column4 {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   padding: 0 $fontsize;
+   div {
+    margin-bottom: $fontsize;
+   }
+}
+
+.column2 {
+    grid-template-columns: 1fr 1fr;
+ }
+
+.column3 {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.column4 {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.column5 {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.column6 {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}

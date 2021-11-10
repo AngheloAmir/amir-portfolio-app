@@ -26,6 +26,11 @@ export interface NavigationUIProps {
 
 /**
  * An interface represent a single nav item
+ * @example
+    name       :string;
+    icon?      :() => JSX.Element;
+    active?    :boolean;
+    disabled?  :boolean;
  */
 export interface NavNameAndIcon {
     name       :string;
@@ -36,6 +41,13 @@ export interface NavNameAndIcon {
  
 /**
  * A single nav item can have a lits of sub item (a dropdown)
+ * @example
+ * subitem? :Array<{
+    name       :string;
+    icon?      :() => JSX.Element;
+    active?    :boolean;
+    disabled?  :boolean;
+ * }>;
  */
 export interface NavItem extends NavNameAndIcon{
     subitem?   :Array<NavNameAndIcon>;
