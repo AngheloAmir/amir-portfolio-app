@@ -16,6 +16,8 @@ import React from 'react';
 import HomeLayout from '../LayoutViews/HomeLayout';
 import { FaBeer } from 'react-icons/fa';
 
+import porfolioinfo from '../Database/porforlioinfo.json';
+
 export default function HomeScene() {
     const navitems = [
         {
@@ -56,11 +58,13 @@ export default function HomeScene() {
                     navcallback:    (i :number, name :string) => console.log('you pressed :' + name)
                 }}
                 introduction={{
-                    title:'Anghelo Amir',
-                    alias: 'Web developer',
-                    text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias, ut deserunt fuga enim fugiat dolore. Rem reprehenderit consequuntur totam distinctio veniam ad voluptate mollitia culpa. Quas voluptates architecto quasi consequatur.',
-                    imagepath: 'logo192.png'
+                    title:      porfolioinfo.name,
+                    alias:      porfolioinfo.title,
+                    text:       porfolioinfo.introtext,
+                    imagepath:  porfolioinfo.profile
                 }}
+                skills={porfolioinfo.skills}
+                projects={porfolioinfo.projects}
             />
         </React.Fragment>
     );

@@ -1,0 +1,28 @@
+{
+    "profile": "./assets/profile.png",
+    "name": "Anghelo Amir",
+    "title": "Web Developer",
+    "introtext": "Passionate programmer and pursuing a career in web development, especially in React JS and React Native. As he found love in this framework; they were fun and challenging to do. Besides, can do design and IT related stuff. Being a fast learner and performing many trials and errors is the key to complete any programming task.",
+
+    "skills": [
+        { "title": "asdas", "text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente rem id iste quidem dolor molestias, fugiat ipsum, voluptatibus atque eaque quisquam quibusdam. Fugiat, accusamus doloremque quis dolore minus quia itaque! "},
+        { "title": "asdas", "text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente rem id iste quidem dolor molestias, fugiat ipsum, voluptatibus atque eaque quisquam quibusdam. Fugiat, accusamus doloremque quis dolore minus quia itaque! "},
+        { "title": "asdas", "text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente rem id iste quidem dolor molestias, fugiat ipsum, voluptatibus atque eaque quisquam quibusdam. Fugiat, accusamus doloremque quis dolore minus quia itaque! "},
+        { "title": "asdas", "text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente rem id iste quidem dolor molestias, fugiat ipsum, voluptatibus atque eaque quisquam quibusdam. Fugiat, accusamus doloremque quis dolore minus quia itaque! "}
+    ],
+
+    "projects": [
+        {
+            "name": "sdasdd",
+            "image": "./assets/test.png",
+            "description": "asdasdasdas",
+            "link": "asdasdada"
+        },
+        {
+            "name": "sdasdd",
+            "image": "./assets/test.png",
+            "description": "asdasdasdas",
+            "link": "asdasdada"
+        }
+    ]
+}

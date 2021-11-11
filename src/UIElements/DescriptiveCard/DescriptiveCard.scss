@@ -9,19 +9,35 @@
     width:              auto;
 
     h1 {
+        color: $descard-text-title;
         font-size: $fontsize-biggest;
         text-align: center;
     }
     h3 {
+        color: $descard-text-alias;
         font-size: $fontsize-big;
         text-align: center;
     }
     p {
+        color: $descard-text-text;
         font-size: $fontsize;
         margin-left: 10%;
         margin-top: $fontsize;
         text-align: center;
         width: 80%;
+    }
+    img {
+        width: $descard-image-mobile; height: $descard-image-mobile;
+        margin-top: $descard-image-mobile-tmar;
+
+        @media (min-width: 579px) {
+            margin-top: $descard-image-tablet-tmar;
+            width: $descard-image-tablet; height: $descard-image-tablet;
+        }
+        @media (min-width: 1200px) {
+            margin-top: $descard-image-desktop-tmar;
+            width: $descard-image-desktop; height: $descard-image-desktop;
+        }
     }
 
     .imagecontainer {

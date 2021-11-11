@@ -32,9 +32,9 @@ export function Columns(props :ColumnsInterface) {
     return (
         <div id='PongDesignColumns' className={columnClassName}>
             {
-                props.columns.map(({title, text}) => {
+                props.columns.map(({title, text}, index :number) => {
                     return (
-                        <div>
+                        <div key={index}>
                             <h3>{title}</h3>
                             <p>{text}</p>
                         </div>

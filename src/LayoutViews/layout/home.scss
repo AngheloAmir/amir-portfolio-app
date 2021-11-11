@@ -7,31 +7,46 @@ $introductionwidth:     80vw;
 $barscolumntopmargin:   12px;
 
 #Home {
-    height: 100vh;
+    position: relative;
 
     .navbar {
         height:     2.5em;
-        flex-grow:  1;
         position:   fixed;
         top:        0; left: 0;
         width:      100vw;
     }
 
     .introduction {
-        background-color: orange;
+        background-color: #373737;
+        background-image: url('./web.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: 50%;
+        background-position-y: 50%;
         display:        flex;
         flex-direction: column;
-        margin-top:     2.5em;
+        //margin-top:     2.5em;
+        min-height:     70vh;
+        padding-bottom: 8px;
         width:          100%;
+
+        .bgimage {
+            position: absolute;
+            width: inherit;
+            height: 100%;
+            z-index: 0;
+        }
+
         @include tabletscreen {
+            min-height:     300px;
             flex-direction: row;
-            height: 60vh;
-            padding: 6vh  calc((100vw - $introductionwidth) / 2) 8vh calc((100vw - $introductionwidth) / 2);
+            padding: 4vh  calc((100vw - $introductionwidth) / 2) 8vh calc((100vw - $introductionwidth) / 2);
             h1 {
                 margin-top: 1em;
             }      
         }
         @include desktopscreen {
+            min-height:     320px;
             padding: 8vh 
             calc(((100vw - $introductionwidth) / 2) + 5vw)
             8vh
@@ -46,8 +61,6 @@ $barscolumntopmargin:   12px;
     }
 
     .barscolumn {
-        border: 3px solid red;
-
         margin-top: $barscolumntopmargin;
         h3 {
             text-align: center;

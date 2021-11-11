@@ -5,11 +5,11 @@ $primary-textcolor: #fff;
 
 $fontsize:          18px;
 $fontsize-big:      24px;
-$fontsize-biggest:  35px;
+$fontsize-biggest:  36px;
 
 //This includes the sliding menu
 $navbar-base-brandleftmargin:   $fontsize * 3;
-$navbar-base-color:             blueviolet;
+$navbar-base-color:             transparent; //  #373737;
 $navbar-base-fontsize:          $fontsize * 1.2;
 $navbar-base-itemactivecolor:   orange;
 $navbar-base-itemcolor:         gray;
@@ -26,6 +26,16 @@ $navbar-dropdown-textcolor:     purple;
 $navbar-dropdown-texthover:     white;
 $navbar-dropdown-width:         auto;
 $navbar-slidingdrawer-height:   100vh;
-$navbar-slidingdrawer-width:    250px;
+$navbar-slidingdrawer-width:    100vw;
 $navbar-slidingmenu-width:      32px;
 $navbar-slidingmenu-height:     5px;
+
+$descard-text-title:            beige;
+$descard-text-alias:            #b4b4a0;
+$descard-text-text:             white;
+$descard-image-mobile:          160px;
+$descard-image-tablet:          190px;
+$descard-image-desktop:         240px;
+$descard-image-mobile-tmar:     24px;
+$descard-image-tablet-tmar:     calc($descard-image-tablet / 2.4);
+$descard-image-desktop-tmar:    32px;
