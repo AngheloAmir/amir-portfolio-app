@@ -4,6 +4,14 @@
 @import '../theme';
 
 #PongDesignColumns {
+    h3 {
+        color: $column-h3;
+    }
+    p {
+        color: $column-p;
+        padding-left: $fontsize;
+        padding-right: $fontsize;
+    }
     h3, p {
         text-align: center;
         font-size: $fontsize;
@@ -13,11 +21,13 @@
 .singular {
     display: flex;
     flex-direction: column;
-    background-color: blueviolet;
     margin: $fontsize 0;
     h3, p {
         text-align: left;
         font-size: $fontsize;
+    }
+    p {
+        margin-bottom: $fontsize;
     }
 }
 

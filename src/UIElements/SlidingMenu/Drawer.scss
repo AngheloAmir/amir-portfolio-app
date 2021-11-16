@@ -3,7 +3,7 @@
 $transitionSpeed: 0.5s;
 
 #PongDesignSlidingMenuDrawer {
-    background-color:       $navbar-dropdown-bgcolor;
+    background-image:   	$navbar-dropdown-bgsliding;
 	height:                 $navbar-slidingdrawer-height;
 	padding: 				$navbar-base-padding;
     position:               fixed;

@@ -1,7 +1,9 @@
 /*
     Defines the styling for the User Interface of each UI Elements
 */
-$primary-textcolor: #fff;
+$primary-textcolor: #f2c85e;
+$secondary-textcolor: #dd8384;
+$paragraph-textcolor: white;
 
 $fontsize:          18px;
 $fontsize-big:      24px;
@@ -9,8 +11,8 @@ $fontsize-biggest:  36px;
 
 //This includes the sliding menu
 $navbar-base-brandleftmargin:   $fontsize * 3;
-$navbar-base-color:             transparent; //  #373737;
-$navbar-base-fontsize:          $fontsize * 1.2;
+$navbar-base-color:             #6e449281;
+$navbar-base-fontsize:          $fontsize;
 $navbar-base-itemactivecolor:   orange;
 $navbar-base-itemcolor:         gray;
 $navbar-base-itemdisabled:      black;
@@ -18,7 +20,8 @@ $navbar-base-itemhover:         green;
 $navbar-base-itemhoverbg:       orange;
 $navbar-base-menuiconcolor:     black;
 $navbar-base-padding:           ($navbar-base-fontsize / 2); //a padding that has many uses.
-$navbar-dropdown-bgcolor:       chocolate;
+$navbar-dropdown-bgcolor:       linear-gradient(to bottom right, #42275a , #734b6d);
+$navbar-dropdown-bgsliding:     linear-gradient(to bottom, #42275a , #734b6d);
 $navbar-dropdown-bghover:       blue;
 $navbar-dropdown-sub-border:    red;
 $navbar-dropdown-sub-colorbg:   green;
@@ -30,8 +33,8 @@ $navbar-slidingdrawer-width:    100vw;
 $navbar-slidingmenu-width:      32px;
 $navbar-slidingmenu-height:     5px;
 
-$descard-text-title:            beige;
-$descard-text-alias:            #b4b4a0;
+$descard-text-title:            #f2c85e;
+$descard-text-alias:            #dd8384;
 $descard-text-text:             white;
 $descard-image-mobile:          160px;
 $descard-image-tablet:          190px;
@@ -39,3 +42,6 @@ $descard-image-desktop:         240px;
 $descard-image-mobile-tmar:     24px;
 $descard-image-tablet-tmar:     calc($descard-image-tablet / 2.4);
 $descard-image-desktop-tmar:    32px;
+
+$column-h3:                     rgb(68, 64, 90);
+$column-p:                      black;

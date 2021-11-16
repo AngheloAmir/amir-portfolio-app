@@ -76,17 +76,30 @@ export default function HomeLayout( props :propsReceive ) {
         </div>
 
         <div className='barscolumn'>
-            <h3>Skills</h3>
-            <Columns 
-                columns={props.skills}
-                isSingleVertical={isMobile}
-                columnCount={isDesktop ? 4 : 2}
-            />
+            <div className='container'>
+                <h3>Skills</h3>
+                <Columns 
+                    columns={props.skills}
+                    isSingleVertical={isMobile}
+                    columnCount={isDesktop ? 4 : 2}
+                />
+            </div>
         </div>
 
-        <div className='barscolumn'>
+        <div className='projects'>
             <h3>Projects</h3>
+            <div className='item'>
+                    asdasdasd
+                </div>
+                <div className='item'>
+                    asdasdasd
+                </div>
             <BasicCard />
+
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta laboriosam facere consequatur architecto accusantium quibusdam ducimus, nam nisi sint porro adipisci sequi tempore repudiandae aspernatur fugit non tenetur dignissimos quia.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta laboriosam facere consequatur architecto accusantium quibusdam ducimus, nam nisi sint porro adipisci sequi tempore repudiandae aspernatur fugit non tenetur dignissimos quia.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta laboriosam facere consequatur architecto accusantium quibusdam ducimus, nam nisi sint porro adipisci sequi tempore repudiandae aspernatur fugit non tenetur dignissimos quia.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta laboriosam facere consequatur architecto accusantium quibusdam ducimus, nam nisi sint porro adipisci sequi tempore repudiandae aspernatur fugit non tenetur dignissimos quia.</p>
         </div>
     </div> 
     );
