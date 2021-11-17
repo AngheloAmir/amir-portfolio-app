@@ -1,5 +1,5 @@
 /**
- * Contents of the DescriptiveCard UI elements
+ * Contents of the HeaderProfile UI elements
  * @example
  * imagepath?       :string;
  * imagesize?       :[string | number, string | number]
@@ -8,11 +8,11 @@
     text?           :string;
     isHorizontal?   :boolean;
  */
-export interface DescriptiveCardInterface {
+export interface HeaderProfileInterface {
     imagepath?      :string;
     imagesize?      :[string | number, string | number]
     title?          :string;
-    alias?          :string;
+    alias?          :Array<string>;
     text?           :string;
     isHorizontal?   :boolean;
 }

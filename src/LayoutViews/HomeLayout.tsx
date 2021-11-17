@@ -14,7 +14,7 @@ import {
     Navbar,
     SlidingMenu,
     NavItem,
-    DescriptiveCard,
+    HeaderProfile,
     //FancyButton,
     Columns,
     BasicCard,
@@ -28,7 +28,7 @@ interface propsReceive {
     };
     introduction :{
         title :string;
-        alias :string;
+        alias :Array<string>;
         text :string;
         imagepath :string;
     };
@@ -47,7 +47,7 @@ interface propsReceive {
 export default function HomeLayout( props :propsReceive ) {
     const { isMobile, isDesktop } = useDimension();
 
-    return (
+    return ( 
     <div id='Home'>
         <div className='navbar'>
             {!isMobile ?
@@ -65,12 +65,11 @@ export default function HomeLayout( props :propsReceive ) {
         </div>
 
         <div className='introduction'>
-            <DescriptiveCard 
+            <HeaderProfile 
                 title={props.introduction.title}
                 alias={props.introduction.alias}
                 text={props.introduction.text}
                 imagepath={props.introduction.imagepath}
-                
                 isHorizontal={!isMobile}
             />
         </div>
@@ -87,19 +86,29 @@ export default function HomeLayout( props :propsReceive ) {
         </div>
 
         <div className='projects'>
-            <h3>Projects</h3>
-            <div className='item'>
-                    asdasdasd
-                </div>
-                <div className='item'>
-                    asdasdasd
-                </div>
-            <BasicCard />
-
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta laboriosam facere consequatur architecto accusantium quibusdam ducimus, nam nisi sint porro adipisci sequi tempore repudiandae aspernatur fugit non tenetur dignissimos quia.</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta laboriosam facere consequatur architecto accusantium quibusdam ducimus, nam nisi sint porro adipisci sequi tempore repudiandae aspernatur fugit non tenetur dignissimos quia.</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta laboriosam facere consequatur architecto accusantium quibusdam ducimus, nam nisi sint porro adipisci sequi tempore repudiandae aspernatur fugit non tenetur dignissimos quia.</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta laboriosam facere consequatur architecto accusantium quibusdam ducimus, nam nisi sint porro adipisci sequi tempore repudiandae aspernatur fugit non tenetur dignissimos quia.</p>
+            <h3>Projects Highlight</h3>
+            <div className='projects-item'>
+                {
+                    props.projects.map((project :{
+                        name :string;
+                        image :string;
+                        description :string;
+                        link :string;
+                    }, index :number) => {
+                        return (
+                            <div key={index}>
+                                <BasicCard
+                                    image={project.image}
+                                    title={project.name}
+                                    text={project.description}
+                                    btn={'Lunch'}
+                                    onpress={() => alert('pressed')}
+                                    />
+                            </div>
+                        )
+                    })
+                }
+            </div>
         </div>
     </div> 
     );

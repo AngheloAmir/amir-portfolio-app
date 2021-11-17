@@ -1,11 +1,21 @@
 /*
 */
 import React from 'react';
+import './BasicCard.scss';
 
-export function BasicCard() {
+import { BasicCardInterface } from '../';
+
+export function BasicCard( props :BasicCardInterface) {
     return (
-        <div>
-            <h2>basic card</h2>
+        <div id='PongDesignBasicCard'>
+            { props.image && <img src={props.image} alt={props.image} />}
+            { props.title && <h3>{props.title}</h3> }
+            { props.text  && <p>{props.text}</p> }
+            { props.btn &&
+                <div>
+                    <button onClick={() => props.onpress && props.onpress() }>{props.btn}</button>
+                </div>
+            }
         </div>
     )
 }

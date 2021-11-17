@@ -12,6 +12,11 @@ $borderdesign-radius-mobile: 96px;
 
 #Home {
     position: relative;
+    padding-bottom: 80px;
+
+    @include tabletscreen {
+        padding-bottom: 10px;
+    }
 
     .navbar {
         height:     2.5em;
@@ -21,14 +26,11 @@ $borderdesign-radius-mobile: 96px;
     }
 
     .introduction { 
-        //background-image: linear-gradient(to right, #2193b0 , #6dd5ed);
-        //background-image: linear-gradient(to bottom right, #42275a , #734b6d);
-        background-image: linear-gradient(to bottom, #5e5390 , #734b6d);
+        background-image: linear-gradient(to bottom, #16222A,#3A6073);
         border-bottom-right-radius: $borderdesign-radius-mobile;
-        display:        flex;
-        flex-direction: column;
         margin-top:     2.5em;
         min-height:     70vh;
+        padding-bottom: 24px;
         width:          100%;
 
         .bgimage {
@@ -64,7 +66,7 @@ $borderdesign-radius-mobile: 96px;
     }
 
     .barscolumn {
-        background-color: #734b6d;
+        background-color: #3A6073;
         
         .container {
             background-color: $defaultbackground;
@@ -93,9 +95,40 @@ $borderdesign-radius-mobile: 96px;
     }
 
     .projects {
+        display: flex;
+        flex-direction: column;
+        margin-left:    10%;
+        margin-top:     5vh;
+        width:          80%;
+
+        @include tabletscreen {
+            margin-left:    15%;
+            width:          70%;
+        }
+        @include desktopscreen {
+            margin-left:    10%;
+            width:          80%;
+        }
+
+        .projects-item {
+            display:  grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            column-gap: 24px;
+            row-gap: 16px;
+
+            @include desktopscreen {
+                display:  grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr;
+                
+            }
+        }
         
-        margin-left: 2.5%;
-        width: 95%;
+        & > h3 {
+            margin-bottom: 24px;
+            text-align: center;
+        }
 
         .item {
             background-color: #734b6d;

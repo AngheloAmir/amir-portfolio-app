@@ -17,7 +17,7 @@ export function FancyButton() {
 	
 	return (
 		<button id="PongDesignFancyButton" style={ iseffect ? { position: "relative" } : {} } onClick={ handleClick } >
-			asdasda asdddddddddddddddddddddd
+			Hire ME
 			{
 				iseffect ? <div className="ripple-effect"></div> : ''
 			}

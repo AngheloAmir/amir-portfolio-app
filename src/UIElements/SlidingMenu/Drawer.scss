@@ -5,7 +5,9 @@ $transitionSpeed: 0.5s;
 #PongDesignSlidingMenuDrawer {
     background-image:   	$navbar-dropdown-bgsliding;
 	height:                 $navbar-slidingdrawer-height;
+	font-size: 				$fontsize * 1.1;
 	padding: 				$navbar-base-padding;
+	padding-left:           $navbar-base-padding;
     position:               fixed;
 	transition:             transform $transitionSpeed cubic-bezier( 0, 0.5, 0, 1);
 	transition-delay:       0.1s;
@@ -21,6 +23,7 @@ $transitionSpeed: 0.5s;
 		color:				$navbar-base-itemactivecolor;
 		padding: 			$navbar-base-fontsize 0;
 		padding-left: 		$navbar-base-padding;
+		text-decoration:    $navbar-base-itemactivecolordec;
 	}
 
 	.disabled {
@@ -34,7 +37,7 @@ $transitionSpeed: 0.5s;
 	}
 
 	.item {
-		color:				$navbar-dropdown-textcolor;
+		color:				$navbar-base-itemcolor;
 		padding: 			$navbar-base-fontsize 0;
 		padding-left: 		$navbar-base-padding;
 		position: 			relative;

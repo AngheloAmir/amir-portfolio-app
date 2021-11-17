@@ -2,6 +2,7 @@
 */
 
 @import '../theme';
+@import '../_lib/mixings';
 
 #PongDesignDescriptiveCard {
     align-content:      center;
@@ -21,6 +22,7 @@
     p {
         color: $descard-text-text;
         font-size: $fontsize;
+        line-height: $fontsize*1.7;
         margin-left: 10%;
         margin-top: $fontsize;
         text-align: center;
@@ -30,11 +32,12 @@
         width: $descard-image-mobile; height: $descard-image-mobile;
         margin-top: $descard-image-mobile-tmar;
 
-        @media (min-width: 579px) {
+        @include tabletscreen {
+            line-height: $fontsize*1.5;
             margin-top: $descard-image-tablet-tmar;
             width: $descard-image-tablet; height: $descard-image-tablet;
         }
-        @media (min-width: 1200px) {
+        @include bigscreen {
             margin-top: $descard-image-desktop-tmar;
             width: $descard-image-desktop; height: $descard-image-desktop;
         }

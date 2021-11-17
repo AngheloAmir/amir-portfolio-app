@@ -14,39 +14,26 @@
 */
 import React from 'react';
 import HomeLayout from '../LayoutViews/HomeLayout';
-import { FaBeer } from 'react-icons/fa';
+import { FaHome, FaReact } from 'react-icons/fa'; 
+import { MdContactPage } from 'react-icons/md';
 
 import porfolioinfo from '../Database/porforlioinfo.json';
 
 export default function HomeScene() {
     const navitems = [
         {
-            name: 'item1',
-            icon: () => <FaBeer />,
-        },
-        {
-            name: 'item2',
-            icon: () => <FaBeer />,
+            name: ' Home',
+            icon: () => <FaHome />,
             active: true
         },
         {
-            name: 'item3',
-            icon: () => <FaBeer />,
-            disabled: true
+            name: ' Projects',
+            icon: () => <FaReact />,
         },
         {
-            name: 'item4',
-            subitem: [
-                {
-                    name: 'sub 1',
-                    icon: () => <FaBeer />
-                },
-                {
-                    name: 'sub 2',
-                    icon: () => <FaBeer />
-                }
-            ]
-        } 
+            name: ' Contacts',
+            icon: () => <MdContactPage />,
+        },
     ];
 
     return (
@@ -54,7 +41,7 @@ export default function HomeScene() {
             <HomeLayout
                 navigationbar={{
                     navitems:       navitems,
-                    brandIconPath:  './assets/test.png',
+                    brandIconPath:  '',
                     navcallback:    (i :number, name :string) => console.log('you pressed :' + name)
                 }}
                 introduction={{

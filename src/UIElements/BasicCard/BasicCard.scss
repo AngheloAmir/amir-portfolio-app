@@ -1,0 +1,61 @@
+/*
+*/
+
+@import '../theme';
+@import '../_lib/mixings';
+
+$basic-card-btn-height:         $fontsize * 2;  
+$basic-card-btn-width:          50vw;
+$basic-card-btn-width-tab:      120px;
+
+#PongDesignBasicCard {
+
+    background-color: #44738a;
+    border-radius:      $basic-card-radius;
+
+
+    display:            flex;
+    flex-direction:     column;
+    align-items:        center;
+    padding:            $fontsize;
+    margin-bottom:      $fontsize;
+
+    img {
+        height:         $basic-card-img-height;
+        width:          $basic-card-img-width;
+        border-radius: 8px;
+        @include desktopscreen {
+            height:     $basic-card-img-height-tab;
+            width:      $basic-card-img-width-tab;
+        }
+    }
+
+    & > h3 {
+        font-size:      $fontsize;
+        margin:         (calc($fontsize / 2)) 0;
+        text-align:     center;
+        
+    }
+
+     & > p  {
+        font-size:      $fontsize;
+        margin:         (calc($fontsize / 2)) 0;
+        text-align:     justify;
+        padding:        0 $fontsize;
+    }
+
+    button {
+        background-color:   $basic-card-btn;
+        border:             0;
+        border-radius:      12px;
+        color:              $basic-card-btn-text;
+        height:             $basic-card-btn-height;
+        font-size:          $fontsize;
+        margin-top:         $fontsize;
+        width:              $basic-card-btn-width;
+        @include tabletscreen {
+            width:      $basic-card-btn-width-tab;
+        }
+    }
+
+}

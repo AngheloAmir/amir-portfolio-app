@@ -1,8 +1,10 @@
 /*
 */
-import './DescriptiveCard.scss';
+import './HeaderProfile.scss';
 
-import { DescriptiveCardInterface } from  '../_lib/DescriptiveCard';
+import Typewriter from 'typewriter-effect';
+
+import { HeaderProfileInterface } from  '../_lib/HeaderProfile';
 
 /**
  * Card used for noticable information such as Profile home page  
@@ -14,7 +16,7 @@ import { DescriptiveCardInterface } from  '../_lib/DescriptiveCard';
     text?           :string;
     isHorizontal?   :boolean;
  */
-export function DescriptiveCard(props :DescriptiveCardInterface) {
+export function HeaderProfile(props :HeaderProfileInterface) {
     const containerClass :string = props.isHorizontal ? 'horizontal' : 'vertical';
     return (
         <div id='PongDesignDescriptiveCard' className={containerClass}>
@@ -31,7 +33,20 @@ export function DescriptiveCard(props :DescriptiveCardInterface) {
                 }
                 <div className='text'>
                     <h1>{props.title}</h1>
-                    <h3>{props.alias}</h3>
+                    <h3>
+                    { props.alias &&
+                        <Typewriter
+                            options={{
+                                strings: props.alias,
+                                cursor: '',
+                                autoStart: true,
+                                loop: true,
+                                delay: 50,
+                                deleteSpeed: 30,
+                            }}
+                        />
+                    }
+                    </h3>
                     <p>{props.text}</p>
                 </div>
         </div>
