@@ -8,7 +8,7 @@ $secondary-textcolor: #dd8384;
 $paragraph-textcolor: white;
 */
 $primary-textcolor: #1F7872;
-$secondary-textcolor: #dd8384;
+$secondary-textcolor:  #72B095; //#dd8384;
 $paragraph-textcolor: white;
 
 $fontsize:          18px;
@@ -53,10 +53,11 @@ $descard-image-desktop-tmar:    32px;
 $column-h3:                     #1F7872;
 $column-p:                      black;
 
+$basic-card-bg:                 #44738a;
 $basic-card-btn:                rgb(52, 86, 104);
 $basic-card-btn-text:           black;
-$basic-card-img-height:         160px;
+$basic-card-img-height:         180px;
 $basic-card-img-width:          212px; //4:3 ratio
 $basic-card-img-height-tab:     160px; //responsive design
 $basic-card-img-width-tab:      212px;
-$basic-card-radius:             32px;
+$basic-card-radius:             8px;

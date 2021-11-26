@@ -14,27 +14,27 @@
     "projects": [
         {
             "name": "Gala: Virtual Tour Guide for the City of Santa Rosa Laguna",
-            "image": "./assets/gala.jpg",
+            "image": "./assets/galaappbg1.png",
+            "tags": ["asdadas", "asdasda"],
             "description": "A fully featured mobile application for the tourist of Santa Rosa City. It features a GPS navigation, online forum, and addtional features that a tourist will needs! Created using React Native Expo for our Capstone Project.", 
-            "link": "asdasdada"
+            "link": "asdasdada",
+            "btntext": "Visit"
         },
         {
             "name": "My Porfolio in React.js",
             "image": "./assets/porfolio.jpg",
+            "tags": ["asdadas", "asdasda"],
             "description": "This porfolio website is created using React.js with Typescript and Sass. It is stutured in a very REUSABLE fashion. By changing the values in src/Database.porfolioinfo.json, one can reuse this temple. Yes! you are freely to reuse it.",
-            "link": "asdasdada"
+            "link": "asdasdada",
+            "btntext": "Visit"
         },
         {
             "name": "personalreviewer",
-            "image": "./assets/test.png",
+            "image": "./assets/personalrev.png",
+            "tags": ["asdadas", "asdasda"],
             "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et nihil recusandae ad suscipit illum nobis, sapiente animi numquam saepe facere minima, necessitatibus assumenda fuga excepturi tempora ipsum maiores expedita! Eaque.",
-            "link": "asdasdada"
-        },
-        {
-            "name": "A notes",
-            "image": "./assets/test.png",
-            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et nihil recusandae ad suscipit illum nobis, sapiente animi numquam saepe facere minima, necessitatibus assumenda fuga excepturi tempora ipsum maiores expedita! Eaque.",
-            "link": "asdasdada"
+            "link": "asdasdada",
+            "btntext": "Visit"
         }
     ]
 }

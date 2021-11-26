@@ -39,7 +39,8 @@
         }
         @include bigscreen {
             margin-top: $descard-image-desktop-tmar;
-            width: $descard-image-desktop; height: $descard-image-desktop;
+            width: $descard-image-desktop;
+            height: $descard-image-desktop;
         }
     }
 
@@ -47,7 +48,6 @@
         display:            flex;
         justify-content:    center;
     }
-
 }
 
 .horizontal {

@@ -10,6 +10,8 @@ $defaultbackground:     #c0b2a7;
 $borderdesign-radius:      128px;
 $borderdesign-radius-mobile: 96px;
 
+$introbackground-image: linear-gradient(to bottom, #16222A,#3A6073);
+
 #Home {
     position: relative;
     padding-bottom: 80px;
@@ -26,11 +28,12 @@ $borderdesign-radius-mobile: 96px;
     }
 
     .introduction { 
-        background-image: linear-gradient(to bottom, #16222A,#3A6073);
+        background-image: $introbackground-image;
         border-bottom-right-radius: $borderdesign-radius-mobile;
+        min-height:     95vh;
         margin-top:     2.5em;
-        min-height:     70vh;
         padding-bottom: 24px;
+        padding-top:    5vh;
         width:          100%;
 
         .bgimage {
@@ -42,86 +45,94 @@ $borderdesign-radius-mobile: 96px;
 
         @include tabletscreen {
             border-bottom-right-radius: $borderdesign-radius;
+            height:         100vh;
             margin-top:     0;
             min-height:     300px;
             flex-direction: row;
-            padding: 4vh  calc((100vw - $introductionwidth) / 2) 8vh calc((100vw - $introductionwidth) / 2);
+            padding: 20vh  calc((100vw - $introductionwidth) / 2) 8vh calc((100vw - $introductionwidth) / 2);
             h1 {
                 margin-top: 1em;
             }      
         }
         @include desktopscreen {
             min-height:     320px;
-            padding: 8vh 
+            padding: 20vh 
             calc(((100vw - $introductionwidth) / 2) + 5vw)
             8vh
             calc(((100vw - $introductionwidth) / 2) + 5vw);
         }
         @include bigscreen {
-            padding: 10vh 
+            padding: 25vh 
             calc(((100vw - $introductionwidth) / 2) + 5vw)
             8vh
             calc(((100vw - $introductionwidth) / 2) + 5vw);
         }
     }
 
-    .barscolumn {
+    #barscolumn {
         background-color: #3A6073;
+        width: 100%;
         
         .container {
+            display: flex;
+            align-content: center;
             background-color: $defaultbackground;
             border-top-left-radius: $borderdesign-radius-mobile;
-            padding-top: $barscolumntopmargin;
-            padding-left: 5%;
-            padding-right: 5%;
-    
-            & > h3 {
-                text-align: center;
-                color: black;
-            }
+
             @include tabletscreen {
                 border-top-left-radius: $borderdesign-radius;
-                flex-direction: row;
-                padding-left: calc((100vw - $introductionwidth) / 2);
-                padding-right: calc((100vw - $introductionwidth) / 2);
-                h1 {
-                    margin-top: 1em;
-                }
-                p {
+            }
+
+            .content {
+                margin: auto;
+                max-width: 1200px;
+                padding: $barscolumntopmargin 5% 5% 5%;
+                
+                & > h3 {
                     text-align: center;
+                    color: black;
+                }
+                @include tabletscreen {
+                    border-top-left-radius: $borderdesign-radius;
+                    h1 {
+                        margin-top: 1em;
+                    }
+                    p {
+                        text-align: center;
+                    }
                 }
             }
         }
     }
 
-    .projects {
+    #projects {
         display: flex;
         flex-direction: column;
-        margin-left:    10%;
-        margin-top:     5vh;
-        width:          80%;
-
-        @include tabletscreen {
-            margin-left:    15%;
-            width:          70%;
-        }
+        justify-content: space-evenly;
+        margin-left:    10vw;
+        margin-top:     0vw;
+        width:          80vw;
+        
         @include desktopscreen {
-            margin-left:    10%;
-            width:          80%;
+            margin-left:    5%;
+            width:          90%;
         }
 
         .projects-item {
             display:  grid;
             grid-template-columns: 1fr;
             grid-template-rows: 1fr;
-            column-gap: 24px;
+            column-gap: 5%;
             row-gap: 16px;
 
-            @include desktopscreen {
-                display:  grid;
+            @include tabletscreen {
                 grid-template-columns: 1fr 1fr;
-                grid-template-rows: 1fr;
-                
+            }
+
+            @include desktopscreen {
+                grid-template-columns: 1fr 1fr 1fr;
+                max-width: 1000px;
+                align-self: center;
             }
         }
         

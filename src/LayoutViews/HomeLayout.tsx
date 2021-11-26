@@ -18,6 +18,7 @@ import {
     //FancyButton,
     Columns,
     BasicCard,
+    LinedStyled
 } from '../UIElements';
 
 interface propsReceive {
@@ -36,12 +37,16 @@ interface propsReceive {
         title: string;
         text :string;
     }>;
-    projects :Array<{
-        name :string;
-        image :string;
-        description :string;
-        link :string;
-    }>;
+    projects :Array<Cards>;
+}
+
+interface Cards {
+    name :string;
+    image :string;
+    description :string;
+    tags :Array<string>;
+    link :string;
+    btntext: string;
 }
 
 export default function HomeLayout( props :propsReceive ) {
@@ -74,40 +79,41 @@ export default function HomeLayout( props :propsReceive ) {
             />
         </div>
 
-        <div className='barscolumn'>
+        <div id='barscolumn'>
             <div className='container'>
-                <h3>Skills</h3>
-                <Columns 
-                    columns={props.skills}
-                    isSingleVertical={isMobile}
-                    columnCount={isDesktop ? 4 : 2}
-                />
+                <div className='content'>
+                    <h3>Skills</h3>
+                    <Columns 
+                        columns={props.skills}
+                        isSingleVertical={isMobile}
+                        columnCount={isDesktop ? 4 : 2}
+                    />
+                </div>
             </div>
         </div>
 
-        <div className='projects'>
-            <h3>Projects Highlight</h3>
+        <div id='projects'>
+            <LinedStyled
+                text='Projects Highlight'
+                isHorizontal={!isMobile}
+            />
             <div className='projects-item'>
-                {
-                    props.projects.map((project :{
-                        name :string;
-                        image :string;
-                        description :string;
-                        link :string;
-                    }, index :number) => {
-                        return (
-                            <div key={index}>
-                                <BasicCard
-                                    image={project.image}
-                                    title={project.name}
-                                    text={project.description}
-                                    btn={'Lunch'}
-                                    onpress={() => alert('pressed')}
-                                    />
-                            </div>
-                        )
-                    })
-                }
+            {
+                props.projects.map((project :Cards, index :number) => {
+                    return (
+                        <div key={index}>
+                            <BasicCard
+                                image={project.image}
+                                title={project.name}
+                                text={project.description}
+                                btn={project.btntext}
+                                tags={project.tags}
+                                onpress={() => alert('pressed')}
+                                />
+                        </div>
+                    )
+                })
+            }
             </div>
         </div>
     </div> 

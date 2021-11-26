@@ -11,11 +11,6 @@ export function BasicCard( props :BasicCardInterface) {
             { props.image && <img src={props.image} alt={props.image} />}
             { props.title && <h3>{props.title}</h3> }
             { props.text  && <p>{props.text}</p> }
-            { props.btn &&
-                <div>
-                    <button onClick={() => props.onpress && props.onpress() }>{props.btn}</button>
-                </div>
-            }
         </div>
     )
 }

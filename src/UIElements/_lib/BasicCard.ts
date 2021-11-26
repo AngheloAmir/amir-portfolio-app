@@ -9,5 +9,6 @@ export interface BasicCardInterface {
     title?   :string;
     text?    :string;
     btn?     :string;
+    tags?    :Array<string>;
     onpress? :() => void;
 }

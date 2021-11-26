@@ -11,3 +11,4 @@ export { HeaderProfile } from './HeaderProfile/HeaderProfile';
 export { FancyButton } from './FancyButton/FancyButton';
 export { Columns } from './Columns/Columns';
 export { BasicCard } from './BasicCard/BasicCard';
+export { LinedStyled } from './LinedStyled/LinedStyled';
