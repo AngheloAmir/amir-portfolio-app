@@ -1,0 +1,41 @@
+{
+    "profile": "./assets/profile.png",
+    "name": "Anghelo Amir",
+    "title": ["IT and Web Developer", "React.js & Node.js Developer", "with typescript and sass", "and Java (OOP)!"],
+    "introtext": "Passionate programmer and pursuing a career in web development, especially in React JS and React Native. As he found love in this framework; they were fun and challenging to do. Besides, can do design and IT related stuff. Being a fast learner and performing many trials and errors is the key to complete any programming task.",
+    "btnaction": ["Download Resume", "Message Me"],
+
+    "skills": [
+        { "title": "Web, JavaScript & Typescript", "text": "Mastering the fundamentals of HTML, CSS, JavaScript and TypeScript. I may not be the best in web design, but I assure proper coding design skills. Most of my projects use Typescript as it is easier to maintain." },
+        { "title": "React & React Native", "text": "I Have been practicing with these frameworks for more than 12 months. My skill sharpened over the year, and I learned new techniques to use this framework effectively. I use context API instead of Redux."},
+        { "title": "Express.js and MongoDB", "text": "I gained skill with these frameworks thru practice. However, most of my projects do not use these technologies. But still, I can assure to build quality code for the backend of the project."},
+        { "title": "Java (OOP)", "text": "My first programming language is assembly 6502, then C/C++, and then Java. I have learned to program about eight years ago so, my skill in the logic of programming is well developed."}
+    ],
+
+    "projects": [
+        {
+            "name": "Gala: Virtual Tour Guide",
+            "image": "./assets/galaappbg1.png",
+            "tags": ["React-Native (Expo)", "Express.js", "MongoDB", "Typescript"],
+            "description": "Gala VTG is a full-featured mobile application for tourists of Santa Rosa City. It has GPS navigation, an online forum, and additional features that a tourist will need! The app was created using React Native Expo, Node.js, and MongoDB for the backend.", 
+            "link": "asdasdada",
+            "btntext": "Lunch"
+        },
+        {
+            "name": "My porfolio website",
+            "image": "./assets/porfolio.jpg",
+            "tags": ["React.js", "Typescript", "SASS"],
+            "description": "My portfolio website is single page application that is created with React.js, Typescript, and Sass. It is designed to have reusable components, which makes it easier to maintain. To change the information provided, it is easy as changing the values in the portfolio.json.",
+            "link": "asdasdada",
+            "btntext": "View repo"
+        },
+        {
+            "name": "Personal Reviewer",
+            "image": "./assets/personalrev.png",
+            "tags": ["React Native (Expo)", "Typescript"],
+            "description": "Personal Reviewer is a mobile application developed with React Native Expo. It is made for my study as a student of Information Technology course. Currently, it is optimized to work on android phones with a smaller screen; to speed up the development of the program.",
+            "link": "asdasdada",
+            "btntext": "View repo"
+        }
+    ]
+}

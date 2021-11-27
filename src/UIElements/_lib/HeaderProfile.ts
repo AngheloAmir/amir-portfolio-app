@@ -15,4 +15,6 @@ export interface HeaderProfileInterface {
     alias?          :Array<string>;
     text?           :string;
     isHorizontal?   :boolean;
+    btnaction?      :Array<string>;
+    btnactioncallback? :(index :number, itemname :string) => void;
 }

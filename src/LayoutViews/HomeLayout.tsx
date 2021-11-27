@@ -9,52 +9,23 @@
         The user is at home page
 */
 import './layout/home.scss';
-import useDimension from '../Utilities/useWindowDimension'
+import useDimension from '../_app/useWindowDimension';
+import { HomeLayoutInterface } from './_lib/HomeLayoutInterface';
 import {
     Navbar,
     SlidingMenu,
-    NavItem,
     HeaderProfile,
-    //FancyButton,
     Columns,
     BasicCard,
     LinedStyled
 } from '../UIElements';
 
-interface propsReceive {
-    navigationbar :{
-        brandIconPath :string;
-        navitems :Array<NavItem>;
-        navcallback :(i :number, name :string) => void;
-    };
-    introduction :{
-        title :string;
-        alias :Array<string>;
-        text :string;
-        imagepath :string;
-    };
-    skills: Array<{
-        title: string;
-        text :string;
-    }>;
-    projects :Array<Cards>;
-}
-
-interface Cards {
-    name :string;
-    image :string;
-    description :string;
-    tags :Array<string>;
-    link :string;
-    btntext: string;
-}
-
-export default function HomeLayout( props :propsReceive ) {
+export default function HomeLayout( props :HomeLayoutInterface.propsReceive ) {
     const { isMobile, isDesktop } = useDimension();
 
     return ( 
     <div id='Home'>
-        <div className='navbar'>
+        <div id='navbar'>
             {!isMobile ?
                 <Navbar
                     brandIconPath={props.navigationbar.brandIconPath}
@@ -69,13 +40,15 @@ export default function HomeLayout( props :propsReceive ) {
             }
         </div>
 
-        <div className='introduction'>
+        <div id='introduction'>
             <HeaderProfile 
                 title={props.introduction.title}
                 alias={props.introduction.alias}
                 text={props.introduction.text}
                 imagepath={props.introduction.imagepath}
                 isHorizontal={!isMobile}
+                btnaction={props.introduction.btnaction}
+                btnactioncallback={props.introduction.btnactioncallback}
             />
         </div>
 
@@ -99,7 +72,7 @@ export default function HomeLayout( props :propsReceive ) {
             />
             <div className='projects-item'>
             {
-                props.projects.map((project :Cards, index :number) => {
+                props.projects.map((project :HomeLayoutInterface.Cards, index :number) => {
                     return (
                         <div key={index}>
                             <BasicCard

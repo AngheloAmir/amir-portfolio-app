@@ -20,14 +20,14 @@ $introbackground-image: linear-gradient(to bottom, #16222A,#3A6073);
         padding-bottom: 10px;
     }
 
-    .navbar {
+    #navbar {
         height:     2.5em;
         position:   fixed;
         top:        0; left: 0;
         width:      100vw;
     }
 
-    .introduction { 
+    #introduction { 
         background-image: $introbackground-image;
         border-bottom-right-radius: $borderdesign-radius-mobile;
         min-height:     95vh;
@@ -72,7 +72,7 @@ $introbackground-image: linear-gradient(to bottom, #16222A,#3A6073);
     #barscolumn {
         background-color: #3A6073;
         width: 100%;
-        
+
         .container {
             display: flex;
             align-content: center;
@@ -84,11 +84,12 @@ $introbackground-image: linear-gradient(to bottom, #16222A,#3A6073);
             }
 
             .content {
-                margin: auto;
+                margin-top: 0.5rem;
                 max-width: 1200px;
                 padding: $barscolumntopmargin 5% 5% 5%;
                 
                 & > h3 {
+                    margin: 0 0 0.5rem 0;
                     text-align: center;
                     color: black;
                 }
@@ -111,6 +112,7 @@ $introbackground-image: linear-gradient(to bottom, #16222A,#3A6073);
         justify-content: space-evenly;
         margin-left:    10vw;
         margin-top:     0vw;
+        margin-bottom:  10vh;
         width:          80vw;
         
         @include desktopscreen {
@@ -119,11 +121,12 @@ $introbackground-image: linear-gradient(to bottom, #16222A,#3A6073);
         }
 
         .projects-item {
-            display:  grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr;
-            column-gap: 5%;
-            row-gap: 16px;
+            display:                grid;
+            grid-template-columns:  1fr;
+            grid-template-rows:     1fr;
+            column-gap:             5%;
+            row-gap:                16px;
+            padding-top:            1rem;
 
             @include tabletscreen {
                 grid-template-columns: 1fr 1fr;

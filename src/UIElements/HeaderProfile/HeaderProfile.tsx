@@ -49,6 +49,14 @@ export function HeaderProfile(props :HeaderProfileInterface) {
                     </h3>
                     <p>{props.text}</p>
                 </div>
+
+                { props.btnaction &&
+                    <h4>{props.btnaction[0]}</h4>
+                }
+
+                { props.btnaction &&
+                    <h4>{props.btnaction[1]}</h4>
+                }
         </div>
     )
 }

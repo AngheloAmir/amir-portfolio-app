@@ -9,67 +9,78 @@ $basic-card-btn-width:          50vw;
 $basic-card-btn-width-tab:      120px;
 
 #PongDesignBasicCard {
-    background-image: linear-gradient(to bottom, #16222A,#3A6073);
-    //border-radius:      $basic-card-radius;
-    border-top-left-radius: 2px;
-    border-top-right-radius: 2px;
-    box-shadow: 3px 3px rgba($color: #000000, $alpha: 0.2);
+    background-image:   linear-gradient(to bottom, #16222A,#3A6073);
+    box-shadow:         3px 3px rgba($color: #000000, $alpha: 0.2);
     display:            flex;
     flex-direction:     column;
     align-items:        center;
-    //padding:            $fontsize;
-    margin-bottom:      $fontsize;
+    //margin-bottom:      $fontsize;
+    height:             100%;
+    overflow-x:           hidden;
 
     img {
         height:         $basic-card-img-height;
-        border-top-left-radius: 2px;
-        border-top-right-radius: 2px;
-       // border-top-left-radius: 8px;
-        //border-top-right-radius: 8px;
         width:          100%;
+    }
 
-        /*
-        height:         $basic-card-img-height;
-        width:          $basic-card-img-width;
-        border-radius: 8px;
-        @include desktopscreen {
-            height:     $basic-card-img-height-tab;
-            width:      $basic-card-img-width-tab;
+    .information {
+        flex-direction:     column;
+        align-items:        center;
+        height: 50%;
+
+        & > h3 {
+            color:          $primary-textcolor;
+            font-size:      $fontsize * 1.1;
+            margin:         (calc($fontsize / 2)) 0;
+            text-align:     center;
+            font-weight:    500;
+            width:          80%;
         }
-        */
-    }
-
-    & > h3 {
-        color:          $secondary-textcolor;
-        font-size:      $fontsize;
-        margin:         (calc($fontsize / 2)) 0;
-        text-align:     center;
-        font-weight:    500;
-        width:          80%;
-        
-    }
-
-     & > p  {
-         color: white;
-        font-size:      $fontsize * 0.9;
-        line-height:  $fontsize * 1.5;
-        margin:         (calc($fontsize / 2)) 0;
-        //text-align:     justify;
-        padding:        0 $fontsize;
-        //display:        ;
+    
+         & > p  {
+            color: white;
+            font-size:      $fontsize * 0.9;
+            margin:         (calc($fontsize / 2)) 0;
+            padding:        0 $fontsize;
+        }
+    
+        .tags {
+            align-self:     baseline;
+            margin-left:    5%;
+            width:          90%;
+            
+            span {
+                display:        inline-block;
+                font-size:      $fontsize * 0.8;
+                margin-right:   0.5rem;
+                color:          $secondary-textcolor;
+            }
+        }
     }
 
     button {
         background-color:   $basic-card-btn;
-        border:             0;
-        border-radius:      12px;
+        border:             1px solid black;
+        //border-radius:      12px;
         color:              $basic-card-btn-text;
         height:             $basic-card-btn-height;
-        font-size:          $fontsize;
+        font-size:          $fontsize * 0.8;
         margin-top:         $fontsize;
+        margin-bottom:      $fontsize;
         width:              $basic-card-btn-width;
+
+        &:hover {
+            background-color:  $basic-card-btn-hover;
+            border:            0;
+            color:             $basic-card-btn-hover-text;
+        }
+
+        &:active {
+            background-color: rgb(121, 90, 33);
+        }
+
         @include tabletscreen {
-            width:      $basic-card-btn-width-tab;
+            width:          $basic-card-btn-width-tab;
         }
     }
 

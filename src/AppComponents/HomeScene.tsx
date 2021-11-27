@@ -17,7 +17,7 @@ import HomeLayout from '../LayoutViews/HomeLayout';
 import { FaHome, FaReact } from 'react-icons/fa'; 
 import { MdContactPage } from 'react-icons/md';
 
-import porfolioinfo from '../Database/porforlioinfo.json';
+import porfolioinfo from '../_database/portfolio.json';
 
 export default function HomeScene() {
     const navitems = [
@@ -36,6 +36,10 @@ export default function HomeScene() {
         },
     ];
 
+    const handleIntroductionBTNAction = (i :number, itemname :string) => {
+        console.log('Pressed: ' + itemname);
+    }
+
     return (
         <React.Fragment>
             <HomeLayout
@@ -48,7 +52,9 @@ export default function HomeScene() {
                     title:      porfolioinfo.name,
                     alias:      porfolioinfo.title,
                     text:       porfolioinfo.introtext,
-                    imagepath:  porfolioinfo.profile
+                    imagepath:  porfolioinfo.profile,
+                    btnaction:  porfolioinfo.btnaction,
+                    btnactioncallback: handleIntroductionBTNAction
                 }}
                 skills={porfolioinfo.skills}
                 projects={porfolioinfo.projects}
