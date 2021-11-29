@@ -60,7 +60,9 @@ $basic-card-btn-width-tab:      120px;
 
     button {
         background-color:   $basic-card-btn;
-        border:             1px solid black;
+        box-shadow: 1px 1px rgba(0, 0, 0, 0.171);
+        border: 0;
+        //border:             1px solid black;
         //border-radius:      12px;
         color:              $basic-card-btn-text;
         height:             $basic-card-btn-height;

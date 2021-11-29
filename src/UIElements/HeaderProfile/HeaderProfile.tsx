@@ -15,6 +15,8 @@ import { HeaderProfileInterface } from  '../_lib/HeaderProfile';
     alias?          :string;
     text?           :string;
     isHorizontal?   :boolean;
+    btnaction?      :Array<string>;
+    btnactioncallback? :(index :number, itemname :string) => void;
  */
 export function HeaderProfile(props :HeaderProfileInterface) {
     const containerClass :string = props.isHorizontal ? 'horizontal' : 'vertical';
@@ -28,7 +30,6 @@ export function HeaderProfile(props :HeaderProfileInterface) {
                             :
                             <img src={props.imagepath} alt={props.imagepath} />
                         }
-                        
                     </div>
                 }
                 <div className='text'>
@@ -51,11 +52,11 @@ export function HeaderProfile(props :HeaderProfileInterface) {
                 </div>
 
                 { props.btnaction &&
-                    <h4>{props.btnaction[0]}</h4>
+                     <h4>{props.btnaction[0]}</h4>
                 }
 
                 { props.btnaction &&
-                    <h4>{props.btnaction[1]}</h4>
+                     <h4>{props.btnaction[1]}</h4>
                 }
         </div>
     )
