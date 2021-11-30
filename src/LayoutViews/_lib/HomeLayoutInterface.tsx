@@ -22,6 +22,7 @@ export namespace HomeLayoutInterface {
             text :string;
         }>;
         projects :Array<Cards>;
+        projectOnAction: (index :number, name :string) => void;
     }
     
     export interface Cards {

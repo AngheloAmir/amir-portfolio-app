@@ -21,7 +21,7 @@ export function BasicCard( props :BasicCardInterface) {
                     }
                 </div>
             </div>
-            { props.btn && <button>{props.btn}</button> }
+            { props.btn && <button onClick={props.onpress}>{props.btn}</button> }
         </div>
     )
 }

@@ -81,7 +81,7 @@ export default function HomeLayout( props :HomeLayoutInterface.propsReceive ) {
                                 text={project.description}
                                 btn={project.btntext}
                                 tags={project.tags}
-                                onpress={() => alert('pressed')}
+                                onpress={() => props.projectOnAction(index, project.name)}
                                 />
                         </div>
                     )

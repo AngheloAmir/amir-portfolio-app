@@ -16,7 +16,6 @@ import React from 'react';
 import HomeLayout from '../LayoutViews/HomeLayout';
 import { FaHome, FaReact } from 'react-icons/fa'; 
 import { MdContactPage } from 'react-icons/md';
-
 import porfolioinfo from '../_database/portfolio.json';
 
 export default function HomeScene() {
@@ -36,8 +35,18 @@ export default function HomeScene() {
         },
     ];
 
+
+    //https://msng.link/o/?Anghelo Amir=fm
+
+
     const handleIntroductionBTNAction = (i :number, itemname :string) => {
-        console.log('Pressed: ' + itemname);
+        if(i == 0) {
+            window.open('./downloadable/amir-anghelo-resume-webdeveloper.pdf');
+        }
+    }
+
+    const handleProjectAction = (index :number, name :string) => {
+        window.open( porfolioinfo.projects[index].link);
     }
 
     return (
@@ -58,6 +67,7 @@ export default function HomeScene() {
                 }}
                 skills={porfolioinfo.skills}
                 projects={porfolioinfo.projects}
+                projectOnAction={handleProjectAction}
             />
         </React.Fragment>
     );

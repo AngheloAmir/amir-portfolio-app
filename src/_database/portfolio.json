@@ -1,9 +1,9 @@
 {
     "profile": "./assets/profile.png",
     "name": "Anghelo Amir",
-    "title": ["IT and Web Developer", "React.js & Node.js Developer", "with typescript and sass", "and Java (OOP)!"],
+    "title": ["IT and Web Developer", "React.js & Node.js Developer", "with typescript and sass", "Others: Java, C#"],
     "introtext": "Passionate programmer and pursuing a career in web development, especially in React JS and React Native. As he found love in this framework; they were fun and challenging to do. Besides, can do design and IT related stuff. Being a fast learner and performing many trials and errors is the key to complete any programming task.",
-    "btnaction": ["Download Resume", "Message Me"],
+    "btnaction": ["View Resume", "Reach Me Out"],
 
     "skills": [
         { "title": "Web, JavaScript & Typescript", "text": "Mastering the fundamentals of HTML, CSS, JavaScript and TypeScript. I may not be the best in web design, but I assure proper coding design skills. Most of my projects use Typescript as it is easier to maintain." },
@@ -18,7 +18,7 @@
             "image": "./assets/galaappbg1.png",
             "tags": ["React-Native (Expo)", "Express.js", "MongoDB", "Typescript"],
             "description": "Gala VTG is a full-featured mobile application for tourists of Santa Rosa City. It has GPS navigation, an online forum, and additional features that a tourist will need! The app was created using React Native Expo, Node.js, and MongoDB for the backend.", 
-            "link": "asdasdada",
+            "link": "#home",
             "btntext": "Lunch"
         },
         {
@@ -26,7 +26,7 @@
             "image": "./assets/porfolio.jpg",
             "tags": ["React.js", "Typescript", "SASS"],
             "description": "My portfolio website is single page application that is created with React.js, Typescript, and Sass. It is designed to have reusable components, which makes it easier to maintain. To change the information provided, it is easy as changing the values in the portfolio.json.",
-            "link": "asdasdada",
+            "link": "https://github.com/AngheloAmir/amir-portfolio-app",
             "btntext": "View repo"
         },
         {
@@ -34,7 +34,7 @@
             "image": "./assets/personalrev.png",
             "tags": ["React Native (Expo)", "Typescript"],
             "description": "Personal Reviewer is a mobile application developed with React Native Expo. It is made for my study as a student of Information Technology course. Currently, it is optimized to work on android phones with a smaller screen; to speed up the development of the program.",
-            "link": "asdasdada",
+            "link": "https://github.com/AngheloAmir/personalreviewer",
             "btntext": "View repo"
         }
     ]

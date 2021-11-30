@@ -5,6 +5,7 @@ import './HeaderProfile.scss';
 import Typewriter from 'typewriter-effect';
 
 import { HeaderProfileInterface } from  '../_lib/HeaderProfile';
+import { FancyButton } from '../';
 
 /**
  * Card used for noticable information such as Profile home page  
@@ -42,22 +43,32 @@ export function HeaderProfile(props :HeaderProfileInterface) {
                                 cursor: '',
                                 autoStart: true,
                                 loop: true,
-                                delay: 50,
+                                delay: 30,
                                 deleteSpeed: 30,
+                                //@ts-ignore
+                                pauseFor: 2000,
                             }}
                         />
                     }
                     </h3>
                     <p>{props.text}</p>
+
+                    { props.btnaction && props.btnactioncallback &&
+                    <div id='calltoactions'> 
+                        { props.btnaction[0] && 
+                            <FancyButton name={props.btnaction[0]}
+                            //@ts-ignore
+                            callback={() => props.btnactioncallback(0, props.btnaction[0])} />
+                        }
+                        { props.btnaction[1] &&
+                            <FancyButton name={props.btnaction[1]}
+                            //@ts-ignore
+                            callback={() => props.btnactioncallback(1, props.btnaction[1])} />
+                        }
+                    </div>
+                    }
+
                 </div>
-
-                { props.btnaction &&
-                     <h4>{props.btnaction[0]}</h4>
-                }
-
-                { props.btnaction &&
-                     <h4>{props.btnaction[1]}</h4>
-                }
         </div>
     )
 }

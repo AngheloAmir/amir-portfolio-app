@@ -1,7 +1,12 @@
 /**
  * Contents of the Basic Card UI Element
  * @example
- * 
+ * image?   :string;
+    title?   :string;
+    text?    :string;
+    btn?     :string;
+    tags?    :Array<string>;
+    onpress? :() => void;
  */
 
 export interface BasicCardInterface {

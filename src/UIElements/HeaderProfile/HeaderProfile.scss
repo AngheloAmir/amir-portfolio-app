@@ -9,25 +9,6 @@
     display:            flex;
     width:              auto;
 
-    h1 {
-        color: $descard-text-title;
-        font-size: $fontsize-biggest;
-        text-align: center;
-    }
-    h3 {
-        color: $descard-text-alias;
-        font-size: $fontsize-big;
-        text-align: center;
-    }
-    p {
-        color: $descard-text-text;
-        font-size: $fontsize;
-        line-height: $fontsize*1.7;
-        margin-left: 10%;
-        margin-top: $fontsize;
-        text-align: center;
-        width: 80%;
-    }
     img {
         width: $descard-image-mobile; height: $descard-image-mobile;
         margin-top: $descard-image-mobile-tmar;
@@ -47,6 +28,48 @@
     .imagecontainer {
         display:            flex;
         justify-content:    center;
+    }
+
+    .text {
+        h1 {
+            color: $descard-text-title;
+            font-size: $fontsize-biggest;
+            text-align: center;
+        }
+        h3 {
+            color: $descard-text-alias;
+            font-size: $fontsize-big;
+            text-align: center;
+        }
+        p {
+            color: $descard-text-text;
+            font-size: $fontsize;
+            line-height: $fontsize*1.7;
+            margin-left: 10%;
+            margin-top: $fontsize;
+            text-align: center;
+            width: 80%;
+        }
+
+        #calltoactions {
+            margin-top: $fontsize;
+            align-content: center;
+            margin-left: 10%;
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+    
+            @include tabletscreen {
+                justify-content: space-evenly;
+                flex-direction: row;
+                margin-left: 0%;
+                width: 100%;
+
+                button {
+                    width: 40% !important;
+                }
+            }
+        }
     }
 }
 

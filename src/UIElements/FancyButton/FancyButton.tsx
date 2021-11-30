@@ -1,26 +1,16 @@
 /*
 */
-import React from 'react';
 import './FancyButton.scss';
 
-export function FancyButton() {
-    const [iseffect, setEffect] = React.useState( false );
-	
+export function FancyButton( {name, callback } :{name :string, callback :() => void}) {
 	const handleClick = (e :any) => {
 		e.stopPropagation();
-		setEffect( true );
-		setTimeout( () => {
-				setEffect( false );
-				//callback();
-			}, 300 );
+		callback();
 	}
 	
 	return (
-		<button id="PongDesignFancyButton" style={ iseffect ? { position: "relative" } : {} } onClick={ handleClick } >
-			Hire ME
-			{
-				iseffect ? <div className="ripple-effect"></div> : ''
-			}
+		<button id="PongDesignFancyButton" onClick={ handleClick } >
+			{name}
 		</button>
 	);
 }
