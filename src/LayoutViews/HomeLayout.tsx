@@ -3,7 +3,7 @@
         Layout - A layout 
 
     @DESCRIPTION
-        Handle the appearance of the home page
+        Handle and renders appearance of the home page
 
     @VISIBLE
         The user is at home page
@@ -17,11 +17,12 @@ import {
     HeaderProfile,
     Columns,
     BasicCard,
-    LinedStyled
+    LinedStyled,
+    ModalBox
 } from '../UIElements';
 
 export default function HomeLayout( props :HomeLayoutInterface.propsReceive ) {
-    const { isMobile, isDesktop } = useDimension();
+    const { isMobile } = useDimension();
 
     return ( 
     <div id='Home'>
@@ -59,7 +60,8 @@ export default function HomeLayout( props :HomeLayoutInterface.propsReceive ) {
                     <Columns 
                         columns={props.skills}
                         isSingleVertical={isMobile}
-                        columnCount={isDesktop ? 4 : 2}
+                        columnCount={2}
+                        fade={false}
                     />
                 </div>
             </div>
@@ -71,24 +73,52 @@ export default function HomeLayout( props :HomeLayoutInterface.propsReceive ) {
                 isHorizontal={!isMobile}
             />
             <div className='projects-item'>
-            {
-                props.projects.map((project :HomeLayoutInterface.Cards, index :number) => {
-                    return (
-                        <div key={index}>
-                            <BasicCard
-                                image={project.image}
-                                title={project.name}
-                                text={project.description}
-                                btn={project.btntext}
-                                tags={project.tags}
-                                onpress={() => props.projectOnAction(index, project.name)}
-                                />
-                        </div>
-                    )
-                })
-            }
+            { props.projects.map((project :HomeLayoutInterface.Cards, index :number) => {
+                return (
+                    <div key={index}>
+                        <BasicCard
+                            image={project.image}
+                            title={project.name}
+                            text={project.description}
+                            btn={project.btntext}
+                            tags={project.tags}
+                            onpress={() => props.projectOnAction(index, project.name)}
+                        />
+                    </div>
+                )
+            })}
             </div>
         </div>
+
+        <footer>
+            <h5>{props.footerText}</h5>
+        </footer>
+
+        <ModalBox
+            isVisible={props.isModalVisible}
+            onClose={props.onModalClose}
+            onCloseText='Close'
+            title={props.reachme.title}
+            content={
+            () => {
+            return (
+                <div id='ModalBoxContents'>
+                    { props.reachme.items.map((item :HomeLayoutInterface.ReachMeItems, index :number) => {
+                    return (
+                        <div className='items' key={index}>
+                            { item.link ?
+                                <a href={item.link}>{item.name}</a>
+                                :
+                                <h4>{item.name}</h4>
+                            }
+                            { item.text && <p>{item.text}</p> }
+                            { item.note && <p className='note'>{item.note}</p> }
+                        </div>
+                    )})}
+                </div>
+            )}}
+        />
+ 
     </div> 
     );
 }

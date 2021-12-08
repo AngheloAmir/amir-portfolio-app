@@ -11,9 +11,11 @@ import './Columns.scss';
         text :string;
     }>;
     isHorizontal?   :boolean;
-    columnCount?    :1 | 2 | 3 | 4 | 5 | 6;
+    columnCount?    :1 | 2 | 3 | 4 | 5 | 6; //ignored if isHorizontal is true
  */
 export function Columns(props :ColumnsInterface) {
+    let enableMagicShow :boolean = props.fade ? true : false;
+
     let columnClassName = 'column1';
     if(props.columnCount && !props.isSingleVertical) {
         switch( props.columnCount) {
@@ -34,7 +36,7 @@ export function Columns(props :ColumnsInterface) {
             {
                 props.columns.map(({title, text}, index :number) => {
                     return (
-                        <div key={index}>
+                        <div key={index} className={enableMagicShow ? 'magic' : ''}>
                             <h3>{title}</h3>
                             <p>{text}</p>
                         </div>

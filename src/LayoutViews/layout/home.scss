@@ -4,7 +4,7 @@
 
 $myprofilewidth:        40%;
 $introductionwidth:     90vw;
-$barscolumntopmargin:   12px;
+$barscolumntopmargin:   20px;
 
 $defaultbackground:     #c0b2a7;
 $borderdesign-radius:      128px;
@@ -14,10 +14,10 @@ $introbackground-image: linear-gradient(to bottom, #16222A,#3A6073);
 
 #Home {
     position: relative;
-    padding-bottom: 80px;
+    padding-bottom: 0px;
 
     @include tabletscreen {
-        padding-bottom: 10px;
+        padding-bottom: 0px;
     }
 
     #navbar {
@@ -45,24 +45,24 @@ $introbackground-image: linear-gradient(to bottom, #16222A,#3A6073);
 
         @include tabletscreen {
             border-bottom-right-radius: $borderdesign-radius;
-            height:         105vh;
             margin-top:     0;
             min-height:     300px;
             flex-direction: row;
-            padding: 5vw  calc((100vw - $introductionwidth) / 2) 8vh calc((100vw - $introductionwidth) / 2);
+            padding: 6vw  calc((100vw - $introductionwidth) / 2) 8vh calc((100vw - $introductionwidth) / 2);
             h1 {
                 margin-top: 1em;
             }      
         }
         @include desktopscreen {
-            min-height:     320px;
-            padding: 15vh 
+            min-height:     380px;
+            padding:        14vh 
             calc(((100vw - $introductionwidth) / 2) + 5vw)
             8vh
             calc(((100vw - $introductionwidth) / 2) + 5vw);
         }
         @include bigscreen {
-            padding: 15vh 
+            min-height: 100vh;
+            padding: 18vh 
             calc(((100vw - $introductionwidth) / 2) + 5vw)
             8vh
             calc(((100vw - $introductionwidth) / 2) + 5vw);
@@ -150,6 +150,37 @@ $introbackground-image: linear-gradient(to bottom, #16222A,#3A6073);
             border-top-left-radius: $borderdesign-radius / 2;
             border-top-right-radius: $borderdesign-radius / 2;
             height: 8em;
+        }
+    }
+
+    footer {
+        background-color: #3A6073;
+        padding: 0.5rem;
+        text-align: center;
+    }
+
+    #ModalBoxContents {
+        padding: 1rem;
+        font-size: 18px;
+
+        @include tabletscreen {
+            margin-left: 10%;
+            width: 80%;
+        }
+
+        @include desktopscreen {
+            margin-left: calc((100% - 800px) / 2);
+            width: 800px;
+        }
+
+        .items {
+            margin-bottom: 1.5rem;
+        }
+
+        .note {
+            color: #16222A;
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
         }
     }
 }

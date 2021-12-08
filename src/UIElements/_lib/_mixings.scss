@@ -1,3 +1,15 @@
+/*
+common things to copy:
+
+    @include tabletscreen {
+        background-color: green; 
+    }
+    @include desktopscreen {
+        background-color: blue;
+    }
+
+*/
+
 @mixin mobilescreen {
     @media (max-width: 578px) {
         @content;
@@ -21,15 +33,3 @@
         @content;
     }
 }
-
-/*
-common things to copy:
-
-    @include tabletscreen {
-        background-color: green; 
-    }
-    @include desktopscreen {
-        background-color: blue;
-    }
-
-*/

@@ -7,7 +7,8 @@ function getWindowDimensions() {
     width,
     height,
     isMobile:   width >= 578 ? false : true,
-    isDesktop:  width >= 981 ? true : false
+    isTablet:   width >= 756 ? false : true,
+    isDesktop:  width >= 981 ? true  : false
   };
 }
 

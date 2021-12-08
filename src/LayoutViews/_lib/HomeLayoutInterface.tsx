@@ -23,6 +23,15 @@ export namespace HomeLayoutInterface {
         }>;
         projects :Array<Cards>;
         projectOnAction: (index :number, name :string) => void;
+
+        reachme: {
+            title :string;
+            text :string;
+            items :Array<ReachMeItems>
+        },
+        isModalVisible: boolean;
+        onModalClose:   () => void;
+        footerText:     string;
     }
     
     export interface Cards {
@@ -32,5 +41,12 @@ export namespace HomeLayoutInterface {
         tags :Array<string>;
         link :string;
         btntext: string;
+    }
+
+    export interface ReachMeItems {
+        name? :string;
+        link? :string;
+        text? :string;
+        note? :string;
     }
 }

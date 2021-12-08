@@ -5,8 +5,8 @@
 @import '../_lib/mixings';
 
 $basic-card-btn-height:         $fontsize * 2;  
-$basic-card-btn-width:          50vw;
-$basic-card-btn-width-tab:      120px;
+$basic-card-btn-width:          60vw;
+$basic-card-btn-width-tab:      135px;
 
 #PongDesignBasicCard {
     background-image:   linear-gradient(to bottom, #16222A,#3A6073);
@@ -45,6 +45,7 @@ $basic-card-btn-width-tab:      120px;
         }
     
         .tags {
+            //border: 2px solid red;
             margin-left:    5%;
             width:          90%;
             height: auto;
@@ -68,7 +69,7 @@ $basic-card-btn-width-tab:      120px;
         color:              $basic-card-btn-text;
         height:             $basic-card-btn-height;
         font-size:          $fontsize * 0.8;
-        margin-top:         $fontsize;
+        margin-top:         $fontsize * 1.8;
         margin-bottom:      $fontsize;
         width:              $basic-card-btn-width;
 

@@ -19,6 +19,8 @@ import { MdContactPage } from 'react-icons/md';
 import porfolioinfo from '../_database/portfolio.json';
 
 export default function HomeScene() {
+    const [modalVisible, setModalVisible] = React.useState(false);
+
     const navitems = [
         {
             name: ' Home',
@@ -35,18 +37,20 @@ export default function HomeScene() {
         },
     ];
 
-
-    //https://msng.link/o/?Anghelo Amir=fm
-
-
     const handleIntroductionBTNAction = (i :number, itemname :string) => {
-        if(i == 0) {
+        if(i === 0) {
             window.open('./downloadable/amir-anghelo-resume-webdeveloper.pdf');
         }
+        if(i === 1)
+            setModalVisible(true);
     }
 
     const handleProjectAction = (index :number, name :string) => {
         window.open( porfolioinfo.projects[index].link);
+    }
+
+    const handleModalClose = () => {
+        setModalVisible(false);
     }
 
     return (
@@ -65,9 +69,16 @@ export default function HomeScene() {
                     btnaction:  porfolioinfo.btnaction,
                     btnactioncallback: handleIntroductionBTNAction
                 }}
+
+                reachme={porfolioinfo.reachme}
+                isModalVisible={modalVisible}
+                onModalClose={handleModalClose}
+
                 skills={porfolioinfo.skills}
                 projects={porfolioinfo.projects}
                 projectOnAction={handleProjectAction}
+
+                footerText={porfolioinfo.footerText}
             />
         </React.Fragment>
     );

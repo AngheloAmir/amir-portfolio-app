@@ -12,3 +12,4 @@ export { FancyButton } from './FancyButton/FancyButton';
 export { Columns } from './Columns/Columns';
 export { BasicCard } from './BasicCard/BasicCard';
 export { LinedStyled } from './LinedStyled/LinedStyled';
+export { ModalBox } from './ModalBox/ModalBox';

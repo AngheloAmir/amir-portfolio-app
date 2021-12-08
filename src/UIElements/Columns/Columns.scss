@@ -19,6 +19,19 @@
     }
 }
 
+.magic {
+    p {
+        opacity: 0.2;
+    }
+    p:hover {
+        opacity: 1;
+        color: white;
+    }
+    &:hover {
+        background-color: $basic-card-bg;
+    }
+}
+
 .singular {
     display: flex;
     flex-direction: column;
