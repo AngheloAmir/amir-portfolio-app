@@ -1,10 +1,8 @@
-/*
-*/
-import React from 'react';
 import { ColumnsInterface } from '../';
 import './Columns.scss';
 
 /**
+ * A column for text and description.
  * @example
  * columns :Array<{
         title :string;

@@ -1,10 +1,17 @@
-/*
-*/
-import React from 'react';
 import './BasicCard.scss';
 
 import { BasicCardInterface } from '../';
 
+/**
+ * Contents of the Basic Card UI Element
+ * @example
+ * image?   :string;
+    title?   :string;
+    text?    :string;
+    btn?     :string;
+    tags?    :Array<string>;
+    onpress? :() => void;
+ */
 export function BasicCard( props :BasicCardInterface) {
     return (
         <div id='PongDesignBasicCard'>

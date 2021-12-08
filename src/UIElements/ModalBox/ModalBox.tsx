@@ -16,7 +16,11 @@ interface ModalBoxInterface {
 /**
  * A modal (alert box) box. This display a fixed position ui that captures <body> to prevent scrolling
  * @example
-
+    isVisible      :boolean;
+    onClose        :() => void;
+    onCloseText    :string;
+    title?         :string;
+    content        :() => ReactElement<any, any>;
  */
 export function ModalBox(props :ModalBoxInterface) {
     return (
