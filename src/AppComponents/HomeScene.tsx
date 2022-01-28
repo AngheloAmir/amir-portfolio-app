@@ -14,28 +14,11 @@
 */
 import React from 'react';
 import HomeLayout from '../LayoutViews/HomeLayout';
-import { FaHome, FaReact } from 'react-icons/fa'; 
-import { MdContactPage } from 'react-icons/md';
 import porfolioinfo from '../_database/portfolio.json';
+import NavigationBar from './shared/NavigationBar';
 
 export default function HomeScene() {
     const [modalVisible, setModalVisible] = React.useState(false);
-
-    const navitems = [
-        {
-            name: ' Home',
-            icon: () => <FaHome />,
-            active: true
-        },
-        {
-            name: ' Projects',
-            icon: () => <FaReact />,
-        },
-        {
-            name: ' Contacts',
-            icon: () => <MdContactPage />,
-        },
-    ];
 
     const handleIntroductionBTNAction = (i :number, itemname :string) => {
         if(i === 0) {
@@ -55,12 +38,8 @@ export default function HomeScene() {
 
     return (
         <React.Fragment>
+            <NavigationBar />
             <HomeLayout
-                navigationbar={{
-                    navitems:       navitems,
-                    brandIconPath:  '',
-                    navcallback:    (i :number, name :string) => console.log('you pressed :' + name)
-                }}
                 introduction={{
                     title:      porfolioinfo.name,
                     alias:      porfolioinfo.title,

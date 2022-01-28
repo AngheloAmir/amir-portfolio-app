@@ -22,6 +22,13 @@
         transition: opacity 0.8s;
         transition-delay:   0.1s;
         width:              90%;
+
+        @include tabletscreen {
+            margin:             10vh 20vw 0 20vw;
+            width:              60%;
+            border: 2px solid red;
+            
+        }
             
         .closebtn {
             padding:    2px;

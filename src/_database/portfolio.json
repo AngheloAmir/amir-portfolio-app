@@ -5,26 +5,16 @@
     "introtext": "Passionate programmer and pursuing a career in web development, especially in React JS and React Native. As he found love in this framework; they were fun and challenging to do. Besides, can do design and IT related stuff. Being a fast learner and performing many trials and errors is the key to complete any programming task.",
     "btnaction": ["View Resume", "Reach Me Out"],
 
-    "footerText": "Anghelo Amir, (last updated: Dec, 2021)",
+    "footerText": "Anghelo Amir, (last updated: Jan 28, 2021)",
 
     "reachme": {
         "title": "Contacts to reach me",
         "text": "Here are the list to reach me",
         "items": [
             {
-                "name": "Messenger (Prefered)",
-                "link": "https://msng.link/o/?Anghelo Amir=fm",
-                "text": "I prefer reaching me out in messenger because it feel much safe againts malware"
-            },
-            {
-                "name": "Upwork",
-                "link": "https://www.upwork.com/freelancers/~011f83541ddb7011cc",
-                "text": "Hire me from Upwork for assurance"
-            },
-            {
-                "name": "GMail",
+                "name": "Gmail",
                 "text": "angheloamir@gmail.com",
-                "note": "Most messages in email are not entertained due to my security concern"
+                "note": "You may request a copy of my CV"
             },
             {
                 "name": "Mobile Number",
@@ -47,8 +37,8 @@
             "image": "./assets/galaappbg1.jpg",
             "tags": ["React-Native (Expo)", "Express.js", "MongoDB", "Typescript"],
             "description": "Gala VTG is a full-featured mobile application for tourists of Santa Rosa City. It has GPS navigation, an online forum, and additional features that a tourist will need! The app was created using React Native (Expo) and optimize for mobile screens.", 
-            "link": "#home",
-            "btntext": "Lunch"
+            "link": "https://github.com/AngheloAmir/gala-virtual-tour-guide-for-the-city-of-Santa-Rosa-Laguna",
+            "btntext": "View Github repo"
         },
         {
             "name": "My porfolio website",

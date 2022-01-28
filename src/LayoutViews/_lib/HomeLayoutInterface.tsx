@@ -1,14 +1,7 @@
 /*
 */
-import { NavItem } from '../../UIElements';
-
 export namespace HomeLayoutInterface {
     export interface propsReceive {
-        navigationbar :{
-            brandIconPath :string;
-            navitems :Array<NavItem>;
-            navcallback :(i :number, name :string) => void;
-        };
         introduction :{
             title :string;
             alias :Array<string>;

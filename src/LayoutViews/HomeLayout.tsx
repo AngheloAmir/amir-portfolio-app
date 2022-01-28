@@ -12,8 +12,6 @@ import './layout/home.scss';
 import useDimension from '../_app/useWindowDimension';
 import { HomeLayoutInterface } from './_lib/HomeLayoutInterface';
 import {
-    Navbar,
-    SlidingMenu,
     HeaderProfile,
     Columns,
     BasicCard,
@@ -26,21 +24,6 @@ export default function HomeLayout( props :HomeLayoutInterface.propsReceive ) {
 
     return ( 
     <div id='Home'>
-        <div id='navbar'>
-            {!isMobile ?
-                <Navbar
-                    brandIconPath={props.navigationbar.brandIconPath}
-                    items={props.navigationbar.navitems}
-                    callback={props.navigationbar.navcallback}
-                />
-                :
-                <SlidingMenu
-                    items={props.navigationbar.navitems}
-                    callback={props.navigationbar.navcallback}
-                />
-            }
-        </div>
-
         <div id='introduction'>
             <HeaderProfile 
                 title={props.introduction.title}

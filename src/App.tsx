@@ -15,6 +15,7 @@ import {
 
 
 import HomeScene from './AppComponents/HomeScene';
+import ProjectScene from './AppComponents/ProjectScene';
 
 function App() {
   const [state, dispatch] = React.useReducer(RootReducer, createDefaultState());
@@ -24,8 +25,8 @@ function App() {
       <contextStore.Provider value={{state, dispatch}}>
         <Router>
           <Switch>
-            <Route path="/"> <HomeScene /> </Route>
-
+            <Route path="/"         exact component={() => <HomeScene />} />
+            <Route path="/projects" exact component={() => <ProjectScene />} />
           </Switch>
         </Router>
       </contextStore.Provider>

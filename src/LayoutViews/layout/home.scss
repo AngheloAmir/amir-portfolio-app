@@ -13,20 +13,6 @@ $borderdesign-radius-mobile: 96px;
 $introbackground-image: linear-gradient(to bottom, #16222A,#3A6073);
 
 #Home {
-    position: relative;
-    padding-bottom: 0px;
-
-    @include tabletscreen {
-        padding-bottom: 0px;
-    }
-
-    #navbar {
-        height:     2.5em;
-        position:   fixed;
-        top:        0; left: 0;
-        width:      100vw;
-    }
-
     #introduction { 
         background-image: $introbackground-image;
         border-bottom-right-radius: $borderdesign-radius-mobile;
@@ -164,13 +150,8 @@ $introbackground-image: linear-gradient(to bottom, #16222A,#3A6073);
         font-size: 18px;
 
         @include tabletscreen {
-            margin-left: 10%;
-            width: 80%;
-        }
-
-        @include desktopscreen {
-            margin-left: calc((100% - 800px) / 2);
-            width: 800px;
+            margin-left: 5%;
+            width: 90%;
         }
 
         .items {
