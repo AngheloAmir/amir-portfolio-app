@@ -3,7 +3,7 @@
  */
 import { useHistory } from 'react-router-dom';
 import { FaHome, FaReact } from 'react-icons/fa';
-import { MdContactPage } from 'react-icons/md';
+//import { MdContactPage } from 'react-icons/md';
 import { Navbar, SlidingMenu } from '../../UIElements';
 import useDimension from '../../_app/useWindowDimension';
 
@@ -22,10 +22,12 @@ export default function NavigationBar() {
             icon: () => <FaReact />,
             active: window.location.href.endsWith('/projects')
         },
+        /*
         {
             name: ' Contacts',
             icon: () => <MdContactPage />,
         },
+        */
     ];
 
     const handleNavigation = (i :number, name :string) => {
