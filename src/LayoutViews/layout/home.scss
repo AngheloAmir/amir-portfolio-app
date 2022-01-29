@@ -133,8 +133,8 @@ $introbackground-image: linear-gradient(to bottom, #16222A,#3A6073);
 
         .item {
             background-color: #734b6d;
-            border-top-left-radius: $borderdesign-radius / 2;
-            border-top-right-radius: $borderdesign-radius / 2;
+            border-top-left-radius:     calc($borderdesign-radius / 2);
+            border-top-right-radius:    calc($borderdesign-radius / 2);
             height: 8em;
         }
     }

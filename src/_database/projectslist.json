@@ -11,7 +11,7 @@
         {
             "name": "My porfolio website",
             "image": "./assets/porfolio.jpg",
-            "tags": ["React.js", "Typescript", "SASS"],
+            "tags": ["React.js", "Typescript", "SCSS"],
             "description": "My portfolio website is single page application that is created with React.js and optimize for mobile and tablets. It is designed to have reusable components, which makes it easier to maintain. To change the information provided, it is easy as changing the values in the portfolio.json.",
             "link": "https://github.com/AngheloAmir/amir-portfolio-app",
             "btntext": "View Github repo"
@@ -37,7 +37,7 @@
             "image": "./assets/anotes.jpg",
             "tags": ["React.js"],
             "description": "A! Notes is a React application. It is made for my study as a student of Information Technology course. It features downloading, loading, syntax highlighting, and responsive design. This application is created using an Android tablet with the use of DoryNode App and Quick Text Editor (Android App).",
-            "link": "/works/anotes/index.html",
+            "link": "./works/anotes/index.html",
             "btntext": "View Application"
         },
         {
@@ -45,7 +45,7 @@
             "image": "./assets/salp.jpg",
             "tags": ["HTML", "CSS", "Javascript"],
             "description": "SALP is a simple assembly language based on a 6502 instruction set but with fewer features. It aims to introduce assembly language programming without the complexity of real assembly languages. This application is optimized with mobiles phone (as I created it with just my Android phone).",
-            "link": "/works/salp/index.html",
+            "link": "./works/salp/index.html",
             "btntext": "View Application"
         },
         {

@@ -43,7 +43,7 @@
         {
             "name": "My porfolio website",
             "image": "./assets/porfolio.jpg",
-            "tags": ["React.js", "Typescript", "SASS"],
+            "tags": ["React.js", "Typescript", "SCSS"],
             "description": "My portfolio website is single page application that is created with React.js and optimize for mobile and tablets. It is designed to have reusable components, which makes it easier to maintain. To change the information provided, it is easy as changing the values in the portfolio.json.",
             "link": "https://github.com/AngheloAmir/amir-portfolio-app",
             "btntext": "View Github repo"

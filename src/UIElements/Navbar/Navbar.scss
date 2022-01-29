@@ -27,9 +27,9 @@
             box-sizing:     border-box;
             border:         1px solid transparent;
             font-size:      $navbar-base-fontsize;
-            margin-left:    $navbar-base-fontsize /2;
-            min-width:      ($navbar-base-fontsize * 7);
-            padding:        ($navbar-base-padding / 2) 0px;
+            margin-left:    calc($navbar-base-fontsize /2);
+            min-width:      calc($navbar-base-fontsize * 7);
+            padding:        calc($navbar-base-padding / 2) 0px;
             position:       relative;
             text-align:     center;
         }
@@ -63,20 +63,20 @@
                 display:            none;
                 margin-left:        $navbar-base-padding;
                 margin-top:         $navbar-base-padding;
-                min-width: 			($navbar-slidingdrawer-width *0.8);
+                min-width: 		    calc($navbar-slidingdrawer-width *0.8);
                 padding:            $navbar-base-padding $navbar-base-padding;
-                padding-top:        ($navbar-base-padding / 2);
+                padding-top:        calc($navbar-base-padding / 2);
                 position:           absolute;
                 text-align:         left;
 
                 .invisiblebar {
                     height:         $navbar-base-fontsize;
                     margin-top:     -$navbar-base-fontsize;
-                    width:          ($navbar-slidingdrawer-width *0.5);
+                    width:          calc($navbar-slidingdrawer-width *0.5);
                 }
 
                 .subitem {
-                    padding:        $navbar-base-padding/2 $navbar-base-padding;
+                    padding:        calc($navbar-base-padding/2) $navbar-base-padding;
                     &:hover {
                         color:      $navbar-dropdown-texthover
                     }
@@ -86,7 +86,7 @@
                     content: " ";
                     position: absolute;
                     top: -20px;
-                    left: ($navbar-base-fontsize * 2);
+                    left: calc($navbar-base-fontsize * 2);
                     margin-top: 5px;
 	                border-width: 8px; border-style: solid;
 	                border-color: transparent transparent #42275a transparent;	

@@ -26,7 +26,7 @@ $navbar-base-itemdisabled:      black;
 $navbar-base-itemhover:         white;
 $navbar-base-itemhoverbg:       transparent;
 $navbar-base-menuiconcolor:     black;
-$navbar-base-padding:           ($navbar-base-fontsize / 2); //a padding that has many uses.
+$navbar-base-padding:           calc($navbar-base-fontsize / 2); //a padding that has many uses.
 $navbar-dropdown-bgcolor:       linear-gradient(to bottom right, #543272 , #734b6d);
 $navbar-dropdown-bgsliding:     linear-gradient(to bottom, #1d2d38,#44738a);
 $navbar-dropdown-bghover:       blue;
