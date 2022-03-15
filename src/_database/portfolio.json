@@ -4,8 +4,9 @@
     "title": ["IT and Web Developer", "React.js & Node.js Developer", "with typescript and sass", "Others: Java, C#"],
     "introtext": "Passionate programmer and pursuing a career in web development, especially in React JS and React Native. As he found love in this framework; they were fun and challenging to do. Besides, can do design and IT related stuff. Being a fast learner and performing many trials and errors is the key to complete any programming task.",
     "btnaction": ["View Resume", "Reach Me Out"],
+    "resumeDownload": "./downloadable/AngheloBAmir(CV-Resume).pdf",
 
-    "footerText": "Anghelo Amir, (last updated: Jan 28, 2021)",
+    "footerText": "Anghelo Amir, (last updated: Mar 15, 2022)",
 
     "reachme": {
         "title": "Contacts to reach me",
@@ -14,12 +15,12 @@
             {
                 "name": "Gmail",
                 "text": "angheloamir@gmail.com",
-                "note": "You may request a copy of my CV"
+                "note": "I prefer messaging me thru email"
             },
             {
-                "name": "Mobile Number",
-                "text": "+639217296125 (Philipines - Smart)",
-                "note": "Please do not call, only text."
+                "name": "Facebook Messenger",
+                "text": "FB name: AngheloAmir",
+                "note": "The profile picture is same as porfolio website profile icon."
             }
         ]
     },
@@ -37,8 +38,8 @@
             "image": "./assets/galaappbg1.jpg",
             "tags": ["React-Native (Expo)", "Express.js", "MongoDB", "Typescript"],
             "description": "Gala VTG is a full-featured mobile application for tourists of Santa Rosa City. It has GPS navigation, an online forum, and additional features that a tourist will need! The app was created using React Native (Expo) and optimize for mobile screens.", 
-            "link": "https://github.com/AngheloAmir/gala-virtual-tour-guide-for-the-city-of-Santa-Rosa-Laguna",
-            "btntext": "View Github repo"
+            "link": "https://galavtg.github.io/",
+            "btntext": "View App's Homepage"
         },
         {
             "name": "My porfolio website",

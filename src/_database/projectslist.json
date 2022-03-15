@@ -5,8 +5,8 @@
             "image": "./assets/galaappbg1.jpg",
             "tags": ["React-Native (Expo)", "Express.js", "MongoDB", "Typescript"],
             "description": "Gala VTG is a full-featured mobile application for tourists of Santa Rosa City. It has GPS navigation, an online forum, and additional features that a tourist will need! The app was created using React Native (Expo) and optimize for mobile screens.", 
-            "link": "https://github.com/AngheloAmir/gala-virtual-tour-guide-for-the-city-of-Santa-Rosa-Laguna",
-            "btntext": "View Github repo"
+            "link": "https://galavtg.github.io/",
+            "btntext": "View App's Homepage"
         },
         {
             "name": "My porfolio website",

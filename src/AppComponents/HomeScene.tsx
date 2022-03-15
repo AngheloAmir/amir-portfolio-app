@@ -17,12 +17,13 @@ import HomeLayout from '../LayoutViews/HomeLayout';
 import porfolioinfo from '../_database/portfolio.json';
 import NavigationBar from './shared/NavigationBar';
 
+
 export default function HomeScene() {
     const [modalVisible, setModalVisible] = React.useState(false);
 
     const handleIntroductionBTNAction = (i :number, itemname :string) => {
         if(i === 0) {
-            window.open('./downloadable/amir-anghelo-resume-webdeveloper.pdf');
+            window.open(porfolioinfo.resumeDownload);
         }
         if(i === 1)
             setModalVisible(true);
