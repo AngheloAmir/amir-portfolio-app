@@ -3,8 +3,8 @@
     "name": "Anghelo Amir",
     "title": ["IT and Web Developer", "React.js & Node.js Developer", "with typescript and sass", "Others: Java, C#"],
     "introtext": "Passionate programmer and pursuing a career in web development, especially in React JS and React Native. As he found love in this framework; they were fun and challenging to do. Besides, can do design and IT related stuff. Being a fast learner and performing many trials and errors is the key to complete any programming task.",
-    "btnaction": ["View Resume", "Reach Me Out"],
-    "resumeDownload": "./downloadable/AngheloBAmir(CV-Resume).pdf",
+    "btnaction": ["View Projects", "Reach Me Out"],
+    "resumeDownload": "https://angheloamir.github.io/#/projects",
 
     "footerText": "Anghelo Amir, (last updated: Mar 15, 2022)",
 
@@ -15,7 +15,7 @@
             {
                 "name": "Gmail",
                 "text": "angheloamir@gmail.com",
-                "note": "I prefer messaging me thru email"
+                "note": "You may request a copy of my Resume/CV. I also prefer messaging me thru email"
             },
             {
                 "name": "Facebook Messenger",
