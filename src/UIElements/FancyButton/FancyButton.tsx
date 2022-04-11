@@ -14,7 +14,7 @@ export function FancyButton( {name, callback } :{name :string, callback :() => v
 	
 	return (
 		<button id="PongDesignFancyButton" onClick={ handleClick } >
-			{name}
+			<span>{name}</span>
 		</button>
 	);
 }

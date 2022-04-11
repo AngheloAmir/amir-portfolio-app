@@ -7,7 +7,8 @@
 html, body {
   max-width: 100%;
   overflow-x: hidden;
-  background-color: #c0b2a7;
+  /*background-color: #c0b2a7;*/
+  background-color: #3A6073;
 }
 
 body {

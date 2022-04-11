@@ -6,7 +6,6 @@
     title?          :string;
     alias?          :string;
     text?           :string;
-    isHorizontal?   :boolean;
  */
 export interface HeaderProfileInterface {
     imagepath?      :string;
@@ -14,7 +13,6 @@ export interface HeaderProfileInterface {
     title?          :string;
     alias?          :Array<string>;
     text?           :string;
-    isHorizontal?   :boolean;
     btnaction?      :Array<string>;
     btnactioncallback? :(index :number, itemname :string) => void;
 }

@@ -17,7 +17,7 @@ $fontsize-biggest:  3rem;
 
 //This includes the sliding menu
 $navbar-base-brandleftmargin:   $fontsize * 3;
-$navbar-base-color:             rgb(26, 41, 51);
+$navbar-base-color:             #284255;
 $navbar-base-fontsize:          $fontsize;
 $navbar-base-itemactivecolor:   #72B095;
 $navbar-base-itemactivecolordec: underline;
@@ -43,9 +43,9 @@ $navbar-slidingmenu-height:     5px;
 $descard-text-title:            #1F7872;
 $descard-text-alias:            #72B095;
 $descard-text-text:             white;
-$descard-image-mobile:          160px;
-$descard-image-tablet:          190px;
-$descard-image-desktop:         240px;
+$descard-image-mobile:          200px;
+$descard-image-tablet:          240px;
+$descard-image-desktop:         280px;
 $descard-image-mobile-tmar:     24px;
 $descard-image-tablet-tmar:     calc($descard-image-tablet / 2.4);
 $descard-image-desktop-tmar:    32px;
@@ -64,5 +64,5 @@ $basic-card-img-height-tab:     160px; //responsive design
 $basic-card-img-width-tab:      212px;
 $basic-card-radius:             8px;
 
-$fancy-button-text-color:      black;
-$fancy-button-text-hover:       white;
+$fancy-button-text-color:      white;
+$fancy-button-text-hover:      white;

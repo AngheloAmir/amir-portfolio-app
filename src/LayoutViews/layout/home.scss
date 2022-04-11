@@ -6,28 +6,24 @@ $myprofilewidth:        40%;
 $introductionwidth:     90vw;
 $barscolumntopmargin:   20px;
 
-$defaultbackground:     #c0b2a7;
-$borderdesign-radius:      128px;
-$borderdesign-radius-mobile: 96px;
+$defaultbackground:         #3A6073;
+$highlighbackground:        #284255;
+$borderdesign-radius:         150px;
+$borderdesign-radius-mobile:  128px;
 
-$introbackground-image: linear-gradient(to bottom, #16222A,#3A6073);
+/*$introbackground-image: linear-gradient(to bottom, #16222A,#3A6073);*/
+/*$defaultbackground:     #c0b2a7;*/
 
 #Home {
-    #introduction { 
-        background-image: $introbackground-image;
+    #hero { 
+        //background-image: $introbackground-image;
+        background-color: #284255;
         border-bottom-right-radius: $borderdesign-radius-mobile;
-        min-height:     95vh;
+        min-height:     100vh;
         margin-top:     2em;
         padding-bottom: 24px;
-        padding-top:    5vh;
+        padding-top:    0vh;
         width:          100%;
-
-        .bgimage {
-            position: absolute;
-            width: inherit;
-            height: 100%;
-            z-index: 0;
-        }
 
         @include tabletscreen {
             border-bottom-right-radius: $borderdesign-radius;
@@ -39,16 +35,17 @@ $introbackground-image: linear-gradient(to bottom, #16222A,#3A6073);
                 margin-top: 1em;
             }      
         }
+        
         @include desktopscreen {
             min-height:     380px;
-            padding:        14vh 
+            padding:        10vh 
             calc(((100vw - $introductionwidth) / 2) + 5vw)
             8vh
             calc(((100vw - $introductionwidth) / 2) + 5vw);
         }
         @include bigscreen {
             min-height: 100vh;
-            padding: 18vh 
+            padding: 15vh 
             calc(((100vw - $introductionwidth) / 2) + 5vw)
             8vh
             calc(((100vw - $introductionwidth) / 2) + 5vw);
@@ -94,6 +91,7 @@ $introbackground-image: linear-gradient(to bottom, #16222A,#3A6073);
     }
 
     #projects {
+        border: 1px solid red;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
