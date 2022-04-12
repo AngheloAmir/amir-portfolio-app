@@ -1,0 +1,94 @@
+/*
+*/
+
+@import '../theme';
+@import '../_lib/mixings';
+
+.text {
+    margin: auto;
+    width: 90%;
+
+    @include desktopscreen {
+        margin-top: 0;
+        padding-top: 0;
+        width: 60%;
+    }
+    
+    .tagline {
+        padding-top: 1rem;
+    }
+
+    h1, h3, p, .tagline {
+        text-align: center;
+        margin: 0 0 0.5rem 0!important;
+
+        @include desktopscreen {
+            text-align: right;
+            margin: 0 !important;
+        }
+    }
+
+    h1 {
+        color: $descard-text-alias;
+        font-size: $fontsize-biggest * 0.8;
+
+        @include desktopscreen {
+            font-size: $fontsize-biggest;
+        }
+    }
+
+    h3 {
+        color: $descard-text-alias;
+        font-size: $fontsize-big;
+    }
+
+    .tagline {
+        font-family: 'Dosis', sans-serif;
+        color: white;
+        font-size: 3rem;
+
+        @include desktopscreen {
+            font-size: 3.5rem;
+            margin-top: 1rem;
+        }
+
+        @include bigscreen {
+            font-size: 5rem;
+        }
+        
+        span {
+            color: orange;
+            z-index: 1;
+        }
+    }
+
+    p {
+        color: $descard-text-text;
+        font-size: $fontsize * 1.2;
+        line-height: $fontsize*2;
+        margin-left: 10%;
+        margin-top: $fontsize;
+        text-align: right;
+        width: 90%;
+    }
+
+    #calltoactions {
+        margin-top: $fontsize;
+        align-content: center;
+        margin-left: 10%;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+
+        @include desktopscreen {
+            justify-content: space-evenly;
+            flex-direction: row;
+            margin-left: 0%;
+            width: 100%;
+
+            button {
+                width: 40% !important;
+            }
+        }
+    }
+}

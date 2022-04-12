@@ -1,15 +1,11 @@
 /*
 */
+import { HeroProfileInterface } from '../../UIElements/_lib/HeroProfile';
+
 export namespace HomeLayoutInterface {
     export interface propsReceive {
-        introduction :{
-            title :string;
-            alias :Array<string>;
-            text :string;
-            imagepath :string;
-            btnaction  :Array<string>;
-            btnactioncallback :(index :number, itemname :string) => void;
-        };
+        introduction :HeroProfileInterface;
+        
         skills: Array<{
             title: string;
             text :string;

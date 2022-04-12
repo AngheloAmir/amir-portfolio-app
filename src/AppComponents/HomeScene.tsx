@@ -23,7 +23,7 @@ export default function HomeScene() {
 
     const handleIntroductionBTNAction = (i :number, itemname :string) => {
         if(i === 0) {
-            window.open(porfolioinfo.resumeDownload);
+            window.open(porfolioinfo.herosection.resumeDownload);
         }
         if(i === 1)
             setModalVisible(true);
@@ -42,11 +42,7 @@ export default function HomeScene() {
             <NavigationBar />
             <HomeLayout
                 introduction={{
-                    title:      porfolioinfo.name,
-                    alias:      porfolioinfo.title,
-                    text:       porfolioinfo.introtext,
-                    imagepath:  porfolioinfo.profile,
-                    btnaction:  porfolioinfo.btnaction,
+                    ...porfolioinfo.herosection,
                     btnactioncallback: handleIntroductionBTNAction
                 }}
 

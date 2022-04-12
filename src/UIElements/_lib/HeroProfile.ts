@@ -7,12 +7,13 @@
     alias?          :string;
     text?           :string;
  */
-export interface HeaderProfileInterface {
+export interface HeroProfileInterface {
     imagepath?      :string;
     imagesize?      :[string | number, string | number]
-    title?          :string;
-    alias?          :Array<string>;
+    welcomemsg?     :string;
+    name?           :string;
     text?           :string;
+    tags?           :string[];
     btnaction?      :Array<string>;
     btnactioncallback? :(index :number, itemname :string) => void;
 }

@@ -13,29 +13,26 @@ import useDimension from '../_app/useWindowDimension';
 import { HomeLayoutInterface } from './_lib/HomeLayoutInterface';
 import {
     HeroProfile,
-    Columns,
+    //Columns,
     BasicCard,
     LinedStyled,
     ModalBox
 } from '../UIElements';
 
 export default function HomeLayout( props :HomeLayoutInterface.propsReceive ) {
-    const { isMobile, isTablet } = useDimension();
+    const { isMobile } = useDimension();
 
     return ( 
     <div id='Home'>
         <section id='hero'>
-            <HeroProfile 
-                title={props.introduction.title}
-                alias={props.introduction.alias}
-                text={props.introduction.text}
-                imagepath={props.introduction.imagepath}
-                btnaction={props.introduction.btnaction}
-                btnactioncallback={props.introduction.btnactioncallback}
-            />
+            <div className='content-container'>
+                <HeroProfile {...props.introduction} />
+            </div>
         </section>
 
-        <div id='barscolumn'>
+        {
+            /*
+            <div id='barscolumn'>
             <div className='container'>
                 <div className='content'>
                     <h3>Skills</h3>
@@ -48,7 +45,8 @@ export default function HomeLayout( props :HomeLayoutInterface.propsReceive ) {
                 </div>
             </div>
         </div>
-
+            */
+        }
         <div id='projects'>
             <LinedStyled
                 text='Projects Highlight'

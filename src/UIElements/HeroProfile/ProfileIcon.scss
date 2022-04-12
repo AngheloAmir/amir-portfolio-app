@@ -1,0 +1,35 @@
+/*
+*/
+
+@import '../theme';
+@import '../_lib/mixings';
+
+.imagecontainer {
+    align-self:         center;
+    display:            flex;
+    justify-content:    center;
+    object-fit:         contain;
+    width:              40%;
+    
+    img {
+        border-radius: 100%;
+        width:      $descard-image-mobile;
+        height:     $descard-image-mobile;
+        margin-top: $descard-image-mobile-tmar;
+        object-fit: contain;
+
+        @include desktopscreen {
+            line-height: $fontsize*1.5;
+            margin-top: $descard-image-tablet-tmar;
+            width: $descard-image-tablet; height: $descard-image-tablet;
+        }
+        @include bigscreen {
+            margin-top: $descard-image-desktop-tmar;
+            width: $descard-image-desktop;
+            height: $descard-image-desktop;
+        }
+    }
+    :hover + h1 {
+        opacity: 1;
+    }
+}

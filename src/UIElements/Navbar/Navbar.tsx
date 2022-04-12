@@ -70,7 +70,7 @@ import Subitem from './Subitem';
  */
 export function Navbar(props :NavigationUIProps) {
     return (
-        <div id='PongDesignNavbar'>
+        <div id='PongDesignNavbar' className='content-container'>
             { props.brandIconPath && <img className='img' src={props.brandIconPath} alt={props.brandIconPath}/> }
             <span className='navitemscontainer'>
             { props.items && props.items.map( (item :NavItem,  index :number) => {
