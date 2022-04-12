@@ -47,6 +47,7 @@
             color:          $navbar-base-itemcolor;
 
             &:hover {
+                cursor:             pointer;     
                 background-color:   $navbar-base-itemhoverbg;
                 color:              $navbar-base-itemhover;
                 border-radius:      $navbar-base-fontsize;

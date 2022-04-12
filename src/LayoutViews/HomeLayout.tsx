@@ -30,24 +30,21 @@ export default function HomeLayout( props :HomeLayoutInterface.propsReceive ) {
             </div>
         </section>
 
-        {
-            /*
-            <div id='barscolumn'>
-            <div className='container'>
-                <div className='content'>
-                    <h3>Skills</h3>
-                    <Columns 
-                        columns={props.skills}
-                        isSingleVertical={isMobile}
-                        columnCount={2}
-                        fade={false}
-                    />
-                </div>
+        <section id='whatcanido'>
+            <div className='content-container'>
+                <h1>What can I do?</h1>
             </div>
-        </div>
-            */
-        }
-        <div id='projects'>
+        </section>
+        
+
+        
+ 
+    </div> 
+    );
+}
+
+/*
+<div id='projects'>
             <LinedStyled
                 text='Projects Highlight'
                 isHorizontal={!isMobile}
@@ -69,6 +66,7 @@ export default function HomeLayout( props :HomeLayoutInterface.propsReceive ) {
             })}
             </div>
         </div>
+
 
         <footer>
             <h5>{props.footerText}</h5>
@@ -98,19 +96,4 @@ export default function HomeLayout( props :HomeLayoutInterface.propsReceive ) {
                 </div>
             )}}
         />
- 
-    </div> 
-    );
-}
-
-/*
-<HeaderProfile 
-                title={props.introduction.title}
-                alias={props.introduction.alias}
-                text={props.introduction.text}
-                imagepath={props.introduction.imagepath}
-                isHorizontal={!isMobile}
-                btnaction={props.introduction.btnaction}
-                btnactioncallback={props.introduction.btnactioncallback}
-            />
 */

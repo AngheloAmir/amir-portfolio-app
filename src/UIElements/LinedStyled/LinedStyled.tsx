@@ -1,4 +1,4 @@
-import './LinedStyled.css';
+import './LinedStyled.scss';
 
 /**
  * Draw a horizontal with a text in the middle (or just line or text)

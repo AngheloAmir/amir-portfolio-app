@@ -23,7 +23,9 @@ export default function Text(props :propsReceive) {
             { props.text?.split(' ').map((text :string, index :number) => {
                     if(text === "[]")
                         return (
-                            <span key={index}><TextAnimation tags={props.tags ? props.tags : []} /></span>
+                            <span key={index}>
+                                <TextAnimation tags={props.tags ? props.tags : []} />
+                            </span>
                         );
                     return text + " ";
                 })    
@@ -36,23 +38,23 @@ export default function Text(props :propsReceive) {
         <div className='text'>
             <h3>{ props.welcomemsg }</h3>
 
-            <h1>
+            <h2>
                 <Typewriter
                     options={{
                         strings: props.name,
                         cursor: '',
                         autoStart: true,
                         loop: false,
-                        delay: 50,
+                        delay: 70,
                     }}
                 />
-            </h1>
+            </h2>
 
             <h1 className='tagline'>
                 { generateTagLine() }
             </h1>
 
-                { props.btnaction && props.btnactioncallback &&
+            { props.btnaction && props.btnactioncallback &&
             <div id='calltoactions'> 
                 { props.btnaction[0] && 
                     <FancyButton name={props.btnaction[0]}
@@ -66,8 +68,6 @@ export default function Text(props :propsReceive) {
                 }
             </div>
             }
-
-            
         </div>
     )
 }

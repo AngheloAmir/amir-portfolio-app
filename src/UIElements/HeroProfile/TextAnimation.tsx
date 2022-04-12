@@ -14,7 +14,7 @@ export default function TextAnimation(props :propsReceive) {
         const i = setInterval(() => {
             update.current = !update.current;
             makeUpdate(update.current)
-        }, 3500);
+        }, 4000);
         return () => clearInterval(i);
     }, []);
 
@@ -28,7 +28,7 @@ export default function TextAnimation(props :propsReceive) {
         else
             setindex( index + 1);
         setOpacity( !isOpactity);
-
+        
         // eslint-disable-next-line
     }, [timeToUpdate])
 
