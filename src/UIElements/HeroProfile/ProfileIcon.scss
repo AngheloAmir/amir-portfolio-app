@@ -11,6 +11,16 @@
     object-fit:         contain;
     width:              40%;
     
+    @include desktopscreen {
+        align-self:         auto;
+        justify-content:    unset;
+    }
+    
+    @include bigscreen {
+        align-self:         center;
+        justify-content:    center;
+    }
+
     img {
         border-radius: 100%;
         width:      $descard-image-mobile;

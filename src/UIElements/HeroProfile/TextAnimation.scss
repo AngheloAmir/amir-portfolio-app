@@ -4,14 +4,13 @@
 #textslideup-animation {
     display: inline-block;
     text-align: center;
-  
+
     div {
-      padding: 0 1rem;
+      padding: 0 0.5rem;
     }
 }
 
 .addOpacityEffect {
-  z-index: 0;
   -webkit-animation-name: subtleSlideUp;
   -webkit-animation-duration: 4s;
   -webkit-animation-iteration-count: infinite;

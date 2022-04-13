@@ -1,6 +1,6 @@
 import './Text.scss';
 
-import Typewriter from 'typewriter-effect';
+//import Typewriter from 'typewriter-effect';
 import { FancyButton } from '..';
 
 import TextAnimation from './TextAnimation';
@@ -39,7 +39,8 @@ export default function Text(props :propsReceive) {
             <h3>{ props.welcomemsg }</h3>
 
             <h2>
-                <Typewriter
+                { props.name }
+                { /*<Typewriter
                     options={{
                         strings: props.name,
                         cursor: '',
@@ -47,7 +48,7 @@ export default function Text(props :propsReceive) {
                         loop: false,
                         delay: 70,
                     }}
-                />
+                /> */ }
             </h2>
 
             <h1 className='tagline'>

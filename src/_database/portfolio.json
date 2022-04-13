@@ -3,8 +3,8 @@
         "imagepath": "./assets/profile.jpg",
         "welcomemsg": "Hi my name is",
         "name": "Anghelo Amir",
-        "text": "\"Let's us [] Websites and Apps\"",
-        "tags": ["Create", "Improve", "Maintain"],
+        "text": "\"Let's [] Websites and Apps\"",
+        "tags": ["Create", "Improve", "Maintain", "Team Up For"],
         "btnaction": ["My Projects", "Contact Me"],
         "resumeDownload": "https://angheloamir.github.io/#/projects"
     },

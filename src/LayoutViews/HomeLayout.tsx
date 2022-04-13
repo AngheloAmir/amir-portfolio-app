@@ -20,7 +20,7 @@ import {
 } from '../UIElements';
 
 export default function HomeLayout( props :HomeLayoutInterface.propsReceive ) {
-    const { isMobile } = useDimension();
+    //const { isMobile } = useDimension();
 
     return ( 
     <div id='Home'>
@@ -33,6 +33,11 @@ export default function HomeLayout( props :HomeLayoutInterface.propsReceive ) {
         <section id='whatcanido'>
             <div className='content-container'>
                 <h1>What can I do?</h1>
+
+                <img src='/assets/ts.png' alt='typescript icon' />
+                <img src='/assets/react.png' alt='typescript icon' />
+                <img src='/assets/fullstack.png' alt='typescript icon' />
+                <img src='/assets/java.png' alt='typescript icon' />
             </div>
         </section>
         

@@ -23,8 +23,8 @@
         margin: 0 0 0.5rem 0!important;
 
         @include desktopscreen {
-            text-align: right;
             margin: 0 !important;
+            text-align: right;   
         }
     }
 
@@ -43,7 +43,7 @@
         }
 
         @include bigscreen {
-            font-size: 5rem;
+            font-size: 4.8rem;
         }
         
         span {
