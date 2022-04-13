@@ -4,6 +4,7 @@ export type { NavItem, NavNameAndIcon, NavigationUIProps } from './_lib/NavItem'
 export type { HeroProfileInterface } from './_lib/HeroProfile';
 export type { ColumnsInterface } from './_lib/Columns';
 export type { BasicCardInterface } from './_lib/BasicCard';
+export type { GIAInterface } from './_lib/GridImageAccordion';
 
 export { Navbar } from './Navbar/Navbar';
 export { SlidingMenu } from './SlidingMenu/SlidingMenu';
@@ -13,3 +14,4 @@ export { Columns } from './Columns/Columns';
 export { BasicCard } from './BasicCard/BasicCard';
 export { LinedStyled } from './LinedStyled/LinedStyled';
 export { ModalBox } from './ModalBox/ModalBox';
+export { GridImageAccordion } from './GridImageAccordion/GridImageAccordion';

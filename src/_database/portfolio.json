@@ -8,6 +8,33 @@
         "btnaction": ["My Projects", "Contact Me"],
         "resumeDownload": "https://angheloamir.github.io/#/projects"
     },
+
+    "skilsSections": {
+        "images"  :{
+            "image1":   "/assets/ts.png",
+            "image2":   "/assets/react.png",
+            "image3":   "/assets/fullstack.png",
+            "image4":   "/assets/java.png"
+        },
+        "texts"   :{
+            "text1" :{
+                "title": "Web, JavaScript & Typescript",
+                "text":  "Mastering the fundamentals of HTML, CSS, JavaScript and TypeScript. I may not be the best in web design, but I assure proper coding design skills. Most of my projects use Typescript as it is easier to maintain."
+            },
+            "text2" :{
+                "title": "React & React Native",
+                "text":  "I Have been practicing with these frameworks for more than 12 months. My skill sharpened over the year, and I learned new techniques to use this framework effectively. I use context API instead of Redux."
+            },
+            "text3" :{
+                "title": "Express.js and MongoDB",
+                "text":  "I gained skill with these frameworks thru practice. However, most of my projects do not use these technologies. But still, I can assure to build quality code for the backend of the project."
+            },
+            "text4" :{
+                "title": "Java (OOP)",
+                "text":  "My first programming language is assembly 6502, then C/C++, and then Java. I have learned to program about eight years ago so, my skill in the logic of programming is well developed."
+            }
+        }
+    },
     
     "footerText": "Anghelo Amir, (last updated: Mar 15, 2022)",
 

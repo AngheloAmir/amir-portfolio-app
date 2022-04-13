@@ -45,12 +45,13 @@ export default function HomeScene() {
                     ...porfolioinfo.herosection,
                     btnactioncallback: handleIntroductionBTNAction
                 }}
+                skills={{ ...porfolioinfo.skilsSections }}
 
                 reachme={porfolioinfo.reachme}
                 isModalVisible={modalVisible}
                 onModalClose={handleModalClose}
 
-                skills={porfolioinfo.skills}
+        
                 projects={porfolioinfo.projects}
                 projectOnAction={handleProjectAction}
 

@@ -1,15 +1,14 @@
 /*
 */
-import { HeroProfileInterface } from '../../UIElements/_lib/HeroProfile';
+import { HeroProfileInterface, GIAInterface } from '../../UIElements';
 
 export namespace HomeLayoutInterface {
     export interface propsReceive {
         introduction :HeroProfileInterface;
+        skills       :GIAInterface
+
+
         
-        skills: Array<{
-            title: string;
-            text :string;
-        }>;
         projects :Array<Cards>;
         projectOnAction: (index :number, name :string) => void;
 

@@ -9,14 +9,15 @@
         The user is at home page
 */
 import './layout/home.scss';
-import useDimension from '../_app/useWindowDimension';
+//import useDimension from '../_app/useWindowDimension';
 import { HomeLayoutInterface } from './_lib/HomeLayoutInterface';
 import {
     HeroProfile,
+    GridImageAccordion,
     //Columns,
-    BasicCard,
-    LinedStyled,
-    ModalBox
+    //BasicCard,
+    //LinedStyled,
+    //ModalBox
 } from '../UIElements';
 
 export default function HomeLayout( props :HomeLayoutInterface.propsReceive ) {
@@ -30,14 +31,10 @@ export default function HomeLayout( props :HomeLayoutInterface.propsReceive ) {
             </div>
         </section>
 
-        <section id='whatcanido'>
+        <section id='skills'>
             <div className='content-container'>
-                <h1>What can I do?</h1>
-
-                <img src='/assets/ts.png' alt='typescript icon' />
-                <img src='/assets/react.png' alt='typescript icon' />
-                <img src='/assets/fullstack.png' alt='typescript icon' />
-                <img src='/assets/java.png' alt='typescript icon' />
+                <h1 className='skills-title'>What can I <span>DO?</span></h1>
+                <GridImageAccordion { ...props.skills }/>
             </div>
         </section>
         

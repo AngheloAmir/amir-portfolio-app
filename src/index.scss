@@ -33,13 +33,19 @@ code {
   width: 90%        !important;
 }
 
+h1, h2, h3 {
+ span {
+   color: orange;
+ }
+}
+
 h1 {
   font-family: 'Dosis', sans-serif;
   color:   white;
-  font-size: 2.4rem;
+  font-size: 2.5rem;
 
   @include desktopscreen {
-      font-size: 3rem;
+      font-size: 4rem;
   }
 }
 
@@ -54,5 +60,16 @@ h2 {
 
 h3 {
   color:   #72B095;
-  font-size: 1.6rem;
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.3rem;
+  color: white;
+  line-height: 2rem;
+}
+
+img {
+  object-fit: contain;
 }
