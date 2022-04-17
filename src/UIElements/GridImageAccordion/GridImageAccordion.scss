@@ -6,32 +6,48 @@
 
 #GridImageAccordion {
     //border: 2px solid red;
-
-    display: flex;
     justify-content: space-between;
     width: 85%;
     margin: auto;
+    padding-bottom: 5rem;
+
+    @include desktopscreen {
+        display: flex;
+    }
 
     .images-container {
         //border: 2px solid red;
-        display: grid;
+        display: flex;
+        justify-content: space-between;
 
         @include desktopscreen {
+            display: grid;
             grid-template-columns: 2fr 2fr;
             grid-template-rows: 2fr 2fr;
             column-gap: 2rem;
             row-gap: 2rem;
-            //margin: 0 2rem;
         }
 
         img {
             border: 2px solid transparent;
             box-shadow: 0 5px 10px 0px rgba(0,0,0,0.4);
+            width: 70px;
+            height: 70px;
 
+            @include tabletscreen {
+                width: 100px;
+                height: 100px;
+            }
+            
             @include desktopscreen {
+                width: 160px;
+                height: 160px;
+                border-radius: 1.2rem;
+            }
+
+            @include bigscreen {
                 width: 200px;
                 height: 200px;
-                border-radius: 1.2rem;
             }
 
             &:hover {
@@ -42,26 +58,30 @@
     }
 
     .text-container {
-        //border: 2px solid blue;
-        //width: 30%;
-        //align-self: center;
-        width: 50%;
         padding-top: 3rem;
-        //margin: auto;
         text-align: left;
+
+        @include desktopscreen {
+            width: 50%;
+        }
 
         h3 {
             font-size: 2rem;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
+
+            @include desktopscreen {
+                margin-bottom: 2rem;
+            }
         }
 
         p {
             font-size: 1.5rem;
-            text-align: justify;
-        }
 
-        
-        
+            @include desktopscreen {
+                text-align: justify;
+            }
+            
+        }
     }
 }
 

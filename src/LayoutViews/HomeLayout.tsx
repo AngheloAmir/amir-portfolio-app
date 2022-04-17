@@ -14,8 +14,9 @@ import { HomeLayoutInterface } from './_lib/HomeLayoutInterface';
 import {
     HeroProfile,
     GridImageAccordion,
+    //Carousel,
     //Columns,
-    //BasicCard,
+    BasicCard,
     //LinedStyled,
     //ModalBox
 } from '../UIElements';
@@ -38,9 +39,32 @@ export default function HomeLayout( props :HomeLayoutInterface.propsReceive ) {
             </div>
         </section>
         
+        <section id='projects'>
+            <div className='content-container'>
+                <h1 className='projects-title'><span>Projects</span> that I Create</h1>
+                <div className='items'>
+                    { props.projects.map((project :any, index :number) => {
+                        return(
+                            <div className='item'>
+                                <BasicCard
+                                    image={project.image}
+                                    title={project.name}
+                                    text={project.description}
+                                    btn={project.btntext}
+                                    tags={project.tags}
+                                    onpress={() => props.projectOnAction(index, project.name)}
+                                />
+                            </div>
+                        )
+                    })}
+                </div>
+            </div>
+        </section>
 
-        
- 
+     
+    <p style={{width: '50px', margin: 'auto', paddingTop: '5rem'}}>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. A
+    </p>
     </div> 
     );
 }

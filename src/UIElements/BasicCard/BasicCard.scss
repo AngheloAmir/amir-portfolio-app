@@ -9,49 +9,44 @@ $basic-card-btn-width:          60vw;
 $basic-card-btn-width-tab:      135px;
 
 #PongDesignBasicCard {
-    background-image:   linear-gradient(to bottom, #16222A,#3A6073);
-    box-shadow:         3px 3px rgba($color: #000000, $alpha: 0.2);
-    display:            flex;
-    flex-direction:     column;
-    align-items:        center;
-    //margin-bottom:      $fontsize;
-    height:             100%;
-    overflow-x:           hidden;
+    background-color: #284255;
+    border-radius:      1rem;
+    box-shadow:         0 5px 10px 0px rgba(0,0,0,0.4);
+    display:                grid;
+    grid-template-columns:  1fr;
+    grid-template-rows:     auto 1fr 80px;
+    height:                 100%;
 
     img {
-        height:         $basic-card-img-height;
-        width:          100%;
+        border-top-left-radius:     1rem;
+        border-top-right-radius:    1rem;
+        object-fit:                 contain;
+        width:                      100%;
+        height:                     100%;
     }
 
     .information {
-        flex-direction:     column;
-        align-items:        center;
-        height: 50%;
+        //border: 1px solid red;
 
         & > h3 {
-            color:          $primary-textcolor;
-            font-size:      $fontsize * 1.1;
-            margin:         (calc($fontsize / 2)) 0;
+            margin-top:     1rem;
             text-align:     center;
-            font-weight:    500;
-            width:          80%;
         }
     
          & > p  {
-            color: white;
-            font-size:      $fontsize * 0.9;
-            margin:         (calc($fontsize / 2)) 0;
-            padding:        0 $fontsize;
+            margin: auto;
+            width: 90%;
         }
     
         .tags {
-            //border: 2px solid red;
-            margin-left:    5%;
-            width:          90%;
-            height: auto;
+            display:    block;
+            margin:     auto;
+            padding:    1rem 0;
+            width:      90%;
+
             span {
                 display:        inline-block;
-                font-size:      $fontsize * 0.8;
+                font-size:      $fontsize * 0.9;
                 margin-right:   0.5rem;
                 color:          $secondary-textcolor;
             }
@@ -59,33 +54,20 @@ $basic-card-btn-width-tab:      135px;
 
     }
 
-    button {
-        display: block;
-        background-color:   $basic-card-btn;
-        box-shadow: 1px 1px rgba(0, 0, 0, 0.171);
-        border: 0;
-        //border:             1px solid black;
-        //border-radius:      12px;
-        color:              $basic-card-btn-text;
-        height:             $basic-card-btn-height;
-        font-size:          $fontsize * 0.8;
-        margin-top:         $fontsize * 1.8;
-        margin-bottom:      $fontsize;
-        width:              $basic-card-btn-width;
-
-        &:hover {
-            background-color:  $basic-card-btn-hover;
-            border:            0;
-            color:             $basic-card-btn-hover-text;
-        }
-
-        &:active {
-            background-color: rgb(121, 90, 33);
-        }
-
-        @include tabletscreen {
-            width:          $basic-card-btn-width-tab;
+    .btn {
+        //border: 1px solid red;
+        padding: 1rem 0;
+         
+        button {
+            align-self: center;
+            display: block !important;
+            margin: auto;
+            width: 90%;
+    
+            @include tabletscreen {
+                width: 80%;
+            }
         }
     }
-
+    
 }

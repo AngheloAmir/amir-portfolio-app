@@ -54,23 +54,60 @@ $borderdesign-radius-mobile:  128px;
 
     #skills {
         text-align: center;
-
+        width: 100%;
+        min-height: 90vh;
         margin-bottom: 10rem;
 
+        @include desktopscreen {
+            margin-bottom: 5rem;
+        }
+
         .skills-title {
-            margin-top: 2rem;
-            margin-bottom:2rem;
+            margin-top: 5rem;
+            margin-bottom:4rem;
         }
 
         @include desktopscreen {
             .skills-title {
-                margin-bottom: 3rem;
-                margin-top: 10rem;
+                margin-bottom: 4rem;
+                margin-top: 8rem;
             }
         }
     }
 
-    #barscolumn {
+    #projects {
+        .projects-title {
+            margin: -10rem 0 2rem 0;
+            text-align: center;
+
+            @include desktopscreen {
+                margin-bottom: 5rem;
+                margin-top: 0;
+            }
+        }
+
+       .items {
+            display: grid;
+            grid-template-columns: 1fr;
+            column-gap: 3rem;
+            row-gap:    3rem;
+
+            @include tabletscreen {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            @include desktopscreen {
+                grid-template-columns: 1fr 1fr 1fr;
+                
+            }
+       }
+    }
+
+    
+}
+
+/*
+#barscolumn {
         background-color: #3A6073;
         width: 100%;
 
@@ -180,4 +217,4 @@ $borderdesign-radius-mobile:  128px;
             margin-top: 0.5rem;
         }
     }
-}
+*/

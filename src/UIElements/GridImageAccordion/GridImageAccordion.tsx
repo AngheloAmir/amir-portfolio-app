@@ -53,33 +53,33 @@ export function GridImageAccordion(props :GIAInterface) {
 
     return (
         <div id='GridImageAccordion'>
-            { whichText() }
             <div className='images-container'>
                 <img
                     src={props.images.image1}
-                    className={active == 0 ? 'activeanim' : ''}
+                    className={active === 0 ? 'activeanim' : ''}
                     onClick={() => setActiveFloat(0)}
                     alt=' icon'
                 />
                 <img
                     src={props.images.image2}
-                    className={active == 1 ? 'activeanim' : ''}
+                    className={active === 1 ? 'activeanim' : ''}
                     onClick={() => setActiveFloat(1)}
                     alt=' icon'
                 />
                 <img 
                     src={props.images.image3}
-                    className={active == 2 ? 'activeanim' : ''}
+                    className={active === 2 ? 'activeanim' : ''}
                     onClick={() => setActiveFloat(2)}
                     alt=' icon'
                 />
                 <img 
                     src={props.images.image4}
-                    className={active == 3 ? 'activeanim' : ''}
+                    className={active === 3 ? 'activeanim' : ''}
                     onClick={() => setActiveFloat(3)}
                     alt=' icon'
                 />
             </div>
+            { whichText() }
         </div>
     )
 }

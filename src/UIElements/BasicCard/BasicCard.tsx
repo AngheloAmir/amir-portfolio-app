@@ -1,6 +1,6 @@
 import './BasicCard.scss';
 
-import { BasicCardInterface } from '../';
+import { BasicCardInterface, FancyButton } from '../';
 
 /**
  * Contents of the Basic Card UI Element
@@ -28,7 +28,16 @@ export function BasicCard( props :BasicCardInterface) {
                     }
                 </div>
             </div>
-            { props.btn && <button onClick={props.onpress}>{props.btn}</button> }
+            <div className='btn'>
+                { props.btn &&
+                    <FancyButton
+                        name={props.btn}
+                        //@ts-ignore
+                        callback={() => props.onpress()}
+                    />
+                }
+            </div>
         </div>
     )
 }
+//{ props.btn && <button onClick={props.onpress}>{props.btn}</button> }

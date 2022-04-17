@@ -39,7 +39,6 @@ export default function HomeScene() {
 
     return (
         <React.Fragment>
-            <NavigationBar />
             <HomeLayout
                 introduction={{
                     ...porfolioinfo.herosection,
@@ -57,6 +56,7 @@ export default function HomeScene() {
 
                 footerText={porfolioinfo.footerText}
             />
+            <NavigationBar />
         </React.Fragment>
     );
 }
