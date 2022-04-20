@@ -13,12 +13,14 @@
         only providing the process and data from StateAPI
 */
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import HomeLayout from '../LayoutViews/HomeLayout';
 import porfolioinfo from '../_database/portfolio.json';
 import NavigationBar from './shared/NavigationBar';
 
 
 export default function HomeScene() {
+    const history = useHistory();
     const [modalVisible, setModalVisible] = React.useState(false);
 
     const handleIntroductionBTNAction = (i :number, itemname :string) => {
@@ -33,6 +35,10 @@ export default function HomeScene() {
         window.open( porfolioinfo.projects[index].link);
     }
 
+    const handleProjectMore = () => {
+        history.push('/projects');
+    }
+
     const handleModalClose = () => {
         setModalVisible(false);
     }
@@ -40,21 +46,23 @@ export default function HomeScene() {
     return (
         <React.Fragment>
             <HomeLayout
+                //Hero section data
                 introduction={{
                     ...porfolioinfo.herosection,
                     btnactioncallback: handleIntroductionBTNAction
                 }}
+
+                //skill section data
                 skills={{ ...porfolioinfo.skilsSections }}
 
-                reachme={porfolioinfo.reachme}
-                isModalVisible={modalVisible}
-                onModalClose={handleModalClose}
-
-        
+                //project section data
                 projects={porfolioinfo.projects}
                 projectOnAction={handleProjectAction}
-
-                footerText={porfolioinfo.footerText}
+                projectOnMore={handleProjectMore}
+               
+                //about me section
+                introduceMe={porfolioinfo.introsection}
+                
             />
             <NavigationBar />
         </React.Fragment>

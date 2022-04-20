@@ -17,6 +17,8 @@ import {
     //Carousel,
     //Columns,
     BasicCard,
+    FancyButton,
+    HighFive,
     //LinedStyled,
     //ModalBox
 } from '../UIElements';
@@ -58,6 +60,21 @@ export default function HomeLayout( props :HomeLayoutInterface.propsReceive ) {
                         )
                     })}
                 </div>
+                <div className="btn-more">
+                    <FancyButton
+                        name='See more of my projects'
+                        callback={props.projectOnMore}
+                    />
+                </div>
+            </div>
+        </section>
+
+        <section id='HighFive'>
+            <div className='content-container'>
+                <h1 className='title'>Let's <span>HI-FIVE!</span></h1>
+                <HighFive
+                    { ... props.introduceMe }
+                />
             </div>
         </section>
 

@@ -1,0 +1,121 @@
+#highfive {
+    //border: 1px solid blue;
+    height: 100%;
+
+    width: 80%;
+    margin: auto;
+
+    .slide1 {
+       // border: 1px solid red;
+
+        display: flex;
+        min-height: 100%;
+        text-align: center;
+
+        .image-state {
+            //border: 1px solid red;
+            width: 45%;
+            
+            overflow-x: hidden;
+            overflow-y: hidden;
+
+            img {
+                animation: wiggle 3s infinite;
+                object-fit: contain;
+                width:  100%;
+            }
+        }
+
+        .text-state {
+            //align-self: center;
+            margin: auto;
+            //text-align: center;
+            width: 55%;
+
+            
+            //border: 1px solid red;
+        }
+    }
+
+    .transmission-state {
+        padding-top: 15%;
+        animation: fadeoutDelayed 3s;
+    }
+    
+    .aboutme {
+       // border: 1px solid red;
+
+        display: flex;
+        min-height: 100%;
+        text-align: center;
+
+        .aboutme-image {
+            animation: fromleftToRight 1.5s;
+            //border: 1px solid red;
+            width: 45%;
+            
+            overflow-x: hidden;
+            overflow-y: hidden;
+
+            img {
+                object-fit: contain;
+                width: 100%;
+            }
+        }
+
+        .text-state {
+            animation: fadein 2s;
+
+            //align-self: center;
+            margin: auto;
+            //text-align: center;
+            width: 55%;
+
+            //border: 1px solid red;
+            p {
+                font-size: 1.6rem !important;
+                line-height: 2.5rem;
+            }
+            
+        }
+    }
+}
+
+@keyframes fromleftToRight {
+    0% {  opacity: 0; transform: translateX(-100%); } 
+    80% { opacity: 1;}
+    100% { transform:  translateX(0);}
+}
+
+
+@keyframes fadein {
+    0%   { opacity: 0; }
+    50%  { opacity: 0; }
+    100% {opacity:  1; }
+}
+
+.fadeout-anim {
+    animation: fadeout 1s;
+}
+
+@keyframes fadeout {
+    0% { opacity: 1; }
+    100% { opacity: 0;}
+}
+
+@keyframes fadeoutDelayed {
+    0% { opacity: 0 ;}
+    20% { opacity: 1;}
+    80% { opacity: 1; }
+    100% { opacity: 0;}
+}
+
+@keyframes wiggle {
+    0% { transform: rotate(0deg); }
+    20% { transform: rotate(3deg);  }
+    40% { transform: rotate(0deg);}
+
+    70% { transform: rotate(0deg);  }
+    90% { transform: rotate(-3deg); }
+    100% { transform: rotate(0deg);  }
+}

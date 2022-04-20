@@ -21,7 +21,7 @@ export function Carousel( props :CarouselInterface) {
                 { props.slides.map((slide :any, index :number) => {
                     return (
                         <div className="slideItem" >
-                            <img src={slide.image} alt='slide image' />
+                            <img src={slide.image} alt='slide' />
                             <div className="textContainer">
                                 <h3> {slide.title}</h3>
                                 <p>  {slide.text} </p>

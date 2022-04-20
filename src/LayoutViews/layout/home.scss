@@ -101,8 +101,30 @@ $borderdesign-radius-mobile:  128px;
                 
             }
        }
+
+       .btn-more {
+           width: 90%;
+           margin: auto;
+           padding-top: 2rem;
+           @include tabletscreen {
+               width: 70%;
+           }
+       }
     }
 
+    #HighFive {
+        min-height: 100vh;
+
+        .title {
+            margin: 5rem 0 2rem 0;
+            text-align: center;
+
+            @include desktopscreen {
+                margin-bottom: 8rem;
+                margin-top:    10rem;
+            }
+        }
+    }
     
 }
 

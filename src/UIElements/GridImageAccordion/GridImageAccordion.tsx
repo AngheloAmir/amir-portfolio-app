@@ -6,6 +6,32 @@ import { GIAInterface } from '../';
  * An accordion based on the images. When an images is hovered or clicked, a text will appear on the
  * left side (desktop) or in the bottom (mobile)
  * 
+ * @example
+ * The It must be supplied with four items (images and text)
+ * images  :{
+        image1  :string;
+        image2  :string;
+        image3  :string;
+        image4  :string;
+    }
+    texts   :{
+        text1   :{
+            title   :string;
+            text    :string;
+        };
+        text2   :{
+            title   :string;
+            text    :string;
+        }
+        text3   :{
+            title   :string;
+            text    :string;
+        }
+        text4   :{
+            title   :string;
+            text    :string;
+        }
+    }
  */
 export function GridImageAccordion(props :GIAInterface) {
     const [active, setActive] = React.useState(0);
