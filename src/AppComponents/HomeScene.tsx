@@ -21,14 +21,14 @@ import NavigationBar from './shared/NavigationBar';
 
 export default function HomeScene() {
     const history = useHistory();
-    const [modalVisible, setModalVisible] = React.useState(false);
+    //const [modalVisible, setModalVisible] = React.useState(false);
 
     const handleIntroductionBTNAction = (i :number, itemname :string) => {
         if(i === 0) {
             window.open(porfolioinfo.herosection.resumeDownload);
         }
-        if(i === 1)
-            setModalVisible(true);
+        //if(i === 1)
+        //    setModalVisible(true);
     }
 
     const handleProjectAction = (index :number, name :string) => {
@@ -39,9 +39,9 @@ export default function HomeScene() {
         history.push('/projects');
     }
 
-    const handleModalClose = () => {
-        setModalVisible(false);
-    }
+    //const handleModalClose = () => {
+    //    setModalVisible(false);
+    //}
 
     return (
         <React.Fragment>

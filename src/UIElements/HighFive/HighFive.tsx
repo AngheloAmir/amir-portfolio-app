@@ -9,7 +9,7 @@ export function HighFive( props :HighFiveInterface) {
 
     return (
         <div id="highfive">
-        { currentState == 0 &&
+        { currentState === 0 &&
             <div className={`slide1 ${isFadeout ? "fadeout-anim" : " "}`}>
                 <div className="image-state">
                     <img src={props.intro.image} alt={props.intro.image}
@@ -26,7 +26,7 @@ export function HighFive( props :HighFiveInterface) {
             </div>
         }
 
-        { currentState == 1 &&
+        { currentState === 1 &&
             <div className="slide1 transmission-state">
                 <div className="text-state">
                     <h1>{props.transistion.text}</h1>
@@ -34,7 +34,7 @@ export function HighFive( props :HighFiveInterface) {
             </div>
         }
 
-        { currentState == 2 &&
+        { currentState === 2 &&
             <div className="aboutme">
                 <div className="text-state">
                     <p>{props.aboutme.text}</p>
