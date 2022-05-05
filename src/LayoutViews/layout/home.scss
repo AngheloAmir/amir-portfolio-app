@@ -114,18 +114,34 @@ $borderdesign-radius-mobile:  128px;
 
     #HighFive {
         min-height: 100vh;
+        margin-bottom: 2rem;
 
         .title {
-            margin: 5rem 0 2rem 0;
+            margin: 5rem 0 3rem 0;
             text-align: center;
 
             @include desktopscreen {
-                margin-bottom: 8rem;
-                margin-top:    10rem;
+                margin-top:    8rem;
             }
         }
     }
     
+    #ContactForm {
+        @include desktopscreen {
+            margin: auto;
+            max-width: 800px;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 2rem;
+
+            @include desktopscreen {
+                margin-bottom: 3rem;
+                margin-top:    8rem;
+            }
+        }
+    }
 }
 
 /*

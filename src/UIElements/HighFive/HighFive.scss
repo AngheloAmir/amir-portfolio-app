@@ -1,77 +1,99 @@
-#highfive {
-    //border: 1px solid blue;
-    height: 100%;
+/*
+*/
 
-    width: 80%;
+@import '../theme';
+@import '../_lib/mixings';
+
+#highfive {
+    height: 100%;
+    width: 100%;
     margin: auto;
 
     .slide1 {
-       // border: 1px solid red;
-
-        display: flex;
-        min-height: 100%;
-        text-align: center;
+        margin-top: 1rem;
 
         .image-state {
-            //border: 1px solid red;
-            width: 45%;
-            
+            margin: auto;
+            max-width: 460px;
+            width: 90%;
             overflow-x: hidden;
             overflow-y: hidden;
 
             img {
                 animation: wiggle 3s infinite;
+                cursor: pointer;
                 object-fit: contain;
                 width:  100%;
             }
+            .text-state {
+                text-align: center;
+            }
         }
 
-        .text-state {
-            //align-self: center;
-            margin: auto;
-            //text-align: center;
-            width: 55%;
+        @include desktopscreen {
+            display: flex;
+            min-height: 100%;
+            padding: 1.5rem;
+            text-align: center;
 
-            
-            //border: 1px solid red;
+            .image-state {
+                width: 45%;
+            }
+            .text-state {
+                margin: auto;
+                width: 55%;
+            }
         }
     }
+    /*End of SLIDE 1*/
 
     .transmission-state {
         padding-top: 15%;
         animation: fadeoutDelayed 3s;
+        .text-state {
+            h1 {
+                text-align: center;
+            }
+        }
     }
-    
-    .aboutme {
-       // border: 1px solid red;
+    /*End of SLIDE 2*/
 
+    .aboutme {
         display: flex;
         min-height: 100%;
         text-align: center;
 
         .aboutme-image {
-            animation: fromleftToRight 1.5s;
-            //border: 1px solid red;
-            width: 45%;
-            
-            overflow-x: hidden;
-            overflow-y: hidden;
+            display: none;
+            margin-top: 2rem;
 
-            img {
-                object-fit: contain;
-                width: 100%;
+            @include desktopscreen {
+                animation: fromleftToRight 1.5s;
+                display: block;
+                margin-top: 0;
+                width: 45%;
+                overflow-x: hidden;
+                overflow-y: hidden;
+
+                img {
+                    object-fit: contain;
+                    width: 100%;
+                }
             }
         }
 
         .text-state {
-            animation: fadein 2s;
-
-            //align-self: center;
+            animation: fromleftToRight 1.5s;
             margin: auto;
-            //text-align: center;
-            width: 55%;
+            padding-top: 2rem;
+            width: 90%;
 
-            //border: 1px solid red;
+            @include desktopscreen {
+                animation: fadein 2s;
+                margin: auto;
+                width: 55%;
+            }
+
             p {
                 font-size: 1.6rem !important;
                 line-height: 2.5rem;

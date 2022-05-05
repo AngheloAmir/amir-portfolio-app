@@ -66,15 +66,15 @@
     "introsection": {
         "intro": {
             "image": "./assets/me_wave.png",
-            "text": "Tap my hands for a high five!"
+            "text": "Hello Visitor! Lets have a shake?"
         },
         "transistion": {
-            "text": "Wow! Great!",
+            "text": "Thanks! Let me introduce myself.",
             "duration": "5"
         },
         "aboutme": {
             "image": "./assets/me_stand.png",
-            "text": "\"Passionate programmer and pursuing a career in web development, especially in React JS and React Native. As he found love in this framework; they were fun and challenging to do. Besides, can do design and IT related stuff. Being a fast learner and performing many trials and errors is the key to complete any programming task\"."
+            "text": "My name is Anghelo Amir, and I am a junior web developer. I graduated from STI College with a degree in BS IT. I found love in web development with ReactJS because it is fun and challenging to do. Being a fast learner and performing many trials and errors is the key to completing any programming task."
         }
     },
 

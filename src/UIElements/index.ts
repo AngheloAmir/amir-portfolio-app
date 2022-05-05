@@ -19,3 +19,5 @@ export { ModalBox } from './ModalBox/ModalBox';
 export { GridImageAccordion } from './GridImageAccordion/GridImageAccordion';
 export { Carousel } from './Carousel/Carousel';
 export { HighFive } from './HighFive/HighFive';
+export { Form } from './Form/Form';
+

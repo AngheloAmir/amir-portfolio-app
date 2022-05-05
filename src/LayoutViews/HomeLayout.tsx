@@ -21,6 +21,7 @@ import {
     HighFive,
     //LinedStyled,
     //ModalBox
+    Form
 } from '../UIElements';
 
 export default function HomeLayout( props :HomeLayoutInterface.propsReceive ) {
@@ -43,7 +44,7 @@ export default function HomeLayout( props :HomeLayoutInterface.propsReceive ) {
         
         <section id='projects'>
             <div className='content-container'>
-                <h1 className='projects-title'><span>Projects</span> that I Create</h1>
+                <h1 className='projects-title'><span>PROJECTS</span> that I Create</h1>
                 <div className='items'>
                     { props.projects.map((project :any, index :number) => {
                         return(
@@ -71,22 +72,36 @@ export default function HomeLayout( props :HomeLayoutInterface.propsReceive ) {
 
         <section id='HighFive'>
             <div className='content-container'>
-                <h1 className='title'>Let's <span>HI-FIVE!</span></h1>
+                <h1 className='title'>Nice to <span>MEET</span> you!</h1>
                 <HighFive
                     { ... props.introduceMe }
                 />
             </div>
         </section>
 
-     
-    <p style={{width: '50px', margin: 'auto', paddingTop: '5rem'}}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. A
-    </p>
+        <section id='ContactForm'>
+            <div className='content-container'>
+                <h1 className='title'>Is am <span>INTERESTING?</span></h1>
+                <Form
+                    title='asda'
+                    text='asda'
+                />
+            </div>  
+        </section>
+
+        <footer>
+            this is a footer
+        </footer>
+        
     </div> 
     );
 }
 
 /*
+ <p style={{width: '50px', margin: 'auto', paddingTop: '5rem'}}>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. A
+    </p>
+
 <div id='projects'>
             <LinedStyled
                 text='Projects Highlight'
