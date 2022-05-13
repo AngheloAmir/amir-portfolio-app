@@ -79,7 +79,20 @@
     },
 
     "contactMe": {
-        "sample": "Asdasd"
+        "forms": [
+            {
+                "name": "Your Name",
+                "type": "input"
+            },
+            {
+                "name": "Your Email",
+                "type": "email"
+            },
+            {
+                "name": "Message",
+                "type": "text"
+            }
+        ]
     },
 
     "footer": {

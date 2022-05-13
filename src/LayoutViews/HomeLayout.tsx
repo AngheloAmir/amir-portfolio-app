@@ -74,17 +74,20 @@ export default function HomeLayout( props :HomeLayoutInterface.propsReceive ) {
             <div className='content-container'>
                 <h1 className='title'>Nice to <span>MEET</span> you!</h1>
                 <HighFive
-                    { ... props.introduceMe }
+                    { ...props.introduceMe }
                 />
             </div>
         </section>
 
         <section id='ContactForm'>
             <div className='content-container'>
-                <h1 className='title'>Is am <span>INTERESTING?</span></h1>
+                <h1 className='title'>
+                    Is am <span>INTERESTING?</span>
+                    <br />
+                    <span> Contact Me! </span>
+                </h1>
                 <Form
-                    title='asda'
-                    text='asda'
+                    { ...props.contactMe }
                 />
             </div>  
         </section>
@@ -101,34 +104,6 @@ export default function HomeLayout( props :HomeLayoutInterface.propsReceive ) {
  <p style={{width: '50px', margin: 'auto', paddingTop: '5rem'}}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. A
     </p>
-
-<div id='projects'>
-            <LinedStyled
-                text='Projects Highlight'
-                isHorizontal={!isMobile}
-            />
-            <div className='projects-item'>
-            { props.projects.map((project :HomeLayoutInterface.Cards, index :number) => {
-                return (
-                    <div key={index}>
-                        <BasicCard
-                            image={project.image}
-                            title={project.name}
-                            text={project.description}
-                            btn={project.btntext}
-                            tags={project.tags}
-                            onpress={() => props.projectOnAction(index, project.name)}
-                        />
-                    </div>
-                )
-            })}
-            </div>
-        </div>
-
-
-        <footer>
-            <h5>{props.footerText}</h5>
-        </footer>
 
         <ModalBox
             isVisible={props.isModalVisible}

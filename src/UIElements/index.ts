@@ -7,6 +7,7 @@ export type { BasicCardInterface } from './_lib/BasicCard';
 export type { GIAInterface } from './_lib/GridImageAccordion';
 export type { CarouselInterface } from './_lib/Carousel';
 export type { HighFiveInterface } from './_lib/HighFive';
+export type { FormInterface } from './_lib/Form';
 
 export { Navbar } from './Navbar/Navbar';
 export { SlidingMenu } from './SlidingMenu/SlidingMenu';

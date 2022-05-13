@@ -62,9 +62,17 @@ export default function HomeScene() {
                
                 //about me section
                 introduceMe={porfolioinfo.introsection}
+
+                //Contact me
+                contactMe={{
+                    ...porfolioinfo.contactMe,
+                    callback: (formData) => alert( JSON.stringify(formData))
+                }}
                 
             />
             <NavigationBar />
         </React.Fragment>
     );
 }
+
+ //window.open('https://mail.google.com/mail/?view=cm&fs=1&to=angheloamir@gmail.com&su=Visitor&body=' + text);
