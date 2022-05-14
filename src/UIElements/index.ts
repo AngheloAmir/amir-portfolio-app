@@ -8,6 +8,7 @@ export type { GIAInterface } from './_lib/GridImageAccordion';
 export type { CarouselInterface } from './_lib/Carousel';
 export type { HighFiveInterface } from './_lib/HighFive';
 export type { FormInterface } from './_lib/Form';
+export type { SocialLinksInterface } from './_lib/SocialLinks';
 
 export { Navbar } from './Navbar/Navbar';
 export { SlidingMenu } from './SlidingMenu/SlidingMenu';
@@ -21,4 +22,5 @@ export { GridImageAccordion } from './GridImageAccordion/GridImageAccordion';
 export { Carousel } from './Carousel/Carousel';
 export { HighFive } from './HighFive/HighFive';
 export { Form } from './Form/Form';
+export { SocialLinks } from './SocialLinks/SocialLinks';
 

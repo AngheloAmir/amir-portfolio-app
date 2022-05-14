@@ -21,7 +21,8 @@ import {
     HighFive,
     //LinedStyled,
     //ModalBox
-    Form
+    Form,
+    SocialLinks
 } from '../UIElements';
 
 export default function HomeLayout( props :HomeLayoutInterface.propsReceive ) {
@@ -93,7 +94,14 @@ export default function HomeLayout( props :HomeLayoutInterface.propsReceive ) {
         </section>
 
         <footer>
-            this is a footer
+            <div className='content'>
+                <div className='links'>
+                    <SocialLinks
+                        {...props.footer.links}
+                    />
+                </div>
+                <p>{props.footer.text}</p>
+            </div>
         </footer>
         
     </div> 

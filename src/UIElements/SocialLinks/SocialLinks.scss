@@ -1,0 +1,12 @@
+#SocialLinks {
+    display: flex;
+    justify-content: space-between;
+
+    a {
+        color: #284255;
+    }
+
+    a:hover {
+        color: orange;
+    }
+}

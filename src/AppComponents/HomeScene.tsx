@@ -68,6 +68,11 @@ export default function HomeScene() {
                     ...porfolioinfo.contactMe,
                     callback: (formData) => alert( JSON.stringify(formData))
                 }}
+
+                //Footers
+                footer={{
+                    ...porfolioinfo.footer
+                }}
                 
             />
             <NavigationBar />
@@ -76,3 +81,4 @@ export default function HomeScene() {
 }
 
  //window.open('https://mail.google.com/mail/?view=cm&fs=1&to=angheloamir@gmail.com&su=Visitor&body=' + text);
+ 

@@ -96,11 +96,11 @@
     },
 
     "footer": {
-        "copyright": "asdasdasdasdasdasds",
-        "social": {
-            "facebook": "asdasdasda",
-            "linkedin": "asdsadasdasd",
-            "github": "asdasdasdasd"
+        "text": "Last update: May 14, 2022",
+        "links": {
+            "facebook": "https://www.facebook.com/anghelo.amir",
+            "linkedin": "https://www.linkedin.com/in/anghelo-amir-771401236/",
+            "github": "https://github.com/AngheloAmir"
         }
     }
 

@@ -1,6 +1,12 @@
 /*
 */
-import { HeroProfileInterface, GIAInterface, HighFiveInterface, FormInterface } from '../../UIElements';
+import {
+    HeroProfileInterface,
+    GIAInterface,
+    HighFiveInterface,
+    FormInterface,
+    SocialLinksInterface
+} from '../../UIElements';
 
 export namespace HomeLayoutInterface {
     export interface propsReceive {
@@ -10,6 +16,10 @@ export namespace HomeLayoutInterface {
         projectOnAction: (index :number, name :string) => void;
         projectOnMore:   () => void;
         contactMe    :FormInterface;
+        footer       : {
+            text     :string;
+            links    :SocialLinksInterface;
+        }
 
         introduceMe  :HighFiveInterface;
     };
