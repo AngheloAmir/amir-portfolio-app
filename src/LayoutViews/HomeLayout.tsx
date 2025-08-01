@@ -55,8 +55,10 @@ export default function HomeLayout( props :HomeLayoutInterface.propsReceive ) {
                                     title={project.name}
                                     text={project.description}
                                     btn={project.btntext}
+                                    secbtn={project.secbtn}
                                     tags={project.tags}
-                                    onpress={() => props.projectOnAction(index, project.name)}
+                                    onpress={()    => props.projectOnAction(index, project.name)}
+                                    onpresssec={() => props.projectOnAction2(index, project.name)}
                                 />
                             </div>
                         )

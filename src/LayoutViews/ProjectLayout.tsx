@@ -28,6 +28,8 @@ export default function ProjectLayout(props :ProjectLayoutInterface.propsReceive
                                 btn={project.btntext}
                                 tags={project.tags}
                                 onpress={() => props.projectOnAction(index, project.name)}
+                                secbtn={project.secbtn}
+                                onpresssec={() => props.projectOnAction2(index, project.name)}
                             />
                         </div>
                     )

@@ -38,6 +38,16 @@
 
     "projects": [
         {
+            "name": "Bheai English Center",
+            "image": "./assets/bheai.png",
+            "tags": ["Next.js", "OpenAI API", "Typescript", "tailwindcss"],
+            "description": "Built an AI-powered web application that helps users improve English fluency and communication skills through practical, interactive conversations",
+            "link":  "https://amir-bheai-english-center.vercel.app/",
+            "link2": "https://github.com/AngheloAmir/bheai_public_scr",
+            "btntext": "View Website",
+            "secbtn": "View Github Repo"
+        },
+        {
             "name": "Gala: Virtual Tour Guide",
             "image": "./assets/galaappbg1.jpg",
             "tags": ["React-Native (Expo)", "Express.js", "MongoDB", "Typescript"],
@@ -51,14 +61,6 @@
             "tags": ["React.js", "Typescript", "SCSS"],
             "description": "My portfolio website is single page application that is created with React.js and optimize for mobile and tablets. It is designed to have reusable components, which makes it easier to maintain. To change the information provided, it is easy as changing the values in json.",
             "link": "https://github.com/AngheloAmir/amir-portfolio-app",
-            "btntext": "View Github repo"
-        },
-        {
-            "name": "Personal Reviewer",
-            "image": "./assets/personalrev.jpg",
-            "tags": ["React Native (Expo)", "Typescript"],
-            "description": "Personal Reviewer is a mobile application developed with React Native Expo. It is made for my study as a student of Information Technology course. Currently, it is optimized to work on android phones with a smaller screen;",
-            "link": "https://github.com/AngheloAmir/personalreviewer",
             "btntext": "View Github repo"
         }
     ],

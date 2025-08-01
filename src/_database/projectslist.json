@@ -1,6 +1,16 @@
 {
     "projects": [
         {
+            "name": "Bheai English Center",
+            "image": "./assets/bheai.png",
+            "tags": ["Next.js", "OpenAI API", "Typescript", "tailwindcss"],
+            "description": "Built an AI-powered web application that helps users improve English fluency and communication skills through practical, interactive conversations",
+            "link":  "https://amir-bheai-english-center.vercel.app/",
+            "link2": "https://github.com/AngheloAmir/bheai_public_scr",
+            "btntext": "View Website",
+            "secbtn": "View Github Repo"
+        },
+        {
             "name": "Gala: Virtual Tour Guide",
             "image": "./assets/galaappbg1.jpg",
             "tags": ["React-Native (Expo)", "Express.js", "MongoDB", "Typescript"],

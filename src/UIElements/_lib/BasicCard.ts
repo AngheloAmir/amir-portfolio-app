@@ -14,6 +14,9 @@ export interface BasicCardInterface {
     title?   :string;
     text?    :string;
     btn?     :string;
+    secbtn?  :string;
+    seclink? :string;
     tags?    :Array<string>;
-    onpress? :() => void;
+    onpress?    :() => void;
+    onpresssec? :() => void;
 }

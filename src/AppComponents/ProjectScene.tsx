@@ -23,12 +23,18 @@ export default function ProjectScene() {
         window.open( projectlist.projects[index].link);
     }
 
+    const handleProjectAction2 = (index :number, name :string) => {
+        window.open( projectlist.projects[index].link2 );
+    }
+
     return (
         <React.Fragment>
             <NavigationBar />
             <ProjectLayout
+                //@ts-ignore
                 projects={ projectlist.projects }
                 projectOnAction={handleProjectAction}
+                projectOnAction2={handleProjectAction2}
             />
         </React.Fragment>
     );

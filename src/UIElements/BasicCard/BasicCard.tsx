@@ -36,6 +36,13 @@ export function BasicCard( props :BasicCardInterface) {
                         callback={() => props.onpress()}
                     />
                 }
+                { props.secbtn &&
+                    <FancyButton
+                        name={props.secbtn}
+                        //@ts-ignore
+                        callback={() => props.onpresssec()}
+                    />
+                }
             </div>
         </div>
     )

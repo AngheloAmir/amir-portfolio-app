@@ -35,6 +35,10 @@ export default function HomeScene() {
         window.open( porfolioinfo.projects[index].link);
     }
 
+    const handleProjectAction2 = (index :number, name :string) => {
+        window.open( porfolioinfo.projects[index].link2 );
+    }
+
     const handleProjectMore = () => {
         history.push('/projects');
     }
@@ -58,6 +62,7 @@ export default function HomeScene() {
                 //project section data
                 projects={porfolioinfo.projects}
                 projectOnAction={handleProjectAction}
+                projectOnAction2={handleProjectAction2}
                 projectOnMore={handleProjectMore}
                
                 //about me section

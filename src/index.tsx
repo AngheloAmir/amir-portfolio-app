@@ -7,6 +7,11 @@
     * DESCRIPTION
 
     * VISIBLE WHEN
+
+
+        Built an AI-powered web application that helps
+users improve English fluency and communication
+skills through practical, interactive conversations.
 */
 
 import React from 'react';

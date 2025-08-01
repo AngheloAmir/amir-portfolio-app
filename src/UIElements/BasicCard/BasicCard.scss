@@ -56,7 +56,12 @@ $basic-card-btn-width-tab:      135px;
 
     .btn {
         //border: 1px solid red;
-        padding: 1rem 0;
+        padding: 1rem 0.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 10px;
          
         button {
             align-self: center;

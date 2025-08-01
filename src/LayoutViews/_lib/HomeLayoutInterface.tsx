@@ -13,7 +13,8 @@ export namespace HomeLayoutInterface {
         introduction :HeroProfileInterface;
         skills       :GIAInterface;
         projects     :Array<Cards>;
-        projectOnAction: (index :number, name :string) => void;
+        projectOnAction:   (index :number, name :string) => void;
+        projectOnAction2:  (index :number, name :string) => void;
         projectOnMore:   () => void;
         contactMe    :FormInterface;
         footer       : {
