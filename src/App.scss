@@ -1,0 +1,46 @@
+// Variables
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+
+// Nested styles
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  
+  .header {
+    color: $primary-color;
+    margin-bottom: 2rem;
+    
+    &:hover {
+      color: darken($primary-color, 10%);
+    }
+  }
+  
+  .content {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    
+    p {
+      color: #333;
+      line-height: 1.6;
+      
+      &.highlight {
+        color: $secondary-color;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+// Media query example
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+    
+    .header {
+      font-size: 1.5rem;
+    }
+  }
+}
