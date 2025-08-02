@@ -1,3 +1,5 @@
+import { SocialLinksInterface } from "../../UIElements";
+
 /*
 */
 export namespace ProjectLayoutInterface {
@@ -5,6 +7,10 @@ export namespace ProjectLayoutInterface {
         projects :Array<Cards>;
         projectOnAction: (index :number, name :string) => void;
         projectOnAction2:  (index :number, name :string) => void;
+        footer       : {
+            text     :string;
+            links    :SocialLinksInterface;
+        }
     }
 
     export interface Cards {

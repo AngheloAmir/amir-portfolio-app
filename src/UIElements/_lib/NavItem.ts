@@ -1,5 +1,3 @@
-import { IconType } from "react-icons";
-
 /**
  * The props need to use Navbar and SlidingMenu UI
  */
@@ -30,13 +28,13 @@ export interface NavigationUIProps {
  * An interface represent a single nav item
  * @example
     name       :string;
-    icon?      :() => ReactNode;
+    icon?:     ComponentType<{ className?: string }> | IconType;
     active?    :boolean;
     disabled?  :boolean;
  */
 export interface NavNameAndIcon {
     name       :string;
-    icon?      : IconType | React.ComponentType<{ className?: string }>;
+    icon?      :React.ComponentType;
     active?    :boolean;
     disabled?  :boolean;
 }

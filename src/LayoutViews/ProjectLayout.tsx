@@ -3,7 +3,7 @@
  */
 import './layout/project.scss';
 import { ProjectLayoutInterface } from './_lib/ProjectLayoutInterface';
-import { BasicCard, LinedStyled } from '../UIElements';
+import { BasicCard, LinedStyled, SocialLinks } from '../UIElements';
 import useDimension               from '../Library/useWindowDimension';
 
 export default function ProjectLayout(props :ProjectLayoutInterface.propsReceive ) {
@@ -36,6 +36,17 @@ export default function ProjectLayout(props :ProjectLayoutInterface.propsReceive
                 })}
                 </div>
             </div>
+
+            <footer>
+                <div className='content'>
+                    <div className='links'>
+                        <SocialLinks
+                            {...props.footer.links}
+                        />
+                    </div>
+                    <p>{props.footer.text}</p>
+                </div>
+            </footer>
         </div>
     );
 }

@@ -15,8 +15,8 @@
 import React from 'react';
 import NavigationBar from './shared/NavigationBar';
 import ProjectLayout from '../LayoutViews/ProjectLayout';
-import projectlist from '../_database/projectslist.json';
-
+import projectlist   from '../_database/projectslist.json';
+import porfolioinfo  from '../_database/portfolio.json';
 
 export default function ProjectScene() {
     const handleProjectAction = (index :number, name :string) => {
@@ -35,6 +35,9 @@ export default function ProjectScene() {
                 projects={ projectlist.projects }
                 projectOnAction={handleProjectAction}
                 projectOnAction2={handleProjectAction2}
+                footer={{
+                    ...porfolioinfo.footer
+                }}
             />
         </React.Fragment>
     );

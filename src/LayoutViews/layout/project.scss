@@ -8,13 +8,11 @@ $borderdesign-radius:      128px;
     margin-top: 5rem;
     
     #projectslist {
-        display: flex;
-        flex-direction: column;
+        display:         flex;
+        flex-direction:  column;
         justify-content: space-evenly;
-        margin-left:    10vw;
-        margin-top:     0vw;
-        margin-bottom:  5vh;
-        width:          80vw;
+        width:           100vw;
+        margin-bottom:   2rem;
 
         .projects-item {
             display:                grid;
@@ -23,6 +21,9 @@ $borderdesign-radius:      128px;
             column-gap:             5%;
             row-gap:                32px;
             padding-top:            1rem;
+            max-width:              1200px;
+            width:                  90vw;
+            align-self:             center;
 
             @include tabletscreen {
                 grid-template-columns: 1fr 1fr;
@@ -30,8 +31,6 @@ $borderdesign-radius:      128px;
 
             @include desktopscreen {
                 grid-template-columns: 1fr 1fr 1fr;
-                max-width: 1000px;
-                align-self: center;
             }
         }
     }

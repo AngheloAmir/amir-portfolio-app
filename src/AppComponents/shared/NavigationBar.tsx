@@ -1,16 +1,19 @@
 import { useNavigate } from 'react-router-dom';
-import { FaHome, FaReact } from 'react-icons/fa';
 import { Navbar, SlidingMenu } from '../../UIElements';
 import useDimension from '../../Library/useWindowDimension';
+import * as FaIcons from 'react-icons/fa';
+
 
 export default function NavigationBar() {
     const { isMobile } = useDimension();
     const navigate     = useNavigate();   
+    const FaHome       = FaIcons.FaHome  as React.ComponentType;
+    const FaReact      = FaIcons.FaReact as React.ComponentType;
     
     const navitems = [
         {
             name: ' Home',
-            icon:  FaHome,
+            icon:   FaHome,
             active: window.location.href.endsWith('/')
         },
         {

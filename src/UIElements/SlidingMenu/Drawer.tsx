@@ -26,13 +26,14 @@ export default function Drawer(props :propsReceive) {
                                     props.callback(index, item.name)
                             }}
                         >
-                            <span className='icon'>
-                                {/* { item.icon && item.icon() } */}
-                                { item.icon && <span>icon here at SlidingMenu/Drawer.tsx </span> }
-                            </span>
-                            <span>
-                                { item.name }
-                            </span>
+                            <div style={{ display: 'flex', gap: '8px'}}>
+                                <span className='icon'>
+                                    { item.icon && React.createElement(item.icon, {})}
+                                </span>
+                                <span>
+                                    { item.name }
+                                </span>
+                            </div>
                             <SubItem
                                 item={item}
                                 index={index}
@@ -61,12 +62,11 @@ function SubItem( props :{item :NavItem, index :number, cb: (name :string) => vo
                         onClick={() => props.cb(subitem.name)}
                     >
                         <span className='icon'>
-                                {/* { item.icon && item.icon() } */}
-                                { subitem.icon && <span>icon here at SlidingMenu/Drawer.tsx </span> }
-                            </span>
-                            <span>
-                                { subitem.name }
-                            </span>
+                            { subitem.icon && React.createElement(subitem.icon, {})}
+                        </span>
+                        <span>
+                            { subitem.name }
+                        </span>
                     </div>
                 );
             })}

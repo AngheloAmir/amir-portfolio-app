@@ -13,7 +13,7 @@ import Text from './Text';
     name?           :string;
     text?           :string;
     btnaction?      :Array<string>;
-    btnactioncallback? :(index :number, itemname :string) => void;
+    btnactioncallback?  :(index :number, itemname :string) => void;
 
     {
         "imagepath":        "./assets/profile.jpg",

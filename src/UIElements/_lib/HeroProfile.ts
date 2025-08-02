@@ -14,6 +14,6 @@ export interface HeroProfileInterface {
     name?           :string;
     text?           :string;
     tags?           :string[];
-    btnaction?      :Array<string>;
-    btnactioncallback? :(index :number, itemname :string) => void;
+    btnaction?      :Array<string>;    
+    btnactioncallback?  :(index :number, itemname :string) => void;
 }

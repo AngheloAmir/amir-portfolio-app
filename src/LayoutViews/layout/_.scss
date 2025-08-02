@@ -9,7 +9,6 @@ common things to copy:
     @include desktopscreen {
         background-color: blue;
     }
-
 */
 
 @mixin mobilescreen {
@@ -42,4 +41,31 @@ common things to copy:
 
 @mixin testcolored {
     background-color: pink;
+}
+
+footer {
+    background-color: #44738a;
+    margin-top: 5rem;
+    padding: 2rem;
+
+    .content {
+        width: 90%;
+        max-width: 600px;
+        margin: auto;
+        text-align: center;
+
+        p {
+            font-size: 1rem !important;
+            margin-top: 1rem;
+        }
+
+        .links {
+            width: 70%;
+            margin: auto;
+
+            @include desktopscreen {
+                width: 40%;
+            }
+        }
+    }
 }

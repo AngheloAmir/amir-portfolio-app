@@ -5,8 +5,9 @@
         "name": "Anghelo Amir",
         "text": "\"Let's [] Websites and Apps\"",
         "tags": ["Create", "Improve", "Maintain", "Team Up For"],
-        "btnaction": ["My Projects", "Contact Me"],
-        "resumeDownload": "https://angheloamir.github.io/#/projects"
+        "btnaction": ["My Projects", "Visit My Github"],
+        "resumeDownload": "https://angheloamir.github.io/#/projects",
+        "secondAction":   "https://github.com/AngheloAmir"
     },
 
     "skilsSections": {
@@ -98,7 +99,7 @@
     },
 
     "footer": {
-        "text": "Last update: August 1, 2025",
+        "text": "Last update: August 3, 2025",
         "links": {
             "facebook": "https://www.facebook.com/anghelo.amir",
             "linkedin": "https://www.linkedin.com/in/anghelo-amir-01145333b/",

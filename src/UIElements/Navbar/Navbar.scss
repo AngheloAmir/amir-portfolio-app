@@ -77,10 +77,11 @@
                 }
 
                 .subitem {
-                    padding:        calc($navbar-base-padding/2) $navbar-base-padding;
-                    &:hover {
-                        color:      $navbar-dropdown-texthover
-                    }
+                    //padding:        calc($navbar-base-padding/2) $navbar-base-padding;
+                    // display:        flex;
+                    // &:hover {
+                    //     color:      $navbar-dropdown-texthover
+                    // }
                 }
 
                 &::before {

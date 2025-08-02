@@ -21,14 +21,13 @@ import NavigationBar from './shared/NavigationBar';
 
 export default function HomeScene() {
     const navigate = useNavigate();
-    //const [modalVisible, setModalVisible] = React.useState(false);
 
     const handleIntroductionBTNAction = (i :number, itemname :string) => {
         if(i === 0) {
-            window.open(porfolioinfo.herosection.resumeDownload);
+            window.open( porfolioinfo.herosection.resumeDownload);
         }
-        //if(i === 1)
-        //    setModalVisible(true);
+        if(i === 1)
+            window.open( porfolioinfo.herosection.secondAction );
     }
 
     const handleProjectAction = (index :number, name :string) => {
@@ -42,10 +41,6 @@ export default function HomeScene() {
     const handleProjectMore = () => {
         navigate('/projects');
     }
-
-    //const handleModalClose = () => {
-    //    setModalVisible(false);
-    //}
 
     return (
         <React.Fragment>
@@ -84,6 +79,3 @@ export default function HomeScene() {
         </React.Fragment>
     );
 }
-
- //window.open('https://mail.google.com/mail/?view=cm&fs=1&to=angheloamir@gmail.com&su=Visitor&body=' + text);
- 
