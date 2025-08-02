@@ -1,46 +1,87 @@
-// Variables
-$primary-color: #3498db;
-$secondary-color: #2ecc71;
+@import './UIElements/_lib/mixings';
 
-// Nested styles
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
-  
-  .header {
-    color: $primary-color;
-    margin-bottom: 2rem;
-    
-    &:hover {
-      color: darken($primary-color, 10%);
-    }
-  }
-  
-  .content {
-    background-color: #f8f9fa;
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    
-    p {
-      color: #333;
-      line-height: 1.6;
-      
-      &.highlight {
-        color: $secondary-color;
-        font-weight: bold;
-      }
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  /*background-color: #c0b2a7;*/
+  background-color: #3A6073;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.content-container {
+  margin: auto      !important;
+  max-width: 1200px !important;
+  width: 90%        !important;
+}
+
+h1, h2, h3, p {
+ cursor: default;
+ span {
+   color: orange;
+ }
+}
+
+h1 {
+  font-family: 'Dosis', sans-serif;
+  color:   white;
+  font-size: 2.5rem;
+
+  @include desktopscreen {
+      font-size: 4rem;
   }
 }
 
-// Media query example
-@media (max-width: 768px) {
-  .container {
-    padding: 1rem;
-    
-    .header {
-      font-size: 1.5rem;
-    }
+h2 {
+  color:   #72B095;
+  font-size: 2.4rem;
+
+  @include desktopscreen {
+      font-size: 3rem;
   }
+}
+
+h3 {
+  color:   #72B095;
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+p, label {
+  font-size: 1.3rem;
+  color: white;
+  line-height: 2rem;
+}
+
+input, textarea {
+  font-size: 1.3rem;
+  padding: 0.5rem 1rem;
+
+  border: 0;
+
+  &:active {
+    border: 1px solid red;
+  }
+}
+
+img {
+  object-fit: contain;
 }
