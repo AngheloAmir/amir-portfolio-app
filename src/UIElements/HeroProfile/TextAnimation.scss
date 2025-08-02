@@ -1,0 +1,27 @@
+@import '../theme';
+@import '../_lib/mixings';
+
+#textslideup-animation {
+    display: inline-block;
+    text-align: center;
+
+    div {
+      padding: 0 0.5rem;
+    }
+}
+
+.addOpacityEffect {
+  -webkit-animation-name: subtleSlideUp;
+  -webkit-animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+  animation-name: subtleSlideUp;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+ 
+  @keyframes subtleSlideUp {
+    0%    { opacity: 0; transform: translate(0%, 20%) }
+    15%   { opacity: 1; transform: translate(0%, 0%) }
+    85%   { opacity: 1; transform: translate(0%, 0%) }
+    100%  { opacity: 0; transform: translate(0%, -20%) }
+  }
+}

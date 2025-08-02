@@ -1,0 +1,109 @@
+{
+    "herosection": {
+        "imagepath": "./assets/profile.jpg",
+        "welcomemsg": "Hi my name is",
+        "name": "Anghelo Amir",
+        "text": "\"Let's [] Websites and Apps\"",
+        "tags": ["Create", "Improve", "Maintain", "Team Up For"],
+        "btnaction": ["My Projects", "Contact Me"],
+        "resumeDownload": "https://angheloamir.github.io/#/projects"
+    },
+
+    "skilsSections": {
+        "images"  :{
+            "image1":   "/assets/ts.png",
+            "image2":   "/assets/react.png",
+            "image3":   "/assets/fullstack.png",
+            "image4":   "/assets/java.png"
+        },
+        "texts"   :{
+            "text1" :{
+                "title": "Web, JavaScript & Typescript",
+                "text":  "Mastering the fundamentals of HTML, CSS, JavaScript and TypeScript. I may not be the best in web design, but I assure proper coding design skills. Most of my projects use Typescript as it is easier to maintain."
+            },
+            "text2" :{
+                "title": "React.js & React Native",
+                "text":  "I Have been practicing with these frameworks for more than 12 months. My skill sharpened over the year, and I learned new techniques to use this framework effectively. I use context API instead of Redux."
+            },
+            "text3" :{
+                "title": "Express.js and MongoDB",
+                "text":  "I gained skill with these frameworks thru practice. However, most of my projects do not use these technologies. But still, I can assure to build quality code for the backend of the project."
+            },
+            "text4" :{
+                "title": "Java (OOP)",
+                "text":  "My first programming language is assembly 6502, then C/C++, and then Java. I have learned to program about eight years ago so, my skill in the logic of programming is well developed."
+            }
+        }
+    },
+
+    "projects": [
+        {
+            "name": "Bheai English Center",
+            "image": "./assets/bheai.png",
+            "tags": ["Next.js", "OpenAI API", "Typescript", "tailwindcss"],
+            "description": "Built an AI-powered web application that helps users improve English fluency and communication skills through practical, interactive conversations",
+            "link":  "https://amir-bheai-english-center.vercel.app/",
+            "link2": "https://github.com/AngheloAmir/bheai_public_scr",
+            "btntext": "View Website",
+            "secbtn": "View Github Repo"
+        },
+        {
+            "name": "Gala: Virtual Tour Guide",
+            "image": "./assets/galaappbg1.jpg",
+            "tags": ["React-Native (Expo)", "Express.js", "MongoDB", "Typescript"],
+            "description": "Gala VTG is a full-featured mobile application for tourists of Santa Rosa City. It has GPS navigation, an online forum, and additional features that a tourist will need! The app was created using React Native (Expo) and optimize for mobile screens.", 
+            "link": "https://galavtg.github.io/",
+            "btntext": "View App's Homepage"
+        },
+        {
+            "name": "My porfolio website",
+            "image": "./assets/porfolio2.jpg",
+            "tags": ["React.js", "Typescript", "SCSS"],
+            "description": "My portfolio website is single page application that is created with React.js and optimize for mobile and tablets. It is designed to have reusable components, which makes it easier to maintain. To change the information provided, it is easy as changing the values in json.",
+            "link": "https://github.com/AngheloAmir/amir-portfolio-app",
+            "btntext": "View Github repo"
+        }
+    ],
+
+    "introsection": {
+        "intro": {
+            "image": "./assets/me_wave.png",
+            "text": "Hello Visitor! Lets have a shake?"
+        },
+        "transistion": {
+            "text": "Thanks! Let me introduce myself.",
+            "duration": "5"
+        },
+        "aboutme": {
+            "image": "./assets/me_stand.png",
+            "text": "My name is Anghelo Amir, and I am a junior web developer. I graduated from STI College with a degree in BS IT. I found love in web development with ReactJS because it is fun and challenging to do. Being a fast learner and performing many trials and errors is the key to completing any programming task."
+        }
+    },
+
+    "contactMe": {
+        "forms": [
+            {
+                "name": "Your Name",
+                "type": "input"
+            },
+            {
+                "name": "Your Email",
+                "type": "email"
+            },
+            {
+                "name": "Message",
+                "type": "text"
+            }
+        ]
+    },
+
+    "footer": {
+        "text": "Last update: August 1, 2025",
+        "links": {
+            "facebook": "https://www.facebook.com/anghelo.amir",
+            "linkedin": "https://www.linkedin.com/in/anghelo-amir-01145333b/",
+            "github": "https://github.com/AngheloAmir"
+        }
+    }
+
+}

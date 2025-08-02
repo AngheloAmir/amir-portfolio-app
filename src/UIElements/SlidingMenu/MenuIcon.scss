@@ -1,0 +1,52 @@
+/*
+*/
+
+@import '../theme';
+
+$sliding-menuicon-color:    black;
+$sliding-menuicon-padding:  5px 5px;
+$sliding-menuicon-bradius:  3px;
+$sliding-brand-leftmargin:  2rem;
+$sliding-drawer-height:     100vh;
+$sliding-drawer-width:      60vw;
+
+#menuicon {
+    padding: $sliding-menuicon-padding;
+
+    div {
+        background-color:   $sliding-menuicon-color;
+        width:              $navbar-slidingmenu-width;
+        height:             $navbar-slidingmenu-height;
+        border-radius:      $sliding-menuicon-bradius;
+    }
+
+    .bar1 {
+        
+        margin:             2px 0 6px 0;
+        transition:         0.3s;
+    }
+
+    .bar2 {
+        margin:             6px 0;
+        transition:         0.3s;
+    }
+
+    .bar3 {
+        margin:             0;
+        transition:         0.3s;
+    }
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+	-webkit-transform: rotate(45deg) translate(-8px, -8px);
+	transform: rotate(45deg) translate(-8px, -8px);
+}

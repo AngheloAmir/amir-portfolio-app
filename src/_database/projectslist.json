@@ -1,0 +1,70 @@
+{
+    "projects": [
+        {
+            "name": "Bheai English Center",
+            "image": "./assets/bheai.png",
+            "tags": ["Next.js", "OpenAI API", "Typescript", "tailwindcss"],
+            "description": "Built an AI-powered web application that helps users improve English fluency and communication skills through practical, interactive conversations",
+            "link":  "https://amir-bheai-english-center.vercel.app/",
+            "link2": "https://github.com/AngheloAmir/bheai_public_scr",
+            "btntext": "View Website",
+            "secbtn": "View Github Repo"
+        },
+        {
+            "name": "Gala: Virtual Tour Guide",
+            "image": "./assets/galaappbg1.jpg",
+            "tags": ["React-Native (Expo)", "Express.js", "MongoDB", "Typescript"],
+            "description": "Gala VTG is a full-featured mobile application for tourists of Santa Rosa City. It has GPS navigation, an online forum, and additional features that a tourist will need! The app was created using React Native (Expo) and optimize for mobile screens.", 
+            "link": "https://galavtg.github.io/",
+            "btntext": "View App's Homepage"
+        },
+        {
+            "name": "My porfolio website",
+            "image": "./assets/porfolio.jpg",
+            "tags": ["React.js", "Typescript", "SCSS"],
+            "description": "My portfolio website is single page application that is created with React.js and optimize for mobile and tablets. It is designed to have reusable components, which makes it easier to maintain. To change the information provided, it is easy as changing the values in the portfolio.json.",
+            "link": "https://github.com/AngheloAmir/amir-portfolio-app",
+            "btntext": "View Github repo"
+        },
+        {
+            "name": "Personal Reviewer",
+            "image": "./assets/personalrev.jpg",
+            "tags": ["React Native (Expo)", "Typescript"],
+            "description": "Personal Reviewer is a mobile application developed with React Native Expo. It is made for my study as a student of Information Technology course. Currently, it is optimized to work on android phones with a smaller screen; to speed up the development of the program.",
+            "link": "https://github.com/AngheloAmir/personalreviewer",
+            "btntext": "View Github repo"
+        },
+        {
+            "name": "Tap Tap Shop",
+            "image": "./assets/taptapshop.jpg",
+            "tags": ["HTML", "SCSS", "Javascript"],
+            "description": "Tap Tap Shop is a website that I designed for our school project. It is a simple prototype that only displays static HTML pages. However, this website sources code features the use of SCSS, better usage of Javascript (avoid duplications), and good responsive design.",
+            "link": "https://taptapshop.herokuapp.com/",
+            "btntext": "View Website"
+        },
+        {
+            "name": "A! Notes",
+            "image": "./assets/anotes.jpg",
+            "tags": ["React.js"],
+            "description": "A! Notes is a React application. It is made for my study as a student of Information Technology course. It features downloading, loading, syntax highlighting, and responsive design. This application is created using an Android tablet with the use of DoryNode App and Quick Text Editor (Android App).",
+            "link": "./works/anotes/index.html",
+            "btntext": "View Application"
+        },
+        {
+            "name": "SALP Assembly",
+            "image": "./assets/salp.jpg",
+            "tags": ["HTML", "CSS", "Javascript"],
+            "description": "SALP is a simple assembly language based on a 6502 instruction set but with fewer features. It aims to introduce assembly language programming without the complexity of real assembly languages. This application is optimized with mobiles phone (as I created it with just my Android phone).",
+            "link": "./works/salp/index.html",
+            "btntext": "View Application"
+        },
+        {
+            "name": "Forum Express",
+            "image": "./assets/forum.jpg",
+            "tags": ["Node.js", "Express.js", "MongoDB", "React.js"],
+            "description": "Forum Express is a backend service for the mobile application: Gala Virtual Tour Guide. It is a part of the capstone project that was created in my final year at my college course. It features a forum moderator page, REST APIs, and the use of the MongoDB database.",
+            "link": "https://github.com/AngheloAmir/forum-express",
+            "btntext": "View Github repo"
+        }
+    ]
+}

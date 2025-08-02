@@ -1,0 +1,78 @@
+/*
+*/
+
+@import '../theme';
+@import '../_lib/mixings';
+
+$basic-card-btn-height:         $fontsize * 2;  
+$basic-card-btn-width:          60vw;
+$basic-card-btn-width-tab:      135px;
+
+#PongDesignBasicCard {
+    background-color: #284255;
+    border-radius:      1rem;
+    box-shadow:         0 5px 10px 0px rgba(0,0,0,0.4);
+    display:                grid;
+    grid-template-columns:  1fr;
+    grid-template-rows:     auto 1fr 80px;
+    height:                 100%;
+
+    img {
+        border-top-left-radius:     1rem;
+        border-top-right-radius:    1rem;
+        object-fit:                 contain;
+        width:                      100%;
+        height:                     100%;
+    }
+
+    .information {
+        //border: 1px solid red;
+
+        & > h3 {
+            margin-top:     1rem;
+            text-align:     center;
+        }
+    
+         & > p  {
+            margin: auto;
+            width: 90%;
+        }
+    
+        .tags {
+            display:    block;
+            margin:     auto;
+            padding:    1rem 0;
+            width:      90%;
+
+            span {
+                display:        inline-block;
+                font-size:      $fontsize * 0.9;
+                margin-right:   0.5rem;
+                color:          $secondary-textcolor;
+            }
+        }
+
+    }
+
+    .btn {
+        //border: 1px solid red;
+        padding: 1rem 0.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 10px;
+         
+        button {
+            align-self: center;
+            display: block !important;
+            margin: auto;
+            width: 90%;
+    
+            @include tabletscreen {
+                width: 80%;
+            }
+        }
+    }
+    
+}

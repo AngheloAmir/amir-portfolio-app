@@ -1,0 +1,27 @@
+/*
+*/
+
+@import '../theme';
+
+#PongDesignSlidingMenu {
+    background-image:   $navbar-dropdown-bgsliding;
+    display:            flex;
+    flex-direction:     column;
+    flex-grow:          1;
+    font-size:          $navbar-base-fontsize;
+    height:             100%;
+    position:           relative;
+    
+    .nav {
+        background-color:   $navbar-base-color;
+        display:            flex;
+        flex-grow:          1;
+        height:             100%;
+
+        .img {
+            height:         100%;
+            width:          auto;
+            padding-left:   $navbar-base-brandleftmargin;
+        }
+    }
+}
